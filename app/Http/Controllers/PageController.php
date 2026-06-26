@@ -11,6 +11,10 @@ class PageController extends Controller {
     return view('pages.about');
   }
 
+  public function aboutHijazi() {
+    return view('pages.about.hijazi');
+  }
+
   public function products() {
     return view('pages.products');
   }

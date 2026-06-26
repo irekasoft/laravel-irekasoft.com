@@ -43,6 +43,7 @@ class AppRepository
             'icon_label' => $meta['icon_label'] ?? '?',
             'store_url' => $meta['store_url'] ?? null,
             'video_url' => $meta['video_url'] ?? null,
+            'image_url' => $meta['image_url'] ?? null,
             'features' => $meta['features'] ?? [],
             'body' => $body,
             'body_html' => $body !== '' ? Str::markdown($body) : '',
@@ -54,6 +55,10 @@ class AppRepository
 
         if ($app['video_url'] === '') {
             $app['video_url'] = null;
+        }
+
+        if ($app['image_url'] === '') {
+            $app['image_url'] = null;
         }
 
         return $app;

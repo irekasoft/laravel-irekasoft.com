@@ -1,5 +1,8 @@
 @php
   $platformLabels = collect($app['platforms'])->map(fn(string $key) => $platforms[$key] ?? $key)->join(' · ');
+  $appImageSrc = $app['image_url']
+    ? (str_starts_with($app['image_url'], 'http') ? $app['image_url'] : asset('images/apps/' . $app['image_url']))
+    : null;
 @endphp
 
 <x-layouts.app :title="$app['name']" :description="$app['tagline']">
@@ -53,6 +56,14 @@
       </div>
 
       <div class="space-y-12">
+        @if ($appImageSrc)
+          <div>
+            <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Preview</p>
+            <img src="{{ $appImageSrc }}" alt="{{ $app['name'] }} screenshot"
+              class="w-full rounded-sm border border-ink/10 object-cover" loading="lazy">
+          </div>
+        @endif
+
         @if ($app['video_url'])
           @php
             $videoId = null;

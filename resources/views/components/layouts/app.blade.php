@@ -62,20 +62,20 @@
 
       <nav @class([
           'hidden lg:flex items-center font-mono text-[12px] uppercase tracking-[0.14em]',
-          'gap-8 text-charcoal/70' => !$immersive,
+          'gap-8 text-charcoal/40' => !$immersive,
           'gap-0 text-white/70' => $immersive,
       ])>
         @foreach ($navItems as $index => $item)
           @if ($immersive && $index > 0)
-            <span class="px-4 text-white/25" aria-hidden="true">/</span>
+            <span class="px-4 text-white" aria-hidden="true">/</span>
           @endif
           <a href="{{ route($item['route']) }}" @class([
-              'hover:text-ink transition-colors' => !$immersive,
+              'hover:text-black transition-colors' => !$immersive,
               'hover:text-white transition-colors' => $immersive,
               request()->routeIs($item['route'])
                   ? ($immersive
                       ? 'text-white'
-                      : 'text-ink')
+                      : 'text-black')
                   : '',
           ])>{{ $item['label'] }}</a>
         @endforeach

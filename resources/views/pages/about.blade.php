@@ -4,11 +4,21 @@
 >
 
     <section class="bg-ink text-paper">
-        <div class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20">
-            <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">About</p>
-            <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl">
-                A small studio, building things people use every day.
-            </h1>
+        <div class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20 grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+            <div>
+                <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">About</p>
+                <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl">
+                    A small studio, building things people use every day.
+                </h1>
+            </div>
+            <img
+                src="{{ asset('images/about/Artboard-17-300x300.png') }}"
+                alt="iReka Soft"
+                class="w-20 h-20 rounded-2xl shadow-lg shadow-black/30 "
+                width="60"
+                height="60"
+                loading="eager"
+            >
         </div>
     </section>
 
@@ -38,12 +48,37 @@
                     storefront, and manage a till without needing an IT team. That thread is now Orderla,
                     and it's the focus of everything we build.
                 </p>
+                <p>
+                    Mobile technology keeps maturing, and software that genuinely helps in daily life
+                    still matters to us. Our motto is <em class="text-charcoal">app for life</em>.
+                </p>
+                
             </div>
         </div>
     </section>
 
     <section class="bg-ink-soft text-paper">
-        <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-10 md:grid-cols-3">
+        <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-12 md:grid-cols-2 md:items-center">
+            <div>
+                <p class="font-mono text-[12px] uppercase tracking-wide text-gold mb-3">Learn + research + development</p>
+                <p class="text-paper/70 leading-relaxed">
+                    Technologies evolve quickly. We invest time studying recent trends, new techniques,
+                    and what's worth adopting — so what we ship stays current without chasing every headline.
+                </p>                
+            </div>
+            <div>
+                <p class="font-mono text-[12px] uppercase tracking-wide text-gold mb-3">Platform partners</p>
+                <p class="text-paper/70 leading-relaxed">
+                    Apple for the platform and developer tools that shaped our earliest work, and Google
+                    for the business services and Android ecosystem that let us reach a wider audience.
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-ink text-paper">
+        <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-10 md:grid-cols-2">
             <div>
                 <p class="font-mono text-[12px] uppercase tracking-wide text-gold mb-3">Vision</p>
                 <p class="font-display text-xl leading-snug">
@@ -60,10 +95,17 @@
                 </p>
             </div>
             <div>
+                <p class="font-mono text-[12px] uppercase tracking-wide text-gold mb-3">Objective</p>
+                <p class="text-paper/70 leading-relaxed">
+                    Develop quality software with the best user experience we can manage. Put Malaysia
+                    on the map as a place that builds apps and systems the world actually uses.
+                </p>
+            </div>
+            <div>
                 <p class="font-mono text-[12px] uppercase tracking-wide text-gold mb-3">Values</p>
                 <p class="text-paper/70 leading-relaxed">
                     Care in the craft, refined rather than rushed. We'd rather ship something narrow and
-                    solid than broad and brittle.
+                    solid than broad and brittle — and we try to nurture the technology community around us.
                 </p>
             </div>
         </div>
@@ -72,22 +114,44 @@
     <section class="bg-paper">
         <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
             <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-6">Business information</p>
-            <dl class="grid gap-6 md:grid-cols-2 max-w-3xl text-sm">
+            <dl class="grid gap-6 md:grid-cols-3 max-w-3xl text-sm">
                 <div>
                     <dt class="text-charcoal/50">Business name</dt>
                     <dd class="font-display text-lg">iReka Soft Enterprise</dd>
                 </div>
                 <div>
+                    <dt class="text-charcoal/50">Registration number</dt>
+                    <dd class="font-display text-lg">002435676-P</dd>
+                </div>
+                <div>
                     <dt class="text-charcoal/50">Established</dt>
-                    <dd class="font-display text-lg">May 2015 · Malaysia</dd>
+                    <dd class="font-display text-lg">May 2015</dd>
+                </div>
+                <div>
+                    <dt class="text-charcoal/50">Registered country</dt>
+                    <dd class="font-display text-lg">Malaysia</dd>
+                </div>
+                <div>
+                    <dt class="text-charcoal/50">Bank</dt>
+                    <dd class="font-display text-lg">CIMB Bank Berhad (Cyberjaya Branch)</dd>
                 </div>
                 <div>
                     <dt class="text-charcoal/50">Representative</dt>
-                    <dd class="font-display text-lg">Muhammad Hijazi</dd>
+                    <dd class="font-display text-lg">
+                        <a href="{{ route('about.hijazi') }}"
+                            class="text-terracotta hover:underline transition-colors">
+                            Muhammad Hijazi
+                        </a>
+                    </dd>
                 </div>
-                <div>
-                    <dt class="text-charcoal/50">Activities</dt>
-                    <dd class="font-display text-lg">Software product development &amp; digital services</dd>
+                <div class="md:col-span-3">
+                    <dt class="text-charcoal/50">Business activities</dt>
+                    <dd class="mt-2 space-y-1 font-display text-lg">
+                        <p>Developing mobile software</p>
+                        <p>Digital creative</p>
+                        <p>Publishing mobile apps on App Store and Google Play</p>
+                        <p>Mobile apps consultation</p>
+                    </dd>
                 </div>
             </dl>
         </div>

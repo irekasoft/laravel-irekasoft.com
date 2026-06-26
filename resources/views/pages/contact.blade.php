@@ -1,53 +1,65 @@
-<x-layouts.app
-    :title="'Contact'"
-    :description="'Get in touch with iReka Soft — email, WhatsApp, or find us in Cyberjaya, Malaysia.'"
->
+<x-layouts.app :title="'Contact'" :description="'Get in touch with iReka Soft — email, WhatsApp, or find us in Cyberjaya, Malaysia.'">
 
-    <section class="bg-ink text-paper">
-        <div class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20">
-            <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">Contact</p>
-            <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl">
-                We'd like to hear from you.
-            </h1>
-            <p class="mt-5 max-w-xl text-paper/70 leading-relaxed">
-                Questions about Orderla, a feature request, a bug report, or a project to discuss —
-                all welcome.
-            </p>
-        </div>
-    </section>
+  <section class="bg-ink text-paper">
+    <div class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20">
+      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">Contact</p>
+      <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl">
+        We'd like to hear from you.
+      </h1>
+      <p class="mt-5 max-w-xl text-paper/70 leading-relaxed">
+        Questions about iReka Soft, a feature request, a bug report, or a project to discuss —
+        all welcome.
 
-    <section class="bg-paper">
-        <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-12 md:grid-cols-3">
-            <div>
-                <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Direct</p>
-                <ul class="space-y-3 text-lg font-display">
-                    <li><a href="mailto:irekasoft@gmail.com" class="hover:text-terracotta transition-colors">irekasoft@gmail.com</a></li>
-                    <li><a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">+60 11-3585 9242</a></li>
-                </ul>
-            </div>
+        <br />
 
-            <div>
-                <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Social</p>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="https://instagram.com/irekasoft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">Instagram</a></li>
-                    <li><a href="https://facebook.com/irekasoft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">Facebook</a></li>
-                    <li><a href="https://www.linkedin.com/company/ireka-soft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">LinkedIn</a></li>
-                    <li><a href="https://github.com/irekasoft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">GitHub</a></li>
-                    <li><a href="https://irekasoft.blogspot.com" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">Blogspot</a></li>
-                </ul>
-           
-            </div>
+        <a class="border-b border-terracotta inline-block mt-3 text-terracotta transition-colors"
+          href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener">
+          Send a WhatsApp message
+          <i class="bi bi-whatsapp ml-1"></i>
+        </a>
+      </p>
+    </div>
+  </section>
 
-            <div>
-                <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Office</p>
-                <p class="text-sm text-charcoal/70 leading-relaxed">
-                    Tinkerscape, Rekascape<br>
-                    3730, Persiaran Apec<br>
-                    Cyberjaya, Selangor<br>
-                    Malaysia
-                </p>
-            </div>
-        </div>
-    </section>
+  <section class="bg-paper">
+    <div class="mx-auto max-w-6xl px-6 py-4 md:py-10 grid gap-8 md:grid-cols-3">
+      <div>
+        <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Direct</p>
+        <ul class="space-y-3 text-lg font-display">
+          <li><a href="mailto:irekasoft@gmail.com"
+              class="hover:text-terracotta transition-colors">irekasoft@gmail.com</a></li>
+          <li><a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener"
+              class="hover:text-terracotta transition-colors">+60 11-3585 9242</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Social</p>
+        <ul class="space-y-3 text-sm">
+          <li><a href="https://facebook.com/irekasoft" target="_blank" rel="noopener"
+              class="hover:text-terracotta transition-colors">Facebook</a></li>
+          <li><a href="https://instagram.com/irekasoft" target="_blank" rel="noopener"
+              class="hover:text-terracotta transition-colors">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ireka-soft" target="_blank" rel="noopener"
+              class="hover:text-terracotta transition-colors">LinkedIn</a></li>
+          <li><a href="https://github.com/irekasoft" target="_blank" rel="noopener"
+              class="hover:text-terracotta transition-colors">GitHub</a></li>
+          <li><a href="https://irekasoft.blogspot.com" target="_blank" rel="noopener"
+              class="hover:text-terracotta transition-colors">Blogspot</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+        <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Office</p>
+        <p class="text-sm text-charcoal/70 leading-relaxed">
+          Tinkerscape, Rekascape<br>
+          3730, Persiaran Apec<br>
+          Cyberjaya, Selangor<br>
+          Malaysia
+        </p>
+      </div>
+    </div>
+  </section>
 
 </x-layouts.app>

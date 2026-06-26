@@ -7,6 +7,7 @@ icon: daily-reminder.png
 icon_bg: '#D35400'
 icon_label: DR
 store_url: https://itunes.apple.com/us/app/dailyreminder-remind-me-about/id912288065?ls=1&mt=8
+image_url: daily-reminder-preview.png
 features:
   - Flexible repeat schedules
   - Quick add for routine tasks

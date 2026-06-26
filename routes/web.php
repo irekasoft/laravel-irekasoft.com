@@ -10,6 +10,9 @@ Route::get('/', [PageController::class, 'home'])
 Route::get('/about', [PageController::class, 'about'])
       ->name('about');
 
+Route::get('/about/hijazi', [PageController::class, 'aboutHijazi'])
+      ->name('about.hijazi');
+
 Route::get('/products', [PageController::class, 'products'])
       ->name('products');
 

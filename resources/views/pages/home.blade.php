@@ -26,8 +26,9 @@
             Working on Laravel, React, and React Native.
           </p>
 
-          <div
-            class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-2 py-2 backdrop-blur-sm">
+          <a
+            href="{{ route('services') }}"
+            class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-2 py-2 backdrop-blur-sm hover:border-white/30 hover:bg-white/10 transition-colors">
             <span
               class="flex h-8 w-8 items-center justify-center rounded-full bg-gold/20 font-display text-sm font-semibold text-gold">
               iR
@@ -35,7 +36,7 @@
             <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-white/75 mr-3">
               iReka Soft — Cyberjaya, Malaysia
             </span>
-          </div>
+          </a>
 
           <nav
             class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-white/45">
@@ -60,7 +61,7 @@
   <section class="bg-paper">
     <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
       <h2 class="font-display text-blue-500 font-semibold text-3xl md:text-4xl tracking-tight max-w-xl">
-        One suite, three jobs.
+        One suite, three markets.
       </h2>
 
       <div class="mt-12 grid gap-10 md:grid-cols-3">
@@ -68,7 +69,7 @@
           <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.my</p>
           <p class="mt-3 font-display text-blue-500 text-xl">Take orders where your customers already are.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
-            A WhatsApp-native ordering flow for SMEs — no app to download, no POS to buy.
+            A WhatsApp-native ordering flow for SMEs — no app to download.
             Merchants set up a catalogue and start taking orders the same day.
           </p>
         </div>
@@ -82,10 +83,9 @@
         </div>
         <div>
           <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla FOS</p>
-          <p class="mt-3 font-display text-blue-500 text-xl">Point of sale that survives a dinner rush.</p>
+          <p class="mt-3 font-display text-blue-500 text-xl">Food ordering and mini POS system.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
-            A food ordering and POS system built for the floor — fast order entry, kitchen
-            tickets, and receipt printing that just works.
+            A food ordering and mini POS system built for the floor — fast order entry. Built for restaurants and cafes.
           </p>
         </div>
       </div>
@@ -134,9 +134,10 @@
       </h2>
       <p class="mt-4 text-charcoal/70">Want to see it, or build something like it with us?</p>
       <div class="mt-8 flex flex-wrap gap-4 justify-center">
-        <a href="{{ route('contact') }}"
-          class="font-mono text-[13px] uppercase tracking-wide bg-ink text-paper px-6 py-3 rounded-sm hover:bg-charcoal transition-colors">
-          Get in touch
+        <a href="{{ route('services') }}"
+          class="font-mono text-[13px] uppercase tracking-wide bg-gold text-black px-6 py-3 rounded-sm hover:bg-gold/80 transition-colors">
+          <i class="bi bi-person-lines-fill mr-1"></i>
+          Our Services
         </a>
       </div>
     </div>

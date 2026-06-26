@@ -1,4 +1,4 @@
-<x-layouts.app :title="'Mobile Apps'" :description="'Heritage iOS, Android, and Mac apps from iReka Soft — FaceClock Pro, Nightstand, Expense, and more.'">
+<x-layouts.app :title="'Apps'" :description="'iOS, Android, and Mac apps from iReka Soft — FaceClock Pro, Nightstand, Expense, and more.'">
 
   <section class="bg-paper border-b border-ink/10 pt-6">
     <div class="mx-auto max-w-6xl px-6 pb-10 text-center">

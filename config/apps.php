@@ -2,13 +2,13 @@
 
 return [
 
-    'path' => base_path('content/apps'),
+  'path' => base_path('content/apps'),
 
-    'platforms' => [
-        'ios' => 'iOS',
-        'ios_android' => 'iOS + Android',
-        'android' => 'Android',
-        'mac' => 'Mac',
-    ],
+  'platforms' => [
+    'ios' => 'iOS',
+    'mac' => 'Mac',
+    // 'ios_android' => 'iOS + Android',
+    // 'android' => 'Android',
+  ],
 
 ];

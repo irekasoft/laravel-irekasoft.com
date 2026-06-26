@@ -6,7 +6,7 @@ platforms:
 icon: countdowns.png
 icon_bg: '#3498DB'
 icon_label: CD
-store_url:
+store_url: https://apps.apple.com/my/app/countdowns/id1086514260
 features:
   - Multiple active countdowns in one place
   - Clear day-by-day remaining display

@@ -6,7 +6,8 @@ platforms:
 icon: app-icon-resizer.png
 icon_bg: '#566573'
 icon_label: Ai
-store_url:
+store_url: https://itunes.apple.com/us/app/app-icon-resizer-app-development/id1013592989?ls=1&mt=12
+video_url: https://youtu.be/y33K13FLgBc
 features:
   - Exports standard macOS icon dimensions
   - Batch output from a single source image

@@ -22,7 +22,7 @@
                 <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Direct</p>
                 <ul class="space-y-3 text-lg font-display">
                     <li><a href="mailto:irekasoft@gmail.com" class="hover:text-terracotta transition-colors">irekasoft@gmail.com</a></li>
-                    <li><a href="https://wa.me/601135859242" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">+60 11-3585 9242</a></li>
+                    <li><a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">+60 11-3585 9242</a></li>
                 </ul>
             </div>
 

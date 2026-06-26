@@ -6,7 +6,7 @@ platforms:
 icon: nightstand.png
 icon_bg: '#1A5276'
 icon_label: NS
-store_url:
+store_url: https://itunes.apple.com/us/app/nightstand-alarm-clock-beside/id1071317513?ls=1&mt=8
 features:
   - High-contrast clock for bedside use
   - Multiple alarms with straightforward controls

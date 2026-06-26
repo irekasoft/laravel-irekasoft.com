@@ -2,37 +2,30 @@
 
 namespace App\Http\Controllers;
 
-class PageController extends Controller
-{
-    public function home()
-    {
-        return view('pages.home');
-    }
+class PageController extends Controller {
+  public function home() {
+    return view('pages.home');
+  }
 
-    public function about()
-    {
-        return view('pages.about');
-    }
+  public function about() {
+    return view('pages.about');
+  }
 
-    public function products()
-    {
-        return view('pages.products');
-    }
+  public function products() {
+    return view('pages.products');
+  }
 
-    public function services()
-    {
-        return view('pages.services');
-    }
+  public function services() {
+    return view('pages.services');
+  }
 
-    public function portfolio()
-    {
-        return view('pages.portfolio', [
-            'projects' => config('portfolio.projects'),
-        ]);
-    }
+  public function portfolio() {
+    return view('pages.portfolio', [
+      'projects' => config('portfolio.projects'),
+    ]);
+  }
 
-    public function contact()
-    {
-        return view('pages.contact');
-    }
+  public function contact() {
+    return view('pages.contact');
+  }
 }

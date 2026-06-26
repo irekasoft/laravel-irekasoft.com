@@ -4,16 +4,21 @@
 
 <x-layouts.app :title="$app['name']" :description="$app['tagline']">
 
+  <div class="fixed inset-x-0 top-16 z-40 border-b border-white/10 bg-ink/90 backdrop-blur-sm">
+    <div class="mx-auto max-w-6xl px-6 py-3">
+      <a href="{{ route('apps.index') }}"
+        class="font-mono text-[12px] uppercase tracking-[0.14em] text-white hover:text-gold transition-colors">
+        <i class="bi bi-chevron-left"></i>
+        All apps
+      </a>
+    </div>
+  </div>
+
   <section class="relative overflow-hidden bg-ink text-paper">
     <x-app-show-bg />
 
-    <div class="relative z-10 mx-auto max-w-6xl px-6 pt-4 pb-8">
-      <a href="{{ route('apps.index') }}"
-        class="font-mono text-[12px] uppercase tracking-[0.14em] text-white hover:text-gold transition-colors">
-        ← All apps
-      </a>
-
-      <div class="mt-5 flex flex-col gap-6 md:flex-row md:items-start">
+    <div class="relative z-10 mx-auto max-w-6xl px-6 pt-16 pb-8">
+      <div class="flex flex-col gap-6 md:flex-row md:items-start">
         <x-app-icon :app="$app" size="lg" class="shadow-md" />
 
         <div class="max-w-2xl">
@@ -47,13 +52,38 @@
         </div>
       </div>
 
-      <div>
-        <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Highlights</p>
-        <ul class="space-y-3 text-sm text-charcoal/80">
-          @foreach ($app['features'] as $feature)
-            <li class="border-t border-ink/10 pt-3">{{ $feature }}</li>
-          @endforeach
-        </ul>
+      <div class="space-y-12">
+        @if ($app['video_url'])
+          @php
+            $videoId = null;
+            if (preg_match('/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([a-zA-Z0-9_-]{11})/', $app['video_url'], $matches)) {
+              $videoId = $matches[1];
+            }
+          @endphp
+          @if ($videoId)
+            <div>
+              <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Demo</p>
+              <div class="aspect-video overflow-hidden rounded-sm border border-ink/10 bg-ink/5">
+                <iframe
+                  class="h-full w-full"
+                  src="https://www.youtube.com/embed/{{ $videoId }}"
+                  title="{{ $app['name'] }} demo video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          @endif
+        @endif
+
+        <div>
+          <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Highlights</p>
+          <ul class="space-y-3 text-sm text-charcoal/80">
+            @foreach ($app['features'] as $feature)
+              <li class="border-t border-ink/10 pt-3">{{ $feature }}</li>
+            @endforeach
+          </ul>
+        </div>
       </div>
     </div>
   </section>

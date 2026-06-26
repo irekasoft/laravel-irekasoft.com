@@ -31,7 +31,7 @@
         ['route' => 'contact', 'label' => 'Contact'],
         // ['route' => 'products', 'label' => 'Products'],
     ];
-    $ctaHref = $immersive ? route('products') : 'https://wa.me/601135859242';
+    $ctaHref = $immersive ? ('apps') : 'https://wa.me/601135859242?text=Hello%20from%20irekasoft.com';
     $ctaLabel = $immersive ? 'Explore iReka Soft' : 'WhatsApp Us';
     $ctaExternal = true;
   @endphp
@@ -41,7 +41,7 @@
       'border-b border-ink/10 bg-paper/90 backdrop-blur-sm' => !$immersive,
       'border-b border-white/10 bg-black/40 backdrop-blur-sm' => $immersive,
   ])>
-    <div class="mx-auto max-w-7xl px-6 py-5 flex items-center justify-between gap-6">
+    <div class="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between gap-6">
       <a href="{{ route('home') }}" class="flex items-center gap-3 shrink-0 group">
 
         <span class="flex flex-col">
@@ -50,7 +50,11 @@
               'text-ink' => !$immersive,
               'text-white' => $immersive,
           ])>
-            ireka<span class="text-blue-800">soft.</span>
+            ireka<span 
+            @class([
+              'text-blue-600' => !$immersive,
+              'text-blue-300' => $immersive,
+            ])>soft.</span>
           </span>
           
         </span>
@@ -78,12 +82,15 @@
       </nav>
 
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <a href="{{ $ctaHref }}" @if ($ctaExternal) target="_blank" rel="noopener" @endif
+        <a href="{{ $ctaHref }}" 
           @class([
               'hidden sm:inline-flex shrink-0 font-mono text-[12px] uppercase tracking-[0.12em] px-4 py-2.5 rounded-sm transition-colors',
               'bg-green-500 text-white hover:bg-green-600' => !$immersive,
               'bg-blue-500 text-white hover:bg-blue-600' => $immersive,
           ])>
+          @if (!$immersive)
+            <i class="bi bi-whatsapp mr-2"></i>
+          @endif
           {{ $ctaLabel }}
         </a>
 
@@ -136,7 +143,7 @@
     </div>
   </div>
 
-  <main class="pt-20">
+  <main class="pt-16">
     {{ $slot }}
   </main>
 
@@ -169,7 +176,7 @@
         <ul class="space-y-2 text-sm">
           <li><a href="mailto:irekasoft@gmail.com" class="hover:text-paper transition-colors">irekasoft@gmail.com</a>
           </li>
-          <li><a href="https://wa.me/601135859242" target="_blank" rel="noopener"
+          <li><a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener"
               class="hover:text-paper transition-colors">+60 11-3585 9242</a></li>
           <li class="text-paper/50">Cyberjaya, Selangor, Malaysia</li>
         </ul>

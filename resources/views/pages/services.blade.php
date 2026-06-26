@@ -146,7 +146,7 @@
         mobile apps technologies.
       </p>
       <div class="mt-8">
-        <a href="https://wa.me/601135859242" target="_blank" rel="noopener"
+        <a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener"
           class="font-mono text-[13px] uppercase tracking-wide bg-green-500 text-white px-6 py-3 rounded-sm hover:bg-green-600 transition-colors">
           Send enquiry now
         </a>

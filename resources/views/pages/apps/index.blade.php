@@ -1,41 +1,41 @@
-<x-layouts.app
-    :title="'Mobile Apps'"
-    :description="'Heritage iOS, Android, and Mac apps from iReka Soft — FaceClock Pro, Nightstand, Expense, and more.'"
->
+<x-layouts.app :title="'Mobile Apps'" :description="'Heritage iOS, Android, and Mac apps from iReka Soft — FaceClock Pro, Nightstand, Expense, and more.'">
 
-    <section class="bg-paper border-b border-ink/10">
-        <div class="mx-auto max-w-6xl px-6 pt-20 pb-10 md:pt-28 md:pb-12 text-center">
-            <h1 class="font-display font-semibold text-4xl md:text-5xl tracking-tight text-ink">
-                Mobile Apps
-            </h1>
-            <p class="mt-6 font-mono text-[12px] uppercase tracking-[0.14em] text-charcoal/50">
-                @foreach ($platforms as $label)
-                    <span>{{ $label }}</span>@if (! $loop->last)<span class="px-3 text-charcoal/25">|</span>@endif
-                @endforeach
-            </p>
+  <section class="bg-paper border-b border-ink/10 pt-12">
+    <div class="mx-auto max-w-6xl px-6 pt-0 pb-10 text-center">
+      <h1 class="font-display font-semibold text-4xl md:text-5xl tracking-tight text-ink">
+        Mobile Apps
+      </h1>
+      <p class="mt-6 font-mono text-[12px] uppercase tracking-[0.14em] text-charcoal/50">
+        @foreach ($platforms as $label)
+          <span>{{ $label }}</span>
+          @if (!$loop->last)
+            <span class="px-3 text-charcoal/25">|</span>
+          @endif
+        @endforeach
+      </p>
+    </div>
+  </section>
+
+  @foreach ($grouped as $platformKey => $platformApps)
+    <section @class([
+        'border-b border-ink/10',
+        'bg-paper' => $loop->even,
+        'bg-ink-soft text-paper' => $loop->odd,
+    ])>
+      <div class="mx-auto max-w-6xl px-6 py-14 md:py-16">
+        <h2 @class([
+            'font-display font-semibold text-2xl md:text-3xl tracking-tight mb-8',
+            'text-ink' => $loop->even,
+            'text-paper' => $loop->odd,
+        ])>{{ $platforms[$platformKey] }} Apps</h2>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          @foreach ($platformApps as $app)
+            <x-app-card :app="$app" :dark="!$loop->parent->even" />
+          @endforeach
         </div>
+      </div>
     </section>
-
-    @foreach ($grouped as $platformKey => $platformApps)
-        <section @class([
-            'border-b border-ink/10',
-            'bg-paper' => $loop->even,
-            'bg-ink-soft text-paper' => $loop->odd,
-        ])>
-            <div class="mx-auto max-w-6xl px-6 py-14 md:py-16">
-                <h2 @class([
-                    'font-display font-semibold text-2xl md:text-3xl tracking-tight mb-8',
-                    'text-ink' => $loop->even,
-                    'text-paper' => $loop->odd,
-                ])>{{ $platforms[$platformKey] }} Apps</h2>
-
-                <div class="grid gap-4 sm:grid-cols-2">
-                    @foreach ($platformApps as $app)
-                        <x-app-card :app="$app" :dark="! $loop->parent->even" />
-                    @endforeach
-                </div>
-            </div>
-        </section>
-    @endforeach
+  @endforeach
 
 </x-layouts.app>

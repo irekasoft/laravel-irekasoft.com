@@ -12,8 +12,8 @@
     --color-ink: #07090D;
     --color-ink-soft: #10141C;
     --color-paper: #EEF1F8;
-    --color-gold: #3463F0;
-    --color-gold-soft: #6E91FF;
+    --color-gold: #FFD700;
+    --color-gold-soft: #FFD700;
     --color-terracotta: #38BDF8;
     --color-moss: #475569;
     --color-charcoal: #0B0F19;
@@ -72,6 +72,35 @@
             linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
         background-size: 64px 64px;
+        animation: hero-grid-drift 32s linear infinite;
+    }
+
+    .hero-glow::before,
+    .hero-glow::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        pointer-events: none;
+        will-change: transform;
+    }
+
+    .hero-glow::before {
+        top: -12%;
+        right: -8%;
+        width: min(48vw, 28rem);
+        height: min(48vw, 28rem);
+        background: rgba(52, 99, 240, 0.35);
+        animation: hero-orb-drift-a 22s ease-in-out infinite;
+    }
+
+    .hero-glow::after {
+        bottom: -10%;
+        left: -12%;
+        width: min(40vw, 22rem);
+        height: min(40vw, 22rem);
+        background: rgba(56, 189, 248, 0.22);
+        animation: hero-orb-drift-b 28s ease-in-out infinite;
     }
 
     .hero-geometry {
@@ -84,6 +113,61 @@
         background-size: cover, cover, cover, cover;
         background-position: center;
         background-repeat: no-repeat;
+        transform-origin: center;
+        animation: hero-geometry-shift 26s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    @keyframes hero-grid-drift {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 64px 64px;
+        }
+    }
+
+    @keyframes hero-orb-drift-a {
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        50% {
+            transform: translate(-4%, 3%) scale(1.08);
+        }
+    }
+
+    @keyframes hero-orb-drift-b {
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        50% {
+            transform: translate(5%, -4%) scale(1.06);
+        }
+    }
+
+    @keyframes hero-geometry-shift {
+        0%,
+        100% {
+            transform: scale(1) translate(0, 0);
+        }
+
+        50% {
+            transform: scale(1.02) translate(1%, -0.5%);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-grid,
+        .hero-geometry,
+        .hero-glow::before,
+        .hero-glow::after {
+            animation: none;
+        }
     }
 
     .viewfinder {

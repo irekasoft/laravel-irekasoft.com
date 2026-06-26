@@ -83,7 +83,7 @@
                 </div>
                 <div>
                     <dt class="text-charcoal/50">Representative</dt>
-                    <dd class="font-display text-lg">Muhammad Hijazi Bin Bahaman</dd>
+                    <dd class="font-display text-lg">Muhammad Hijazi</dd>
                 </div>
                 <div>
                     <dt class="text-charcoal/50">Activities</dt>

@@ -92,27 +92,5 @@
         </div>
     </section>
 
-    {{-- HERITAGE --}}
-    <section class="bg-ink-soft text-paper">
-        <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
-            <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold mb-3">Where it started</p>
-            <p class="max-w-xl text-paper/70 leading-relaxed mb-10">
-                Before Orderla, there was a decade of small iOS apps — the ones that taught us how to
-                build software people actually open every day.
-                <a href="{{ route('apps.index') }}" class="text-gold hover:text-gold-soft transition-colors">Browse the full app catalogue →</a>
-            </p>
-            <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 font-mono text-sm text-paper/60">
-                <div class="border-t border-paper/15 pt-3">FaceClock Pro — analogue clock</div>
-                <div class="border-t border-paper/15 pt-3">Nightstand — alarm &amp; sleep timer</div>
-                <div class="border-t border-paper/15 pt-3">Expense — spending tracker</div>
-                <div class="border-t border-paper/15 pt-3">FaceLapse — daily photo journal</div>
-                <div class="border-t border-paper/15 pt-3">Countdowns — multi-event countdown</div>
-                <div class="border-t border-paper/15 pt-3">Daily Reminder — recurring reminders</div>
-                <div class="border-t border-paper/15 pt-3">InstaReka — photo text overlays</div>
-                <div class="border-t border-paper/15 pt-3">Kamus — EN ⇄ BM dictionary</div>
-                <div class="border-t border-paper/15 pt-3">App Icon Resizer — dev utility, Mac</div>
-            </div>
-        </div>
-    </section>
 
 </x-layouts.app>

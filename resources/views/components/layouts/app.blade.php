@@ -25,9 +25,9 @@
   @php
     $navItems = [
         ['route' => 'home', 'label' => 'Home'],
-        ['route' => 'apps.index', 'label' => 'Apps'],
-        ['route' => 'services', 'label' => 'Services'],
-        ['route' => 'about', 'label' => 'About'],
+        ['route' => 'apps.index', 'label' => 'Apps', 'active' => 'apps.*'],
+        ['route' => 'services', 'label' => 'Services', 'active' => 'services*'],
+        ['route' => 'about', 'label' => 'About', 'active' => 'about*'],
         ['route' => 'contact', 'label' => 'Contact'],
         // ['route' => 'products', 'label' => 'Products'],
     ];
@@ -72,7 +72,7 @@
           <a href="{{ route($item['route']) }}" @class([
               'hover:text-black transition-colors' => !$immersive,
               'hover:text-white transition-colors' => $immersive,
-              request()->routeIs($item['route'])
+              request()->routeIs($item['active'] ?? $item['route'])
                   ? ($immersive
                       ? 'text-white'
                       : 'text-black')
@@ -131,7 +131,7 @@
         @foreach ($navItems as $item)
           <a href="{{ route($item['route']) }}" @class([
               'transition-colors hover:text-blue-800',
-              request()->routeIs($item['route']) ? 'text-blue-500' : 'text-paper',
+              request()->routeIs($item['active'] ?? $item['route']) ? 'text-blue-500' : 'text-paper',
           ])>{{ $item['label'] }}</a>
         @endforeach
       </nav>

@@ -11,46 +11,52 @@
 
     <div class="relative z-10 flex flex-1 flex-col justify-center px-6">
       <div class="mx-auto w-full max-w-5xl ">
-        <div class="viewfinder border border-white/25 px-6 py-15">
+        <div class="viewfinder">
+          <span class="viewfinder-edge viewfinder-edge--top" aria-hidden="true"></span>
+          <span class="viewfinder-edge viewfinder-edge--right" aria-hidden="true"></span>
+          <span class="viewfinder-edge viewfinder-edge--bottom" aria-hidden="true"></span>
+          <span class="viewfinder-edge viewfinder-edge--left" aria-hidden="true"></span>
           <span class="viewfinder-corner" aria-hidden="true"></span>
 
-          <div class="mt-0">
-            <h1 class="font-display font-semibold leading-none tracking-tight">
-              <span class="text-[clamp(3.5rem,14vw,8.5rem)]">ireka</span><span class="text-[clamp(3.5rem,14vw,8.5rem)] text-blue-500">soft.</span>
-            </h1>
+          <div class="viewfinder__content px-10 py-12">
+              <div class="mt-0">
+                <h1 class="font-display font-semibold leading-none tracking-tight">
+                  <span class="text-[clamp(3.5rem,14vw,8.5rem)]">ireka</span><span class="text-[clamp(3.5rem,14vw,8.5rem)] text-blue-500">soft.</span>
+                </h1>
+              </div>
+
+              <p
+                class="mt-2 max-w-2xl font-mono text-[11px] md:text-[12px] uppercase leading-relaxed tracking-[0.14em] text-white/70 text-balance">
+                A modern software development studio — UI/UX design, web apps, and mobile development.
+                Working on Laravel, React & React Native.
+              </p>
+
+              <a
+                href="{{ route('services') }}"
+                class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-2 py-2 backdrop-blur-sm hover:border-white/30 hover:bg-white/10 transition-colors">
+                <span
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-gold/20 font-display text-sm font-semibold text-gold">
+                  iR
+                </span>
+                <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-white/75 mr-3">
+                  iReka Soft — Cyberjaya, Malaysia
+                </span>
+              </a>
+
+              <nav
+                class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-white/45">
+                <a href="/apps" target="_blank" rel="noopener"
+                  class="hover:text-white transition-colors">Apps</a>
+                <span aria-hidden="true">/</span>
+                <a href="https://orderla.my" target="_blank" rel="noopener"
+                  class="hover:text-white transition-colors">Orderla.my</a>
+                <span aria-hidden="true">/</span>
+                <a href="https://orderla.co" target="_blank" rel="noopener"
+                  class="hover:text-white transition-colors">Orderla.co</a>
+                <span aria-hidden="true">/</span>
+                <a href="{{ route('products') }}" class="hover:text-white transition-colors">Orderla FOS</a>
+              </nav>
           </div>
-
-          <p
-            class="mt-2 max-w-2xl font-mono text-[11px] md:text-[12px] uppercase leading-relaxed tracking-[0.14em] text-white/70 text-balance">
-            A modern software development studio — UI/UX design, web apps, and mobile development.
-            Working on Laravel, React & React Native.
-          </p>
-
-          <a
-            href="{{ route('services') }}"
-            class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-2 py-2 backdrop-blur-sm hover:border-white/30 hover:bg-white/10 transition-colors">
-            <span
-              class="flex h-8 w-8 items-center justify-center rounded-full bg-gold/20 font-display text-sm font-semibold text-gold">
-              iR
-            </span>
-            <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-white/75 mr-3">
-              iReka Soft — Cyberjaya, Malaysia
-            </span>
-          </a>
-
-          <nav
-            class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-white/45">
-            <a href="/apps" target="_blank" rel="noopener"
-              class="hover:text-white transition-colors">Apps</a>
-            <span aria-hidden="true">/</span>
-            <a href="https://orderla.my" target="_blank" rel="noopener"
-              class="hover:text-white transition-colors">Orderla.my</a>
-            <span aria-hidden="true">/</span>
-            <a href="https://orderla.co" target="_blank" rel="noopener"
-              class="hover:text-white transition-colors">Orderla.co</a>
-            <span aria-hidden="true">/</span>
-            <a href="{{ route('products') }}" class="hover:text-white transition-colors">Orderla FOS</a>
-          </nav>
         </div>
       </div>
     </div>
@@ -148,9 +154,9 @@
   <section class="services-cta-band text-paper border-t border-paper/10">
     <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
       <h2 class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto">
-        "Building something a merchant can run their whole business on."
+        "We build software that helps business owners run their business more smoothly."
       </h2>
-      <p class="mt-4 font-serif text-lg text-paper/70">Want to see it, or build something like it with us?</p>
+      <p class="mt-4 font-serif text-lg text-paper/70">Curious what that could look like for your business? Let's talk.</p>
       <div class="mt-8 flex flex-wrap gap-4 justify-center">
         <a href="{{ route('services') }}"
           class="font-mono text-[13px] uppercase tracking-wide bg-gold text-black px-6 py-3 rounded-sm hover:bg-gold/80 transition-colors">

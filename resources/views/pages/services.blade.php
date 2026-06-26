@@ -85,6 +85,11 @@
           <i class="bi bi-collection mr-1"></i>
           See our portfolio
         </a>
+        <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener"
+          class="ml-4 font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
+          <i class="bi bi-envelope mr-1"></i>
+          Send enquiry now
+        </a>
       </div>
     </div>
   </section>
@@ -149,9 +154,9 @@
         mobile apps technologies.
       </p>
       <div class="mt-8">
-        <a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener"
-          class="font-mono text-[13px] uppercase tracking-wide bg-green-500 text-white px-6 py-3 rounded-sm hover:bg-green-600 transition-colors">
-          <i class="bi bi-whatsapp"></i>
+        <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener"
+          class="font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
+          <i class="bi bi-envelope mr-1"></i>
           Send enquiry now
         </a>
       </div>

@@ -31,8 +31,8 @@
         ['route' => 'contact', 'label' => 'Contact'],
         // ['route' => 'products', 'label' => 'Products'],
     ];
-    $ctaHref = $immersive ? ('apps') : 'https://wa.me/601135859242?text=Hello%20from%20irekasoft.com';
-    $ctaLabel = $immersive ? 'Explore iReka Soft' : 'WhatsApp Us';
+    $ctaHref = $immersive ? ('apps') : 'https://irekaweb.com/enquiry';
+    $ctaLabel = $immersive ? 'Explore iReka Soft' : 'Enquiry Now';
     $ctaExternal = true;
   @endphp
 
@@ -85,11 +85,11 @@
         <a href="{{ $ctaHref }}" 
           @class([
               'hidden sm:inline-flex shrink-0 font-mono text-[12px] uppercase tracking-[0.12em] px-4 py-2.5 rounded-sm transition-colors',
-              'bg-green-500 text-white hover:bg-green-600' => !$immersive,
-              'bg-blue-500 text-white hover:bg-blue-600' => $immersive,
+              'bg-blue-500 text-white hover:bg-blue-600' => !$immersive,
+              'bg-gold text-black hover:bg-gold/80' => $immersive,
           ])>
           @if (!$immersive)
-            <i class="bi bi-whatsapp mr-2"></i>
+            <i class="bi bi-envelope mr-2"></i>
           @endif
           {{ $ctaLabel }}
         </a>
@@ -115,7 +115,7 @@
     data-open="false" aria-hidden="true">
     <div class="absolute inset-0 bg-ink/95 backdrop-blur-md" data-mobile-menu-backdrop aria-hidden="true"></div>
 
-    <div class="relative z-10 flex h-full flex-col px-6 pt-6 pb-10 -mt-2">
+    <div class="relative z-10 flex h-full flex-col px-5 pt-2 pb-10 ">
       <div class="flex shrink-0 justify-end">
         <button type="button" id="mobile-menu-close"
           class="cursor-pointer relative z-20 flex items-center gap-2  border-paper/25  px-3 py-2 font-mono text-[16px] uppercase tracking-[0.14em] text-paper transition-colors hover:border-paper/50"

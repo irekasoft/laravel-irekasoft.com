@@ -11,12 +11,17 @@
       Questions about iReka Soft, a feature request, a bug report, or a project to discuss —
       all welcome.
 
-      <br />
+      <div class="mt-8"></div>
 
-      <a class="border-b border-terracotta inline-block mt-3 text-terracotta transition-colors"
+      <a class="font-mono text-[13px] uppercase tracking-wide bg-green-500 text-white px-6 py-3 rounded-sm hover:bg-green-600 transition-colors mr-4"
         href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener">
-        Send a WhatsApp message
         <i class="bi bi-whatsapp ml-1"></i>
+        Send a WhatsApp message
+      </a>
+      <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener"
+        class="font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
+        <i class="bi bi-envelope mr-1"></i>
+        Send enquiry now
       </a>
     </p>
   </x-page-hero>

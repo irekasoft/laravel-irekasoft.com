@@ -10,20 +10,20 @@
     <p class="mt-5 max-w-xl text-paper/70 leading-relaxed">
       Questions about iReka Soft, a feature request, a bug report, or a project to discuss —
       all welcome.
+    </p>
 
-      <div class="mt-8"></div>
-
-      <a class="font-mono text-[13px] uppercase tracking-wide bg-green-500 text-white px-6 py-3 rounded-sm hover:bg-green-600 transition-colors mr-4"
+    <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center">
+      <a class="inline-flex items-center justify-center font-mono text-[13px] uppercase tracking-wide bg-green-500 text-white px-6 py-3 rounded-sm hover:bg-green-600 transition-colors"
         href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener">
-        <i class="bi bi-whatsapp ml-1"></i>
+        <i class="bi bi-whatsapp mr-1"></i>
         Send a WhatsApp message
       </a>
       <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener"
-        class="font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
+        class="inline-flex items-center justify-center font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
         <i class="bi bi-envelope mr-1"></i>
         Send enquiry now
       </a>
-    </p>
+    </div>
   </x-page-hero>
 
   <section class="bg-paper">

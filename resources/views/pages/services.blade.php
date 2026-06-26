@@ -79,14 +79,14 @@
       <h2 class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto">
         Hire us to develop your custom mobile apps.
       </h2>
-      <div class="mt-8">
+      <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-stretch sm:items-center">
         <a href="{{ route('services.portfolio') }}"
-          class="font-mono text-[13px] uppercase tracking-wide bg-gold text-black px-6 py-3 rounded-sm hover:bg-gold/80 transition-colors">
+          class="inline-flex items-center justify-center font-mono text-[13px] uppercase tracking-wide bg-gold text-black px-6 py-3 rounded-sm hover:bg-gold/80 transition-colors">
           <i class="bi bi-collection mr-1"></i>
           See our portfolio
         </a>
         <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener"
-          class="ml-4 font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
+          class="inline-flex items-center justify-center font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
           <i class="bi bi-envelope mr-1"></i>
           Send enquiry now
         </a>

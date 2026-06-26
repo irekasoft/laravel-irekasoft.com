@@ -115,7 +115,7 @@
     data-open="false" aria-hidden="true">
     <div class="absolute inset-0 bg-ink/95 backdrop-blur-md" data-mobile-menu-backdrop aria-hidden="true"></div>
 
-    <div class="relative z-10 flex h-full flex-col px-5 pt-2 pb-10 ">
+    <div class="relative z-10 flex h-full flex-col px-4 pt-2 pb-10 ">
       <div class="flex shrink-0 justify-end">
         <button type="button" id="mobile-menu-close"
           class="cursor-pointer relative z-20 flex items-center gap-2  border-paper/25  px-3 py-2 font-mono text-[16px] uppercase tracking-[0.14em] text-paper transition-colors hover:border-paper/50"

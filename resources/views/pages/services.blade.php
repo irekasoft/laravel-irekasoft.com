@@ -3,8 +3,10 @@
     :description="'Web and mobile app development services from iReka Soft — UI/UX design, React Native development, and Laravel mobile backends from Cyberjaya, Malaysia.'"
 >
 
-  <section class="bg-ink text-paper">
-    <div class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20">
+  <x-page-hero
+    :image="asset('images/heroes/services.jpg')"
+    
+  >
       <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">Services</p>
       <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl leading-tight">
         Web / Mobile App<br>Development<br>Services
@@ -28,8 +30,7 @@
           Native technology.
         </p>
       </div>
-    </div>
-  </section>
+  </x-page-hero>
 
   <section class="bg-paper">
     <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-12 md:grid-cols-3 text-center">

@@ -9,12 +9,12 @@
       <div class="hero-bg__shade"></div>
     </div>
 
-    <div class="relative z-10 flex flex-1 flex-col justify-center px-6 py-10">
+    <div class="relative z-10 flex flex-1 flex-col justify-center px-6">
       <div class="mx-auto w-full max-w-5xl ">
-        <div class="viewfinder border border-white/25 px-6 py-10">
+        <div class="viewfinder border border-white/25 px-6 py-15">
           <span class="viewfinder-corner" aria-hidden="true"></span>
 
-          <div class="mt-8">
+          <div class="mt-0">
             <h1 class="font-display font-semibold leading-none tracking-tight">
               <span class="text-[clamp(3.5rem,14vw,8.5rem)]">ireka</span><span class="text-[clamp(3.5rem,14vw,8.5rem)] text-blue-500">soft.</span>
             </h1>

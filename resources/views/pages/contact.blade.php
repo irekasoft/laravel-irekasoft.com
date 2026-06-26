@@ -1,25 +1,25 @@
 <x-layouts.app :title="'Contact'" :description="'Get in touch with iReka Soft — email, WhatsApp, or find us in Cyberjaya, Malaysia.'">
 
-  <section class="bg-ink text-paper">
-    <div class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20">
-      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">Contact</p>
-      <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl">
-        We'd like to hear from you.
-      </h1>
-      <p class="mt-5 max-w-xl text-paper/70 leading-relaxed">
-        Questions about iReka Soft, a feature request, a bug report, or a project to discuss —
-        all welcome.
+  <x-page-hero
+    :image="asset('images/heroes/contact.jpg')"    
+  >
+    <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">Contact</p>
+    <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl">
+      We'd like to hear from you.
+    </h1>
+    <p class="mt-5 max-w-xl text-paper/70 leading-relaxed">
+      Questions about iReka Soft, a feature request, a bug report, or a project to discuss —
+      all welcome.
 
-        <br />
+      <br />
 
-        <a class="border-b border-terracotta inline-block mt-3 text-terracotta transition-colors"
-          href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener">
-          Send a WhatsApp message
-          <i class="bi bi-whatsapp ml-1"></i>
-        </a>
-      </p>
-    </div>
-  </section>
+      <a class="border-b border-terracotta inline-block mt-3 text-terracotta transition-colors"
+        href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener">
+        Send a WhatsApp message
+        <i class="bi bi-whatsapp ml-1"></i>
+      </a>
+    </p>
+  </x-page-hero>
 
   <section class="bg-paper">
     <div class="mx-auto max-w-6xl px-6 py-4 md:py-10 grid gap-8 md:grid-cols-3">

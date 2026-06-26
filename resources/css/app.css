@@ -403,4 +403,30 @@
         opacity: 0.35;
         pointer-events: none;
     }
+
+    .page-hero__backdrop {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
+
+    .page-hero__image {
+        position: absolute;
+        inset: -4%;
+        background-image: var(--page-hero-image);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.42;
+        transform: scale(1.03);
+    }
+
+    .page-hero__shade {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(105deg, rgba(7, 9, 13, 0.94) 0%, rgba(7, 9, 13, 0.78) 42%, rgba(7, 9, 13, 0.52) 100%),
+            linear-gradient(to top, rgba(7, 9, 13, 0.88) 0%, transparent 45%),
+            radial-gradient(ellipse 70% 55% at 82% 38%, rgba(56, 189, 248, 0.14), transparent 62%),
+            radial-gradient(ellipse 50% 40% at 18% 82%, rgba(124, 58, 237, 0.1), transparent 58%);
+    }
 }

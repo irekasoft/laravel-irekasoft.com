@@ -3,8 +3,10 @@
     :description="'iReka Soft Enterprise — founded 2015 in Cyberjaya, Malaysia. The studio behind the Orderla commerce suite.'"
 >
 
-    <section class="bg-ink text-paper">
-        <div class="mx-auto max-w-6xl px-6 pt-20 pb-16 md:pt-28 md:pb-20 grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+    <x-page-hero
+        :image="asset('images/heroes/about.jpg')"        
+    >
+        <div class="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
             <div>
                 <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">About</p>
                 <h1 class="mt-6 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl">
@@ -14,13 +16,13 @@
             <img
                 src="{{ asset('images/about/Artboard-17-300x300.png') }}"
                 alt="iReka Soft"
-                class="w-20 h-20 rounded-2xl shadow-lg shadow-black/30 "
+                class="w-20 h-20 rounded-2xl shadow-lg shadow-black/30"
                 width="60"
                 height="60"
                 loading="eager"
             >
         </div>
-    </section>
+    </x-page-hero>
 
     <section class="bg-paper">
         <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-12 md:grid-cols-3">

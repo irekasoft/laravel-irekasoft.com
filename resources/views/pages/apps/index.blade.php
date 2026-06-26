@@ -1,15 +1,16 @@
 <x-layouts.app :title="'Apps'" :description="'iOS, Android, and Mac apps from iReka Soft — FaceClock Pro, Nightstand, Expense, and more.'">
 
-  <section class="bg-ink text-paper">
-    <div class="mx-auto max-w-6xl px-6 pb-16 pt-28">
-      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">
-        Products
-      </p>
-      <h1 class="mt-3 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl leading-tight">
-        Apps
-      </h1>
-    </div>
-  </section>
+  <x-page-hero
+    :image="asset('images/heroes/apps.jpg')"
+    
+  >
+    <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">
+      Products
+    </p>
+    <h1 class="mt-3 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl leading-tight">
+      Apps
+    </h1>
+  </x-page-hero>
 
   {{-- <section class="bg-paper border-b border-ink/10 pt-6">
     <div class="mx-auto max-w-6xl px-6 pb-10 text-center">

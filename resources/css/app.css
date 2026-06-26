@@ -67,16 +67,31 @@
         margin-top: 0.5rem;
     }
 
-    .hero-grid {
-        background-image:
-            linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-        background-size: 64px 64px;
-        animation: hero-grid-drift 32s linear infinite;
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
     }
 
-    .hero-glow::before,
-    .hero-glow::after {
+    .hero-bg__geometry {
+        position: absolute;
+        inset: -18%;
+        background-color: var(--color-ink);
+        background-image:
+            radial-gradient(ellipse 55% 45% at 72% 18%, rgba(52, 99, 240, 0.28), transparent 62%),
+            radial-gradient(ellipse 40% 35% at 8% 92%, rgba(56, 189, 248, 0.16), transparent 58%),
+            radial-gradient(circle at 50% 50%, rgba(16, 20, 28, 0.4), transparent 70%),
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900' fill='none'%3E%3Cpolygon points='1040,80 1380,720 700,720' stroke='rgba(52,99,240,0.22)' stroke-width='1'/%3E%3Cpolygon points='1080,140 1140,260 1020,260' fill='rgba(52,99,240,0.14)'/%3E%3Cpolygon points='180,620 420,180 660,620' stroke='rgba(56,189,248,0.14)' stroke-width='1'/%3E%3Ccircle cx='220' cy='220' r='160' stroke='rgba(255,255,255,0.07)' stroke-width='1'/%3E%3Ccircle cx='220' cy='220' r='110' stroke='rgba(52,99,240,0.12)' stroke-width='1'/%3E%3Ccircle cx='1180' cy='640' r='90' stroke='rgba(56,189,248,0.1)' stroke-width='1'/%3E%3Cline x1='0' y1='780' x2='1440' y2='120' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3Cline x1='200' y1='0' x2='900' y2='900' stroke='rgba(52,99,240,0.08)' stroke-width='1'/%3E%3Cline x1='1440' y1='340' x2='0' y2='560' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3Crect x='60' y='60' width='180' height='180' stroke='rgba(255,255,255,0.06)' stroke-width='1' transform='rotate(12 150 150)'/%3E%3Crect x='1180' y='40' width='120' height='120' stroke='rgba(52,99,240,0.15)' stroke-width='1' transform='rotate(-18 1240 100)'/%3E%3Cpath d='M1320 480 L1440 480 L1380 580 Z' fill='rgba(56,189,248,0.08)'/%3E%3Cpath d='M40 400 L160 400 L100 300 Z' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+        background-size: cover, cover, cover, 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform-origin: center;
+        animation: hero-bg-geometry-drift 42s ease-in-out infinite;
+        will-change: transform;
+    }
+
+    .hero-bg__glow::before,
+    .hero-bg__glow::after {
         content: '';
         position: absolute;
         border-radius: 50%;
@@ -85,87 +100,110 @@
         will-change: transform;
     }
 
-    .hero-glow::before {
+    .hero-bg__glow {
+        position: absolute;
+        inset: 0;
+    }
+
+    .hero-bg__glow::before {
         top: -12%;
         right: -8%;
         width: min(48vw, 28rem);
         height: min(48vw, 28rem);
-        background: rgba(52, 99, 240, 0.35);
-        animation: hero-orb-drift-a 22s ease-in-out infinite;
+        background: rgba(52, 99, 240, 0.4);
+        animation: hero-bg-orb-a 24s ease-in-out infinite;
     }
 
-    .hero-glow::after {
+    .hero-bg__glow::after {
         bottom: -10%;
         left: -12%;
         width: min(40vw, 22rem);
         height: min(40vw, 22rem);
-        background: rgba(56, 189, 248, 0.22);
-        animation: hero-orb-drift-b 28s ease-in-out infinite;
+        background: rgba(56, 189, 248, 0.28);
+        animation: hero-bg-orb-b 30s ease-in-out infinite;
     }
 
-    .hero-geometry {
-        background-color: var(--color-ink);
+    .hero-bg__grid {
+        position: absolute;
+        inset: -10%;
+        opacity: 0.5;
         background-image:
-            radial-gradient(ellipse 55% 45% at 72% 18%, rgba(52, 99, 240, 0.28), transparent 62%),
-            radial-gradient(ellipse 40% 35% at 8% 92%, rgba(56, 189, 248, 0.16), transparent 58%),
-            radial-gradient(circle at 50% 50%, rgba(16, 20, 28, 0.4), transparent 70%),
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900' fill='none'%3E%3Cpolygon points='1040,80 1380,720 700,720' stroke='rgba(52,99,240,0.22)' stroke-width='1'/%3E%3Cpolygon points='1080,140 1140,260 1020,260' fill='rgba(52,99,240,0.14)'/%3E%3Cpolygon points='180,620 420,180 660,620' stroke='rgba(56,189,248,0.14)' stroke-width='1'/%3E%3Ccircle cx='220' cy='220' r='160' stroke='rgba(255,255,255,0.07)' stroke-width='1'/%3E%3Ccircle cx='220' cy='220' r='110' stroke='rgba(52,99,240,0.12)' stroke-width='1'/%3E%3Ccircle cx='1180' cy='640' r='90' stroke='rgba(56,189,248,0.1)' stroke-width='1'/%3E%3Cline x1='0' y1='780' x2='1440' y2='120' stroke='rgba(255,255,255,0.05)' stroke-width='1'/%3E%3Cline x1='200' y1='0' x2='900' y2='900' stroke='rgba(52,99,240,0.08)' stroke-width='1'/%3E%3Cline x1='1440' y1='340' x2='0' y2='560' stroke='rgba(255,255,255,0.04)' stroke-width='1'/%3E%3Crect x='60' y='60' width='180' height='180' stroke='rgba(255,255,255,0.06)' stroke-width='1' transform='rotate(12 150 150)'/%3E%3Crect x='1180' y='40' width='120' height='120' stroke='rgba(52,99,240,0.15)' stroke-width='1' transform='rotate(-18 1240 100)'/%3E%3Cpath d='M1320 480 L1440 480 L1380 580 Z' fill='rgba(56,189,248,0.08)'/%3E%3Cpath d='M40 400 L160 400 L100 300 Z' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E");
-        background-size: cover, cover, cover, cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        transform-origin: center;
-        animation: hero-geometry-shift 26s ease-in-out infinite;
-        will-change: transform;
+            linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 64px 64px;
+        animation: hero-bg-grid-drift 28s linear infinite;
     }
 
-    @keyframes hero-grid-drift {
-        from {
-            background-position: 0 0;
+    .hero-bg__shade {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, color-mix(in srgb, var(--color-ink) 30%, transparent), transparent, var(--color-ink));
+    }
+
+    @keyframes hero-bg-grid-drift {
+        0% {
+            transform: translate(0, 0);
         }
 
-        to {
-            background-position: 64px 64px;
+        100% {
+            transform: translate(64px, 64px);
         }
     }
 
-    @keyframes hero-orb-drift-a {
+    @keyframes hero-bg-orb-a {
         0%,
         100% {
             transform: translate(0, 0) scale(1);
         }
 
-        50% {
-            transform: translate(-4%, 3%) scale(1.08);
+        33% {
+            transform: translate(-8%, 6%) scale(1.12);
+        }
+
+        66% {
+            transform: translate(5%, -7%) scale(0.95);
         }
     }
 
-    @keyframes hero-orb-drift-b {
+    @keyframes hero-bg-orb-b {
         0%,
         100% {
             transform: translate(0, 0) scale(1);
         }
 
-        50% {
-            transform: translate(5%, -4%) scale(1.06);
+        33% {
+            transform: translate(9%, -5%) scale(1.1);
+        }
+
+        66% {
+            transform: translate(-6%, 8%) scale(0.96);
         }
     }
 
-    @keyframes hero-geometry-shift {
+    @keyframes hero-bg-geometry-drift {
         0%,
         100% {
-            transform: scale(1) translate(0, 0);
+            transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+
+        25% {
+            transform: translate(5%, -4%) scale(1.05) rotate(0.6deg);
         }
 
         50% {
-            transform: scale(1.02) translate(1%, -0.5%);
+            transform: translate(-4%, 5%) scale(1.03) rotate(0deg);
+        }
+
+        75% {
+            transform: translate(-5%, -3%) scale(1.06) rotate(-0.6deg);
         }
     }
 
     @media (prefers-reduced-motion: reduce) {
-        .hero-grid,
-        .hero-geometry,
-        .hero-glow::before,
-        .hero-glow::after {
+        .hero-bg__grid,
+        .hero-bg__geometry,
+        .hero-bg__glow::before,
+        .hero-bg__glow::after {
             animation: none;
         }
     }

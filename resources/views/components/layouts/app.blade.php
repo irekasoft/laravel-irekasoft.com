@@ -124,8 +124,8 @@
       <nav class="mt-10 flex flex-col gap-8 font-display text-3xl sm:text-4xl text-paper">
         @foreach ($navItems as $item)
           <a href="{{ route($item['route']) }}" @class([
-              'transition-colors hover:text-gold',
-              request()->routeIs($item['route']) ? 'text-blue-800' : 'text-paper',
+              'transition-colors hover:text-blue-800',
+              request()->routeIs($item['route']) ? 'text-blue-500' : 'text-paper',
           ])>{{ $item['label'] }}</a>
         @endforeach
       </nav>
@@ -154,7 +154,7 @@
       </div>
 
       <div>
-        <p class="font-mono text-[12px] uppercase tracking-wide text-gold mb-3">Orderla Suite</p>
+        <p class="font-mono text-[12px] uppercase tracking-wide text-blue-800 mb-3">Orderla Suite</p>
         <ul class="space-y-2 text-sm">
           <li><a href="https://orderla.my" target="_blank" rel="noopener"
               class="hover:text-paper transition-colors">Orderla.my</a></li>
@@ -166,7 +166,7 @@
       </div>
 
       <div>
-        <p class="font-mono text-[12px] uppercase tracking-wide text-gold mb-3">Get in touch</p>
+        <p class="font-mono text-[12px] uppercase tracking-wide text-blue-800 mb-3">Get in touch</p>
         <ul class="space-y-2 text-sm">
           <li><a href="mailto:irekasoft@gmail.com" class="hover:text-paper transition-colors">irekasoft@gmail.com</a>
           </li>

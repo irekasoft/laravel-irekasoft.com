@@ -1,13 +1,15 @@
 <x-layouts.app :immersive="true" :title="'Home'" :description="'iReka Soft builds the Orderla commerce suite — WhatsApp ordering, storefronts, and F&B point of sale — from Cyberjaya, Malaysia.'">
 
   {{-- IMMERSIVE HERO --}}
-  <section class="relative min-h-screen flex flex-col overflow-hidden">
-    <div class="absolute inset-0 hero-geometry" aria-hidden="true"></div>
-    <div class="absolute inset-0 hero-glow" aria-hidden="true"></div>
-    <div class="absolute inset-0 hero-grid opacity-50" aria-hidden="true"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink" aria-hidden="true"></div>
+  <section class="hero-stage relative min-h-screen flex flex-col overflow-hidden isolate">
+    <div class="hero-bg pointer-events-none" aria-hidden="true">
+      <div class="hero-bg__geometry"></div>
+      <div class="hero-bg__glow"></div>
+      <div class="hero-bg__grid"></div>
+      <div class="hero-bg__shade"></div>
+    </div>
 
-    <div class="relative flex flex-1 flex-col justify-center px-6 py-10">
+    <div class="relative z-10 flex flex-1 flex-col justify-center px-6 py-10">
       <div class="mx-auto w-full max-w-5xl ">
         <div class="viewfinder border border-white/25 px-6 py-10">
           <span class="viewfinder-corner" aria-hidden="true"></span>

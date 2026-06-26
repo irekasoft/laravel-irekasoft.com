@@ -64,54 +64,17 @@
   </section>
 
   {{-- WHAT WE BUILD --}}
-  <section class="bg-paper">
-    <div class="mx-auto max-w-6xl px-6 py-20 md:py-24">
+  <section class="section-dot-grid bg-paper relative" data-dot-cursor>
+    <div class="section-dot-grid__pulses" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-24">
       <h2 class="font-display text-blue-500 font-semibold text-3xl md:text-4xl tracking-tight max-w-xl">
-        One suite, three markets.
+        Orderla suite for three markets.
       </h2>
 
       <div class="mt-12 grid gap-10 md:grid-cols-3">
-        <div>
-          <img
-            src="{{ asset('images/orderla-my.jpg') }}"
-            alt="Orderla.my WhatsApp ordering"
-            class="h-48 w-full rounded-lg object-cover md:h-52"
-            loading="lazy"
-          >
-          <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.my</p>
-          <p class="mt-3 font-bold text-zinc-900 text-xl">Take orders where your customers already are.</p>
-          <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
-            A WhatsApp-native ordering flow for SMEs — no app to download.
-            Merchants set up a catalogue and start taking orders the same day.
-          </p>
-        </div>
-        <div>
-          <img
-            src="{{ asset('images/orderla-co.png') }}"
-            alt="Orderla.co storefront"
-            class="h-48 w-full rounded-lg object-cover md:h-52"
-            loading="lazy"
-          >
-          <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.co</p>
-          <p class="mt-3 font-bold text-zinc-900 text-xl">A storefront that grows with the business.</p>
-          <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
-            E-commerce storefronts ordering for brands that have outgrown a chat-only
-            setup, with the catalogue and checkout to match.
-          </p>
-        </div>
-        <div>
-          <img
-            src="{{ asset('images/orderla-fos.jpg') }}"
-            alt="Orderla FOS cafe point of sale"
-            class="h-48 w-full rounded-lg object-cover md:h-52"
-            loading="lazy"
-          >
-          <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla FOS</p>
-          <p class="mt-3 font-bold text-zinc-900 text-xl">Food ordering and mini POS system.</p>
-          <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
-            A food ordering and mini POS system built for the floor — fast order entry. Built for restaurants and cafes.
-          </p>
-        </div>
+        @foreach ($markets as $market)
+          <x-orderla-market-card :market="$market" />
+        @endforeach
       </div>
     </div>
   </section>

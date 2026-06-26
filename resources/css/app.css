@@ -493,6 +493,99 @@
         }
     }
 
+    .section-dot-grid {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        --cursor-x: 50%;
+        --cursor-y: 50%;
+    }
+
+    .section-dot-grid::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at center, rgba(11, 15, 25, 0.14) 1px, transparent 1px);
+        background-size: 28px 28px;
+        mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, black 25%, transparent 100%);
+        pointer-events: none;
+    }
+
+    .section-dot-grid::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, var(--color-paper), transparent 18%, transparent 82%, var(--color-paper));
+        pointer-events: none;
+    }
+
+    .section-dot-grid__pulses {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        mask-image: radial-gradient(ellipse 85% 75% at 50% 45%, black 25%, transparent 100%);
+    }
+
+    .section-dot-grid__pulses::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle 140px at var(--cursor-x) var(--cursor-y), rgba(56, 189, 248, 0.07), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+
+    .section-dot-grid.is-cursor-active .section-dot-grid__pulses::after {
+        opacity: 1;
+    }
+
+    .section-dot-grid__pulses span {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        margin: -1.5px 0 0 -1.5px;
+        border-radius: 50%;
+        background: rgba(11, 15, 25, 0.22);
+        opacity: calc(0.1 + var(--pulse, 0) * 0.55);
+        transform: scale(calc(1 + var(--pulse, 0) * 1.1));
+        transition: opacity 0.18s ease, transform 0.18s ease;
+        will-change: opacity, transform;
+    }
+
+    .section-dot-grid__pulses span.is-accent {
+        background: rgba(56, 189, 248, 0.3);
+    }
+
+    .section-dot-grid.is-ambient .section-dot-grid__pulses span {
+        animation: section-dot-pulse var(--dot-pulse-duration, 4s) ease-in-out infinite;
+        animation-delay: var(--dot-pulse-delay, 0s);
+    }
+
+    @keyframes section-dot-pulse {
+        0%,
+        100% {
+            opacity: 0.12;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: scale(1.6);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .section-dot-grid__pulses span {
+            animation: none !important;
+            opacity: 0.22;
+            transform: none;
+        }
+
+        .section-dot-grid__pulses::after {
+            display: none;
+        }
+    }
+
     .services-cta-band {
         position: relative;
         isolation: isolate;

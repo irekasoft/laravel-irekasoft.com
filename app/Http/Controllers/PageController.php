@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 class PageController extends Controller {
   public function home() {
-    return view('pages.home');
+    return view('pages.home', [
+      'markets' => config('orderla.markets'),
+    ]);
   }
 
   public function about() {

@@ -62,7 +62,7 @@
           <x-service-graphic.api-admin />
         </div>
         <h2 class="mt-6 font-bold text-blue-600 text-xl leading-snug">
-          API & Admin Panel
+          API & Admin Web
         </h2>
         <p class="mt-4 text-sm text-charcoal/70 leading-relaxed">
           Empowering the mobile apps with the power of cloud and let you manage mobile apps by
@@ -86,7 +86,7 @@
     </div>
   </section>
 
-  <section class="bg-paper border-t border-ink/10">
+  <section class="bg-white border-t border-ink/10">
     <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
       <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-blue-500">
         Technologies We Used
@@ -105,7 +105,7 @@
     </div>
   </section>
 
-  <section class="bg-paper">
+  <section class="bg-white">
     <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
       <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight text-blue-500">
         Previous Clients

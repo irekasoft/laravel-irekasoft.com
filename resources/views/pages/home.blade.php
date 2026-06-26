@@ -38,6 +38,9 @@
 
           <nav
             class="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-white/45">
+            <a href="/apps" target="_blank" rel="noopener"
+              class="hover:text-white transition-colors">Apps</a>
+            <span aria-hidden="true">/</span>
             <a href="https://orderla.my" target="_blank" rel="noopener"
               class="hover:text-white transition-colors">Orderla.my</a>
             <span aria-hidden="true">/</span>

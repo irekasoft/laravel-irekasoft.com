@@ -4,26 +4,28 @@
 
 <x-layouts.app :title="$app['name']" :description="$app['tagline']">
 
-  <section class="bg-ink text-paper">
-    <div class="mx-auto max-w-6xl px-6 pt-4 pb-8">
+  <section class="relative overflow-hidden bg-ink text-paper">
+    <x-app-show-bg />
+
+    <div class="relative z-10 mx-auto max-w-6xl px-6 pt-4 pb-8">
       <a href="{{ route('apps.index') }}"
-        class="font-mono text-[12px] uppercase tracking-[0.14em] text-paper/50 hover:text-gold transition-colors">
+        class="font-mono text-[12px] uppercase tracking-[0.14em] text-white hover:text-gold transition-colors">
         ← All apps
       </a>
 
-      <div class="mt-4 flex flex-col gap-8 md:flex-row md:items-start">
+      <div class="mt-5 flex flex-col gap-6 md:flex-row md:items-start">
         <x-app-icon :app="$app" size="lg" class="shadow-md" />
 
         <div class="max-w-2xl">
           <p class="font-mono text-[12px] uppercase tracking-[0.14em] text-gold">{{ $platformLabels }}</p>
-          <h1 class="mt-3 font-display font-semibold text-4xl md:text-5xl tracking-tight">
+          <h1 class="mt-0 font-display font-semibold text-4xl md:text-5xl tracking-tight">
             {{ $app['name'] }}
           </h1>
-          <p class="mt-5 text-lg text-paper/70 leading-relaxed">{{ $app['tagline'] }}</p>
+          <p class="mt-1 text-lg text-paper/70 leading-relaxed">{{ $app['tagline'] }}</p>
 
           @if ($app['store_url'])
             <a href="{{ $app['store_url'] }}" target="_blank" rel="noopener"
-              class="mt-8 inline-flex items-center gap-2 rounded-sm bg-paper px-5 py-3 font-mono text-[12px] uppercase tracking-wide text-ink transition-colors hover:bg-gold hover:text-paper">
+              class="mt-4 inline-flex items-center gap-2 rounded-sm bg-paper px-5 py-3 font-mono text-[12px] uppercase tracking-wide text-ink transition-colors hover:bg-blue-500 hover:text-paper">
               Download on the App Store
             </a>
           @else

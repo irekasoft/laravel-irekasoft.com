@@ -6,7 +6,7 @@ platforms:
 icon: kamus.png
 icon_bg: '#16A085'
 icon_label: Km
-store_url:
+store_url: https://irekasoft.com/_main/wp-content/themes/irekaweb16/images/app_store.png
 features:
   - English to Bahasa Malaysia and reverse lookup
   - Offline-friendly word list for common terms

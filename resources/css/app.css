@@ -208,6 +208,82 @@
         }
     }
 
+    .app-show-bg {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
+
+    .app-show-bg__field {
+        position: absolute;
+        inset: -8% -4%;
+    }
+
+    .app-show-bg__tile {
+        position: absolute;
+        width: var(--tile-size);
+        height: var(--tile-size);
+        border-radius: 22%;
+        background: linear-gradient(160deg, rgba(238, 241, 248, 0.28), rgba(238, 241, 248, 0.08));
+        border: 1px solid rgba(255, 255, 255, 0.38);
+        box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.08),
+            0 0 18px rgba(255, 255, 255, 0.12),
+            0 16px 40px rgba(0, 0, 0, 0.45),
+            0 4px 14px rgba(0, 0, 0, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.45),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .app-show-bg__tile--pulse {
+        opacity: 0.14;
+        animation: app-show-bg-tile-fade var(--tile-fade-duration, 5s) ease-in-out infinite;
+        animation-delay: var(--tile-fade-delay, 0s);
+        will-change: opacity, box-shadow, border-color;
+    }
+
+    @keyframes app-show-bg-tile-fade {
+        0%,
+        100% {
+            opacity: 0.12;
+            border-color: rgba(255, 255, 255, 0.14);
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.03),
+                0 0 8px rgba(255, 255, 255, 0.04),
+                0 12px 32px rgba(0, 0, 0, 0.35),
+                0 3px 10px rgba(0, 0, 0, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+        }
+
+        50% {
+            opacity: var(--tile-opacity-max, 0.7);
+            border-color: rgba(255, 255, 255, 0.55);
+            box-shadow:
+                0 0 0 1px rgba(255, 255, 255, 0.14),
+                0 0 24px rgba(255, 255, 255, 0.22),
+                0 18px 44px rgba(0, 0, 0, 0.48),
+                0 5px 16px rgba(0, 0, 0, 0.32),
+                inset 0 1px 0 rgba(255, 255, 255, 0.62),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+        }
+    }
+
+    .app-show-bg__shade {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(to right, var(--color-ink) 0%, color-mix(in srgb, var(--color-ink) 72%, transparent) 38%, transparent 68%),
+            linear-gradient(to bottom, transparent 60%, var(--color-ink) 100%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .app-show-bg__tile--pulse {
+            animation: none;
+            opacity: var(--tile-opacity-max, 0.6);
+        }
+    }
+
     .viewfinder {
         position: relative;
     }

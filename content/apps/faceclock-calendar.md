@@ -6,7 +6,7 @@ platforms:
 icon: faceclock-calendar.png
 icon_bg: '#2C3E50'
 icon_label: CC
-store_url:
+store_url: http://appstore.com/irekasoft/faceclockwithcalendar
 features:
   - Digital clock and calendar on a single screen
   - Month grid for quick date reference

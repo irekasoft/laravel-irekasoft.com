@@ -23,10 +23,7 @@
   <rect x="126" y="52" width="88" height="32" rx="3" fill="#22D3EE" />
   <rect x="134" y="60" width="28" height="3" rx="1" fill="#E0F2FE" />
   <rect x="134" y="68" width="20" height="3" rx="1" fill="#E0F2FE" />
-  <path d="M186 72l8 6-8 6" stroke="#E0F2FE" stroke-width="1.5" stroke-linecap="round"
-    stroke-linejoin="round" />
-  <path d="M134 76l-6 4 6 4" stroke="#E0F2FE" stroke-width="1.5" stroke-linecap="round"
-    stroke-linejoin="round" />
+
   <circle cx="170" cy="68" r="1.5" fill="#E0F2FE" />
   <circle cx="176" cy="68" r="1.5" fill="#E0F2FE" />
   <circle cx="182" cy="68" r="1.5" fill="#E0F2FE" />

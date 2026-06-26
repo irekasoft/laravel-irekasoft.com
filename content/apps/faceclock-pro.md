@@ -6,7 +6,7 @@ platforms:
 icon: faceclock-pro.png
 icon_bg: '#C0392B'
 icon_label: FC
-store_url:
+store_url: https://itunes.apple.com/us/app/faceclock-pro/id673746301?mt=8
 features:
   - Elegant analogue face with smooth second hand
   - Portrait and landscape layouts

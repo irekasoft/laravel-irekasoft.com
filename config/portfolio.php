@@ -15,7 +15,7 @@ return [
             'paragraphs' => [
                 'Design the wireframe & mockup for the app. Developed the mobile apps using React Native.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Group-10-1-1024x621.png',
+            'image' => 'portfolio/Group-10-1-1024x621.png',
         ],
         [
             'title' => 'Lockem App – Mobile App for Doctors to work as locum',
@@ -24,7 +24,7 @@ return [
                 'Technologies' => 'React Native (deployed for iOS & Android)',
                 'Client' => 'Whitecoat Labs',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Screenshot-2019-09-26-at-12.21.49-AM.png',
+            'image' => 'portfolio/Screenshot-2019-09-26-at-12.21.49-AM.png',
         ],
         [
             'title' => 'Int3tree App – Tips for Parenting (V1.0)',
@@ -38,7 +38,7 @@ return [
                 'The app consist API integration with Laravel backend.',
                 'Push notifiction when the new post from consultant. Real-time chat with consultant.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/D6ejz5TUYAAav-T.jpg-large.jpeg',
+            'image' => 'portfolio/D6ejz5TUYAAav-T.jpg-large.jpeg',
         ],
         [
             'title' => 'Etikaf (V1.1)',
@@ -50,7 +50,7 @@ return [
             'paragraphs' => [
                 'We develop the app using React Native on this release from native (Swift / Java) app. We have merge features, start from basic with push notification integration. We help to setup the cron-job to send push notifications 2 hours before the events started.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Slice-1024x425.png',
+            'image' => 'portfolio/Slice-1024x425.png',
         ],
         [
             'title' => 'AR Santan Recipe Catalogue',
@@ -64,7 +64,7 @@ return [
                 'We have developed and design a recipe book that appears virtually when user scan a Santan packaging. It uses Unity game engine with Vuforia AR engine to create an emmersive AR experience.',
                 'We carefully craft the 3D object that can flip page by page and also be able to use table of contents to directly go to specific page.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Group-2-4-1024x527.png',
+            'image' => 'portfolio/Group-2-4-1024x527.png',
         ],
         [
             'title' => 'RAISE Reality Asset with AR',
@@ -83,7 +83,7 @@ return [
                 'Backend admin with API',
                 'ARKit for Augmented Reality experience',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Artboard-19.png',
+            'image' => 'portfolio/Artboard-19.png',
         ],
         [
             'title' => 'Etikaf',
@@ -97,7 +97,7 @@ return [
                 'Design and develop mobile app for iOS. Listing and viewing events in masjid under JAKIM.',
                 'The app able to receive push notifications and open the specific view upon tapping the notification banner.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Screen-Shot-2018-07-05-at-8.22.45-PM.png',
+            'image' => 'portfolio/Screen-Shot-2018-07-05-at-8.22.45-PM.png',
         ],
         [
             'title' => 'Bateriku.com Android V2 Upgrade – Customer, Rider & Branch Apps',
@@ -171,7 +171,7 @@ return [
                 ['label' => 'Get from Google Play', 'url' => 'https://play.google.com/store/apps/details?id=com.bateriku.customer&hl=en'],
                 ['label' => 'Case Study', 'url' => 'https://irekasoft.com/cs-bateriku-apps'],
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Screen-Shot-2016-12-20-at-1.07.08-AM-1.png',
+            'image' => 'portfolio/Screen-Shot-2016-12-20-at-1.07.08-AM-1.png',
         ],
         [
             'title' => 'MAST Internet Measurement',
@@ -195,8 +195,8 @@ return [
                 'The app requires account to read news.',
             ],
             'images' => [
-                'https://irekasoft.com/_main/wp-content/uploads/device-2016-04-21-211640-522x1024.png',
-                'https://irekasoft.com/_main/wp-content/uploads/device-2016-04-21-202037-1024x703.png',
+                'portfolio/device-2016-04-21-211640-522x1024.png',
+                'portfolio/device-2016-04-21-202037-1024x703.png',
             ],
         ],
         [
@@ -244,7 +244,7 @@ return [
                 'We communicate with client with Telegram app.',
                 'We made the graph, donought and pie chart from scratch.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/Pelaporan-eCakna-1024x651.jpg',
+            'image' => 'portfolio/Pelaporan-eCakna-1024x651.jpg',
         ],
         [
             'title' => 'World Heritage Okinawa : R-Thinka',
@@ -275,7 +275,7 @@ return [
                 'Admin can rate the report.',
                 'We communicate with client with Whtasapp app.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/eaduan-1024x557.jpg',
+            'image' => 'portfolio/eaduan-1024x557.jpg',
         ],
         [
             'title' => 'Sync Mobile Apps : Sync Media (MVP)',
@@ -308,8 +308,8 @@ return [
                 'We use WhatsApp as communication tool among developer and clients.',
             ],
             'images' => [
-                'https://irekasoft.com/_main/wp-content/uploads/Screen-Shot-2015-12-03-at-4.23.21-PM-300x246.png',
-                'https://irekasoft.com/_main/wp-content/uploads/Screen-Shot-2015-12-03-at-4.23.52-PM-300x287.png',
+                'portfolio/Screen-Shot-2015-12-03-at-4.23.21-PM-300x246.png',
+                'portfolio/Screen-Shot-2015-12-03-at-4.23.52-PM-300x287.png',
             ],
         ],
         [
@@ -322,7 +322,7 @@ return [
                 'We created also the game level app for Mac so the client can design his own level.',
                 'Using box2d physics engine.',
             ],
-            'image' => 'https://irekasoft.com/_main/wp-content/uploads/1899628_465177693581985_384801836_o-1024x768.jpg',
+            'image' => 'portfolio/1899628_465177693581985_384801836_o-1024x768.jpg',
         ],
     ],
 

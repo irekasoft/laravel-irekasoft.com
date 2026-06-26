@@ -108,7 +108,7 @@
                 'grid gap-4' => count($images) > 1,
             ])>
               @foreach ($images as $image)
-                <img src="{{ $image }}" alt="{{ $project['title'] }}"
+                <img src="{{ asset('images/' . $image) }}" alt="{{ $project['title'] }}"
                   @class([
                       'w-full rounded-sm border object-cover',
                       'border-ink/10' => $isEven,

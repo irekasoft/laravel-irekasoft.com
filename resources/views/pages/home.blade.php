@@ -23,7 +23,7 @@
           <p
             class="mt-2 max-w-2xl font-mono text-[11px] md:text-[12px] uppercase leading-relaxed tracking-[0.14em] text-white/70 text-balance">
             A modern software development studio — UI/UX design, web apps, and mobile development.
-            Working on Laravel, React, and React Native.
+            Working on Laravel, React & React Native.
           </p>
 
           <a

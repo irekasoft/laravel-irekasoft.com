@@ -22,7 +22,7 @@
         'bg-paper' => $loop->even,
         'bg-ink-soft text-paper' => $loop->odd,
     ])>
-      <div class="mx-auto max-w-6xl px-6 py-5">
+      <div class="mx-auto max-w-6xl px-6 pt-6 pb-10">
         <h2 @class([
             'font-display font-semibold text-2xl md:text-3xl tracking-tight mb-8',
             'text-ink' => $loop->even,

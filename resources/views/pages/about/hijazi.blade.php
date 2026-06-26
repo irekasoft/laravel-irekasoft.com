@@ -62,7 +62,7 @@
       'year' => '2016',
       'items' => [
         'Q1 Learn Laravel',
-        'Q3 Learn UI/UX from Meng To',
+        'Q3 Learn UI/UX (Design + Code Course)',
         'Q3 Learn Swift 3',
       ],
     ],
@@ -90,7 +90,7 @@
     [
       'year' => '2020',
       'items' => [
-        'Start working on Orderla.my',
+        'Launched Orderla.my',
       ],
     ],
     [
@@ -126,6 +126,9 @@
       ],
     ],
   ];
+
+  $timelinePulseSlot = 0.65;
+  $timelinePulseCycle = count($timeline) * $timelinePulseSlot;
 @endphp
 
 <x-layouts.app
@@ -224,8 +227,7 @@
                 <p>
                     Then came the Windows 9x era, dial-up internet, and the reformasi period in
                     1998. I made websites with Microsoft FrontPage and uploaded them to
-                    <a href="http://amplicast.tripod.com" target="_blank" rel="noopener"
-                        class="text-terracotta hover:underline">tripod.com</a> — manually linking
+                    tripod.com — manually linking
                     HTML pages one by one. Later I used Macromedia Flash and Adobe Dreamweaver.
                 </p>
                 <p>
@@ -259,10 +261,17 @@
                         @php $isLeft = $index % 2 === 0; @endphp
                         <div class="relative grid pb-12 last:pb-0 md:grid-cols-2 md:gap-x-16">
                             <div
-                                class="absolute left-3 top-1 z-10 flex h-6 w-6 -translate-x-1/2 items-center justify-center md:left-1/2"
+                                class="absolute left-3 top-1 z-10 -translate-x-1/2 md:left-1/2"
                                 aria-hidden="true"
                             >
-                                <span class="h-3 w-3 rounded-full bg-gold ring-4 ring-ink"></span>
+                                <span class="timeline-dot">
+                                    <span
+                                        class="timeline-dot__pulse"
+                                        style="animation-duration: {{ $timelinePulseCycle }}s; animation-delay: {{ -$index * $timelinePulseSlot }}s"
+                                    ></span>
+                                    <span class="timeline-dot__border"></span>
+                                    <span class="timeline-dot__core"></span>
+                                </span>
                             </div>
 
                             <div
@@ -277,8 +286,8 @@
                                 'pl-10 md:col-start-1 md:pl-0 md:pr-12 md:text-right' => $isLeft,
                                 'pl-10 md:col-start-2 md:pl-12' => ! $isLeft,
                             ])>
-                                <p class="font-display text-2xl text-gold">{{ $entry['year'] }}</p>
-                                <ul class="mt-3 space-y-2 text-sm leading-relaxed text-paper/70 md:text-base">
+                                <p class="font-bold text-2xl text-gold">{{ $entry['year'] }}</p>
+                                <ul class="mt-2 space-y-1 text-sm leading-relaxed text-paper/70">
                                     @foreach ($entry['items'] as $item)
                                         <li>{{ $item }}</li>
                                     @endforeach

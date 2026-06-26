@@ -9,6 +9,7 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
     --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, monospace;
+    --font-serif: 'IBM Plex Serif', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 
     --color-ink: #07090D;
     --color-ink-soft: #10141C;
@@ -324,5 +325,82 @@
         bottom: -1px;
         right: -1px;
         border-width: 0 1px 1px 0;
+    }
+
+    .timeline-dot {
+        position: relative;
+        display: flex;
+        height: 1.5rem;
+        width: 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .timeline-dot__core {
+        position: relative;
+        z-index: 3;
+        height: 0.625rem;
+        width: 0.625rem;
+        border-radius: 9999px;
+        background-color: var(--color-gold);
+    }
+
+    .timeline-dot__border {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        border-radius: 9999px;
+        border: 1.5px solid color-mix(in srgb, var(--color-gold) 85%, white);
+        background-color: color-mix(in srgb, var(--color-gold) 12%, var(--color-ink));
+    }
+
+    .timeline-dot__pulse {
+        position: absolute;
+        inset: -2px;
+        z-index: 1;
+        border-radius: 9999px;
+        border: 1px solid var(--color-gold);
+        opacity: 0;
+        animation: timeline-dot-pulse-sequence linear infinite;
+    }
+
+    @keyframes timeline-dot-pulse-sequence {
+        0% {
+            transform: scale(0.9);
+            opacity: 0.85;
+        }
+
+        3% {
+            transform: scale(2.4);
+            opacity: 0;
+        }
+
+        3.01%,
+        100% {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+    }
+
+    .services-cta-band {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background-color: var(--color-ink-soft);
+        background-image:
+            radial-gradient(ellipse 60% 50% at 12% 18%, rgba(56, 189, 248, 0.2), transparent 62%),
+            radial-gradient(ellipse 55% 45% at 88% 72%, rgba(124, 58, 237, 0.16), transparent 60%),
+            radial-gradient(ellipse 45% 40% at 50% 100%, rgba(255, 215, 0, 0.07), transparent 58%),
+            linear-gradient(160deg, rgba(16, 20, 28, 0.2) 0%, rgba(16, 20, 28, 0.92) 55%, rgba(7, 9, 13, 1) 100%);
+    }
+
+    .services-cta-band::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 24px 24px;
+        opacity: 0.35;
+        pointer-events: none;
     }
 }

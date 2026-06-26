@@ -66,7 +66,13 @@
 
       <div class="mt-12 grid gap-10 md:grid-cols-3">
         <div>
-          <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.my</p>
+          <img
+            src="{{ asset('images/orderla-my.jpg') }}"
+            alt="Orderla.my WhatsApp ordering"
+            class="h-48 w-full rounded-lg object-cover md:h-52"
+            loading="lazy"
+          >
+          <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.my</p>
           <p class="mt-3 font-display text-blue-500 text-xl">Take orders where your customers already are.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
             A WhatsApp-native ordering flow for SMEs — no app to download.
@@ -74,7 +80,13 @@
           </p>
         </div>
         <div>
-          <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.co</p>
+          <img
+            src="{{ asset('images/orderla-co.png') }}"
+            alt="Orderla.co storefront"
+            class="h-48 w-full rounded-lg object-cover md:h-52"
+            loading="lazy"
+          >
+          <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.co</p>
           <p class="mt-3 font-display text-blue-500 text-xl">A storefront that grows with the business.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
             E-commerce storefronts and B2B ordering for brands that have outgrown a chat-only
@@ -82,7 +94,13 @@
           </p>
         </div>
         <div>
-          <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla FOS</p>
+          <img
+            src="{{ asset('images/orderla-fos.jpg') }}"
+            alt="Orderla FOS cafe point of sale"
+            class="h-48 w-full rounded-lg object-cover md:h-52"
+            loading="lazy"
+          >
+          <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla FOS</p>
           <p class="mt-3 font-display text-blue-500 text-xl">Food ordering and mini POS system.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
             A food ordering and mini POS system built for the floor — fast order entry. Built for restaurants and cafes.

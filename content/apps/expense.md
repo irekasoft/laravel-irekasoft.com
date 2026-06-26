@@ -7,6 +7,7 @@ icon: expense.png
 icon_bg: '#27AE60'
 icon_label: Ex
 store_url: https://apps.apple.com/my/app/expenseapp-lite/id1470632577
+video_url: https://youtu.be/JK1fvA3If2c?si=Dn41L1bmPA-BKaAG
 features:
   - Fast entry for everyday purchases
   - Simple categories without setup overhead

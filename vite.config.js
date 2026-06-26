@@ -18,6 +18,9 @@ export default defineConfig({
                 bunny('Space Mono', {
                     weights: [400, 700],
                 }),
+                bunny('IBM Plex Serif', {
+                    weights: [400, 500, 600],
+                }),
             ],
         }),
         tailwindcss(),

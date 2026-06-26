@@ -72,14 +72,15 @@
     </div>
   </section>
 
-  <section class="bg-paper border-t border-ink/10">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
-      <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-charcoal/80">
+  <section class="services-cta-band text-paper border-t border-paper/10">
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
+      <h2 class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto">
         Hire us to develop your custom mobile apps.
       </h2>
       <div class="mt-8">
         <a href="{{ route('services.portfolio') }}"
-          class="font-mono text-[13px] uppercase tracking-wide bg-ink text-paper px-6 py-3 rounded-sm hover:bg-charcoal transition-colors">
+          class="font-mono text-[13px] uppercase tracking-wide bg-gold text-black px-6 py-3 rounded-sm hover:bg-gold/80 transition-colors">
+          <i class="bi bi-collection mr-1"></i>
           See our portfolio
         </a>
       </div>
@@ -96,9 +97,9 @@
     </div>
   </section>
 
-  <section class="bg-ink-soft text-paper">
-    <div class="mx-auto max-w-6xl px-6 py-20 md:py-28 text-center">
-      <blockquote class="font-display text-2xl md:text-3xl tracking-tight leading-snug max-w-3xl mx-auto">
+  <section class="services-cta-band text-paper border-t border-paper/10">
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
+      <blockquote class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto">
         &ldquo;Plan &amp; design before jumping into coding to<br class="hidden sm:inline">
         make sure we get everything covered&rdquo;
       </blockquote>
@@ -148,6 +149,7 @@
       <div class="mt-8">
         <a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener"
           class="font-mono text-[13px] uppercase tracking-wide bg-green-500 text-white px-6 py-3 rounded-sm hover:bg-green-600 transition-colors">
+          <i class="bi bi-whatsapp"></i>
           Send enquiry now
         </a>
       </div>

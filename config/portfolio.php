@@ -2,6 +2,12 @@
 
 return [
 
+    'hero' => [
+        'image' => 'heroes/portfolio.jpg',
+        'credit' => 'Denny Müller',
+        'credit_url' => 'https://unsplash.com/photos/2LowviVHZ-E',
+    ],
+
     'projects' => [
         [
             'title' => 'CARA Technician App',

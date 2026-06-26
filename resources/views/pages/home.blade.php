@@ -73,7 +73,7 @@
             loading="lazy"
           >
           <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.my</p>
-          <p class="mt-3 font-display text-blue-500 text-xl">Take orders where your customers already are.</p>
+          <p class="mt-3 font-bold text-zinc-900 text-xl">Take orders where your customers already are.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
             A WhatsApp-native ordering flow for SMEs — no app to download.
             Merchants set up a catalogue and start taking orders the same day.
@@ -87,9 +87,9 @@
             loading="lazy"
           >
           <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla.co</p>
-          <p class="mt-3 font-display text-blue-500 text-xl">A storefront that grows with the business.</p>
+          <p class="mt-3 font-bold text-zinc-900 text-xl">A storefront that grows with the business.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
-            E-commerce storefronts and B2B ordering for brands that have outgrown a chat-only
+            E-commerce storefronts ordering for brands that have outgrown a chat-only
             setup, with the catalogue and checkout to match.
           </p>
         </div>
@@ -101,7 +101,7 @@
             loading="lazy"
           >
           <p class="mt-5 font-mono text-[12px] uppercase tracking-wide text-terracotta">Orderla FOS</p>
-          <p class="mt-3 font-display text-blue-500 text-xl">Food ordering and mini POS system.</p>
+          <p class="mt-3 font-bold text-zinc-900 text-xl">Food ordering and mini POS system.</p>
           <p class="mt-3 text-sm text-charcoal/70 leading-relaxed">
             A food ordering and mini POS system built for the floor — fast order entry. Built for restaurants and cafes.
           </p>
@@ -145,16 +145,16 @@
   </section>
 
   {{-- CTA --}}
-  <section class="bg-paper">
-    <div class="mx-auto max-w-6xl px-6 py-20 md:py-24 text-center">
-      <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight text-blue-500">
-        Building something a merchant can run their whole business on.
+  <section class="services-cta-band text-paper border-t border-paper/10">
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
+      <h2 class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto">
+        "Building something a merchant can run their whole business on."
       </h2>
-      <p class="mt-4 text-charcoal/70">Want to see it, or build something like it with us?</p>
+      <p class="mt-4 font-serif text-lg text-paper/70">Want to see it, or build something like it with us?</p>
       <div class="mt-8 flex flex-wrap gap-4 justify-center">
         <a href="{{ route('services') }}"
           class="font-mono text-[13px] uppercase tracking-wide bg-gold text-black px-6 py-3 rounded-sm hover:bg-gold/80 transition-colors">
-          <i class="bi bi-person-lines-fill mr-1"></i>
+          <i class="bi bi-briefcase mr-1"></i>
           Our Services
         </a>
       </div>

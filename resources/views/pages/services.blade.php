@@ -13,21 +13,22 @@
       </h1>
       <div class="mt-6 max-w-2xl text-paper/70 leading-relaxed space-y-4">
         <p>
-          We can help you to <em>plan</em>, <em>design</em>, <em>develop</em> and <em>publish</em>
+          We can help you <em>plan</em>, <em>design</em>, <em>develop</em>, and <em>publish</em>
           mobile apps for <strong class="text-paper">iPhone</strong> and
-          <strong class="text-paper">Android</strong> platforms with
-          <strong class="text-paper">React Native technology</strong>.
+          <strong class="text-paper">Android</strong> with
+          <strong class="text-paper">React Native</strong>, and web apps, APIs, and admin panels
+          with <strong class="text-paper">Laravel</strong>.
         </p>
         <p>
-          React Native is a <em>cross-platform</em> mobile apps development technology that help
-          many Fortune 500 companies build their apps efficiently. React Native generate
-          <strong class="text-paper">native user interface</strong> for respective platforms and
-          it performs amazing.
+          <strong class="text-paper">React Native</strong> is a <em>cross-platform</em> stack that
+          helps companies ship native mobile experiences from a single codebase.
+          <strong class="text-paper">Laravel</strong> powers the backends, dashboards, and
+          business logic that mobile and web products rely on.
         </p>
         <p>
-          Now <strong class="text-paper">performance</strong> and
-          <strong class="text-paper">maintainability</strong> can live together thanks to React
-          Native technology.
+          Together, they let <strong class="text-paper">performance</strong> and
+          <strong class="text-paper">maintainability</strong> live in the same project — fast
+          interfaces on the front, solid foundations behind them.
         </p>
       </div>
   </x-page-hero>

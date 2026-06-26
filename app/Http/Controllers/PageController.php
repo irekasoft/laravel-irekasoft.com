@@ -25,6 +25,7 @@ class PageController extends Controller {
 
   public function portfolio() {
     return view('pages.portfolio', [
+      'hero' => config('portfolio.hero'),
       'projects' => config('portfolio.projects'),
     ]);
   }

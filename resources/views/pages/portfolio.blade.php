@@ -3,18 +3,18 @@
     :description="'Client mobile app portfolio from iReka Soft — React Native, iOS, Android, AR, and Laravel projects from 2012 to 2020.'"
 >
 
-  <section class="bg-ink text-paper">
-    <div class="mx-auto max-w-6xl px-6 pb-16 pt-28">
-      <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">
-        <a href="{{ route('services') }}" class="hover:text-paper transition-colors">Services</a>
-        <span class="mx-2 text-paper/30">/</span>
-        Portfolio
-      </p>
-      <h1 class="mt-3 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl leading-tight">
-        Portfolio : Mobile Apps
-      </h1>
-    </div>
-  </section>
+  <x-page-hero
+    :image="asset('images/' . $hero['image'])"    
+  >
+    <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">
+      <a href="{{ route('services') }}" class="hover:text-paper transition-colors">Services</a>
+      <span class="mx-2 text-paper/30">/</span>
+      Portfolio
+    </p>
+    <h1 class="mt-3 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl leading-tight">
+      Portfolio : Mobile Apps
+    </h1>
+  </x-page-hero>
 
   @foreach ($projects as $project)
     @php

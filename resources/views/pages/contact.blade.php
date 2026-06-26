@@ -29,11 +29,13 @@
             <div>
                 <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Social</p>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="https://facebook.com/irekasoft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">Facebook</a></li>
                     <li><a href="https://instagram.com/irekasoft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">Instagram</a></li>
+                    <li><a href="https://facebook.com/irekasoft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">Facebook</a></li>
                     <li><a href="https://www.linkedin.com/company/ireka-soft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">LinkedIn</a></li>
                     <li><a href="https://github.com/irekasoft" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">GitHub</a></li>
+                    <li><a href="https://irekasoft.blogspot.com" target="_blank" rel="noopener" class="hover:text-terracotta transition-colors">Blogspot</a></li>
                 </ul>
+           
             </div>
 
             <div>

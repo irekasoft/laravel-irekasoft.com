@@ -3,7 +3,7 @@ name: Kamus
 tagline: English ⇄ Bahasa Malaysia dictionary.
 platforms:
   - ios
-  - android
+icon: kamus.png
 icon_bg: '#16A085'
 icon_label: Km
 store_url:

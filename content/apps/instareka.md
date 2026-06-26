@@ -3,6 +3,7 @@ name: InstaReka
 tagline: Photo text overlays, fast.
 platforms:
   - ios
+icon: instareka.png
 icon_bg: '#E67E22'
 icon_label: IR
 store_url:

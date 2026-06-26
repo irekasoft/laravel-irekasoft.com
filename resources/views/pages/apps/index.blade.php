@@ -3,7 +3,7 @@
   <section class="bg-paper border-b border-ink/10 pt-12">
     <div class="mx-auto max-w-6xl px-6 pt-0 pb-10 text-center">
       <h1 class="font-display font-semibold text-4xl md:text-5xl tracking-tight text-ink">
-        Mobile Apps
+        Apps
       </h1>
       <p class="mt-6 font-mono text-[12px] uppercase tracking-[0.14em] text-charcoal/50">
         @foreach ($platforms as $label)

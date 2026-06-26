@@ -3,6 +3,7 @@ name: FaceClock Calendar
 tagline: A simple clock with a calendar.
 platforms:
   - ios
+icon: faceclock-calendar.png
 icon_bg: '#2C3E50'
 icon_label: CC
 store_url:

@@ -3,6 +3,7 @@ name: FaceLapse
 tagline: It's a fun way to capture each day's moment.
 platforms:
   - ios
+icon: facelapse.png
 icon_bg: '#8E44AD'
 icon_label: FL
 store_url:

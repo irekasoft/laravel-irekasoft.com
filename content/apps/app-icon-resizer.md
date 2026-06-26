@@ -3,6 +3,7 @@ name: App Icon Resizer
 tagline: Generate every icon size a Mac app needs.
 platforms:
   - mac
+icon: app-icon-resizer.png
 icon_bg: '#566573'
 icon_label: Ai
 store_url:

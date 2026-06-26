@@ -3,6 +3,7 @@ name: Expense
 tagline: Quickly track your spending.
 platforms:
   - ios
+icon: expense.png
 icon_bg: '#27AE60'
 icon_label: Ex
 store_url:

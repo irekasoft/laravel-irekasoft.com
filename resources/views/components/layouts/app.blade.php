@@ -28,8 +28,8 @@
         ['route' => 'apps.index', 'label' => 'Apps'],
         ['route' => 'services', 'label' => 'Services'],
         ['route' => 'about', 'label' => 'About'],
+        ['route' => 'contact', 'label' => 'Contact'],
         // ['route' => 'products', 'label' => 'Products'],
-        // ['route' => 'contact', 'label' => 'Contact'],
     ];
     $ctaHref = $immersive ? route('products') : 'https://wa.me/601135859242';
     $ctaLabel = $immersive ? 'Explore iReka Soft' : 'WhatsApp Us';
@@ -88,14 +88,14 @@
         </a>
 
         <button type="button" id="mobile-menu-button" @class([
-            'lg:hidden relative z-[120] flex h-10 w-10 items-center justify-center -mr-2',
+            'cursor-pointer lg:hidden relative z-[120] flex h-10 w-10 items-center justify-start ml-2 -mr-4',
             'text-ink' => !$immersive,
             'text-white' => $immersive,
         ]) aria-expanded="false"
           aria-controls="mobile-menu" aria-label="Open menu">
           <span
-            class="mobile-menu-bar absolute block h-0.5 w-5 bg-current transition-all duration-300 -translate-y-1.5"></span>
-          <span class="mobile-menu-bar absolute block h-0.5 w-5 bg-current transition-all duration-300"></span>
+            class="mobile-menu-bar absolute block h-0.5 w-5 bg-blue-500 transition-all duration-300 -translate-y-1.5"></span>
+          <span class="mobile-menu-bar absolute block h-0.5 w-4 bg-current transition-all duration-300"></span>
           <span
             class="mobile-menu-bar absolute block h-0.5 w-5 bg-current transition-all duration-300 translate-y-1.5"></span>
         </button>
@@ -108,13 +108,12 @@
     data-open="false" aria-hidden="true">
     <div class="absolute inset-0 bg-ink/95 backdrop-blur-md" data-mobile-menu-backdrop aria-hidden="true"></div>
 
-    <div class="relative z-10 flex h-full flex-col px-6 pt-6 pb-10">
+    <div class="relative z-10 flex h-full flex-col px-6 pt-6 pb-10 -mt-2">
       <div class="flex shrink-0 justify-end">
         <button type="button" id="mobile-menu-close"
-          class="relative z-20 flex items-center gap-2 border border-paper/25 bg-ink px-3 py-2 font-mono text-[12px] uppercase tracking-[0.14em] text-paper transition-colors hover:border-paper/50"
-          aria-label="Close menu">
-          <span>Close</span>
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          class="cursor-pointer relative z-20 flex items-center gap-2  border-paper/25 bg-ink px-3 py-2 font-mono text-[16px] uppercase tracking-[0.14em] text-paper transition-colors hover:border-paper/50"
+          aria-label="Close menu">          
+          <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
             aria-hidden="true">
             <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
           </svg>
@@ -130,10 +129,10 @@
         @endforeach
       </nav>
 
-      <a href="{{ $ctaHref }}" @if ($ctaExternal) target="_blank" rel="noopener" @endif
+      {{-- <a href="{{ $ctaHref }}" @if ($ctaExternal) target="_blank" rel="noopener" @endif
         class="mt-auto font-mono text-[13px] uppercase tracking-[0.12em] bg-blue-800 text-paper px-6 py-3.5 rounded-sm text-center hover:bg-blue-900 transition-colors">
         {{ $ctaLabel }}
-      </a>
+      </a> --}}
     </div>
   </div>
 
@@ -144,9 +143,9 @@
   <footer class="bg-ink text-paper/80">
     <div class="mx-auto max-w-6xl px-6 py-14 grid gap-10 md:grid-cols-4">
       <div class="md:col-span-2">
-        <p class="font-display text-xl text-paper">iReka Soft</p>
-        <p class="mt-3 text-sm leading-relaxed max-w-sm text-paper/60">
-          An software development studio in Cyberjaya, Malaysia.
+        <p class="font-bold text-xl text-paper">ireka<span class="text-blue-400">soft.</span></p>
+        <p class="mt-0 text-sm leading-relaxed max-w-sm text-paper/60">
+          A software development studio in Cyberjaya, Malaysia.
         </p>
         <p class="mt-4 font-mono text-[12px] uppercase tracking-wide text-paper/40">
           iReka Soft Enterprise · Co. Reg. 201503132920 · Est. 2015
@@ -154,7 +153,7 @@
       </div>
 
       <div>
-        <p class="font-mono text-[12px] uppercase tracking-wide text-blue-800 mb-3">Orderla Suite</p>
+        <p class="font-mono text-[12px] uppercase tracking-wide text-blue-400 mb-3">Orderla Suite</p>
         <ul class="space-y-2 text-sm">
           <li><a href="https://orderla.my" target="_blank" rel="noopener"
               class="hover:text-paper transition-colors">Orderla.my</a></li>
@@ -166,7 +165,7 @@
       </div>
 
       <div>
-        <p class="font-mono text-[12px] uppercase tracking-wide text-blue-800 mb-3">Get in touch</p>
+        <p class="font-mono text-[12px] uppercase tracking-wide text-blue-400 mb-3">Get in touch</p>
         <ul class="space-y-2 text-sm">
           <li><a href="mailto:irekasoft@gmail.com" class="hover:text-paper transition-colors">irekasoft@gmail.com</a>
           </li>

@@ -3,6 +3,7 @@ name: Daily Reminder
 tagline: Recurring reminders for habits and routines.
 platforms:
   - ios
+icon: daily-reminder.png
 icon_bg: '#D35400'
 icon_label: DR
 store_url:

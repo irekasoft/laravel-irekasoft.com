@@ -38,6 +38,7 @@ class AppRepository
             'name' => $meta['name'] ?? pathinfo($path, PATHINFO_FILENAME),
             'tagline' => $meta['tagline'] ?? '',
             'platforms' => $meta['platforms'] ?? [],
+            'icon' => $meta['icon'] ?? null,
             'icon_bg' => $meta['icon_bg'] ?? '#566573',
             'icon_label' => $meta['icon_label'] ?? '?',
             'store_url' => $meta['store_url'] ?? null,

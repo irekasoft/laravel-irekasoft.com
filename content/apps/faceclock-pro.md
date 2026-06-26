@@ -3,6 +3,7 @@ name: FaceClock Pro
 tagline: FaceClock Pro is simply an elegant analogue clock app.
 platforms:
   - ios
+icon: faceclock-pro.png
 icon_bg: '#C0392B'
 icon_label: FC
 store_url:

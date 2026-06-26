@@ -3,6 +3,7 @@ name: Countdowns
 tagline: Multiple countdowns that matters to you.
 platforms:
   - ios
+icon: countdowns.png
 icon_bg: '#3498DB'
 icon_label: CD
 store_url:

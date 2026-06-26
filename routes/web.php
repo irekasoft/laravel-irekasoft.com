@@ -16,6 +16,9 @@ Route::get('/products', [PageController::class, 'products'])
 Route::get('/services', [PageController::class, 'services'])
       ->name('services');
 
+Route::get('/services/portfolio', [PageController::class, 'portfolio'])
+      ->name('services.portfolio');
+
 Route::get('/contact', [PageController::class, 'contact'])
       ->name('contact');
 

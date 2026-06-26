@@ -6,10 +6,7 @@
        'border-ink/10 bg-paper hover:border-gold/40' => ! $dark,
        'border-paper/15 bg-ink hover:border-gold/40' => $dark,
    ])>
-    <span
-        class="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl font-display text-sm font-semibold text-white shadow-sm"
-        style="background-color: {{ $app['icon_bg'] }}"
-    >{{ $app['icon_label'] }}</span>
+    <x-app-icon :app="$app" />
 
     <span class="min-w-0 flex-1">
         <span @class([

@@ -24,6 +24,13 @@ class PageController extends Controller
         return view('pages.services');
     }
 
+    public function portfolio()
+    {
+        return view('pages.portfolio', [
+            'projects' => config('portfolio.projects'),
+        ]);
+    }
+
     public function contact()
     {
         return view('pages.contact');

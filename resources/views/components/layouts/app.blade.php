@@ -145,7 +145,7 @@
     </div>
   </div>
 
-  <main class="pt-16">
+  <main class="pt-15">
     {{ $slot }}
   </main>
 

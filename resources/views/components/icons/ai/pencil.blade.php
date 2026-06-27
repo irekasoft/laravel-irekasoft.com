@@ -1,5 +1,5 @@
 <img
-    src="{{ asset('images/icons/ai-tools/pencil.svg') }}"
+    src="{{ asset('images/icons/ai-tools/pencil.png') }}"
     alt=""
     class="h-full w-full object-contain"
     width="20"

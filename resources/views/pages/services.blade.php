@@ -29,46 +29,9 @@
       </div>
   </x-page-hero>
 
-  <section class="bg-paper">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-12 md:grid-cols-3 text-center">
-      <div>
-        <div class="mx-auto w-60" aria-hidden="true">
-          <x-service-graphic.uiux />
-        </div>
-        <h2 class="mt-6 font-bold text-blue-600 text-xl leading-snug">
-          UI / UX Design
-        </h2>
-        <p class="mt-4 text-sm text-charcoal/70 leading-relaxed">
-          Plan and design the whole concept of mobile app is key to succeed in launching
-          successful mobile apps.
-        </p>
-      </div>
-      <div>
-        <div class="mx-auto w-60" aria-hidden="true">
-          <x-service-graphic.react-native />
-        </div>
-        <h2 class="mt-6 font-bold text-blue-600 text-xl leading-snug">
-          Mobile App Development
-        </h2>
-        <p class="mt-4 text-sm text-charcoal/70 leading-relaxed">
-          In this time of modern-smartphone technology choosing the right technology help you to
-          develop mobile apps faster and efficient.
-        </p>
-      </div>
-      <div>
-        <div class="mx-auto w-60" aria-hidden="true">
-          <x-service-graphic.api-admin />
-        </div>
-        <h2 class="mt-6 font-bold text-blue-600 text-xl leading-snug">
-          API & Admin Web
-        </h2>
-        <p class="mt-4 text-sm text-charcoal/70 leading-relaxed">
-          Empowering the mobile apps with the power of cloud and let you manage mobile apps by
-          using powerful admin panel.
-        </p>
-      </div>
-    </div>
-  </section>
+  <x-service-offerings-grid />
+
+  <x-service-flow-timeline />
 
   <section class="services-cta-band text-paper border-t border-paper/10">
     <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
@@ -90,13 +53,13 @@
     </div>
   </section>
 
-  <section class="bg-white border-t border-ink/10">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
+  <section class="section-dot-grid bg-paper relative border-t border-ink/10" data-dot-cursor>
+    <div class="section-dot-grid__pulses" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
       <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-blue-500">
         Technologies We Used
       </h2>
-      <img src="{{ asset('images/services/services-tech.png') }}" alt="Technologies we use"
-        class="mx-auto mt-10 max-w-lg w-full" width="500" loading="lazy">
+      <x-service-tech-grid />
     </div>
   </section>
 
@@ -109,8 +72,8 @@
     </div>
   </section>
 
-  <section class="bg-white">
-    <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
+  <section class="subtle-line-grid bg-white">
+    <div class="relative z-10 mx-auto max-w-6xl px-6 pt-14 pb-26 text-center">
       <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight text-blue-500">
         Previous Clients
       </h2>
@@ -139,8 +102,11 @@
     </div>
   </section>
 
-  <section class="bg-ink text-paper">
-    <div class="mx-auto max-w-6xl px-6 py-20 md:py-24 text-center">
+  <section class="services-ocean-band text-paper" data-ocean-cursor>
+    <div class="services-ocean-band__glow" aria-hidden="true"></div>
+    <div class="services-ocean-band__waves" aria-hidden="true"></div>
+    <div class="services-ocean-band__cursor" aria-hidden="true"></div>
+    <div class="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-24 text-center">
       <p class="max-w-2xl mx-auto text-paper/70 leading-relaxed">
         We believe that every business should have mobile apps to retain customer and to engage
         users to give more value for their lives.
@@ -149,11 +115,12 @@
         We are here to help you by giving free consultation where and how we could start in this
         mobile apps technologies.
       </p>
-      <div class="mt-8">
-        <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener"
-          class="font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
-          <i class="bi bi-cursor mr-1"></i>
-          Send enquiry
+      <div class="mt-8 flex justify-center">
+        <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener" class="ocean-btn">
+          <span class="ocean-btn__label">
+            <i class="bi bi-cursor mr-1"></i>
+            Send enquiry
+          </span>
         </a>
       </div>
       <p class="mt-8 text-sm text-paper/50">

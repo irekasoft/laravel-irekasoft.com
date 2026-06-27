@@ -447,6 +447,26 @@
         justify-content: center;
     }
 
+    .service-flow-dot {
+        position: relative;
+        display: flex;
+        height: 3rem;
+        width: 3rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        border: 1.5px solid color-mix(in srgb, var(--color-terracotta) 35%, white);
+        background-color: var(--color-paper);
+        color: var(--color-terracotta);
+        box-shadow: 0 1px 2px rgba(11, 15, 25, 0.06);
+    }
+
+    .service-flow-dot i {
+        font-size: 1.5rem;
+        -webkit-text-stroke: 0.5px currentColor;
+        paint-order: stroke fill;
+    }
+
     .timeline-dot__core {
         position: relative;
         z-index: 3;
@@ -586,6 +606,42 @@
         }
     }
 
+    .apps-platform-section {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+    }
+
+    .apps-platform-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 28px 28px;
+        pointer-events: none;
+    }
+
+    .apps-platform-section--light::before {
+        background-image: radial-gradient(circle at center, rgba(113, 113, 122, 0.1) 1px, transparent 1px);
+    }
+
+    .subtle-line-grid {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+    }
+
+    .subtle-line-grid::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+        background-size: 32px 32px;
+        pointer-events: none;
+    }
+
     .services-cta-band {
         position: relative;
         isolation: isolate;
@@ -606,6 +662,162 @@
         background-size: 24px 24px;
         opacity: 0.35;
         pointer-events: none;
+    }
+
+    .services-ocean-band {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        --cursor-x: 50%;
+        --cursor-y: 50%;
+        background-color: #061018;
+        background-image:
+            radial-gradient(ellipse 75% 60% at 15% 15%, rgba(14, 165, 233, 0.28), transparent 58%),
+            radial-gradient(ellipse 65% 55% at 88% 80%, rgba(59, 130, 246, 0.22), transparent 60%),
+            radial-gradient(ellipse 50% 45% at 50% 110%, rgba(6, 182, 212, 0.18), transparent 55%),
+            radial-gradient(ellipse 40% 35% at 72% 35%, rgba(56, 189, 248, 0.12), transparent 52%),
+            linear-gradient(175deg, #040a10 0%, #071828 35%, #0a2540 62%, #061018 100%);
+    }
+
+    .services-ocean-band__glow {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .services-ocean-band__glow::before,
+    .services-ocean-band__glow::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        will-change: transform;
+    }
+
+    .services-ocean-band__glow::before {
+        top: -15%;
+        left: 10%;
+        width: min(50vw, 26rem);
+        height: min(50vw, 26rem);
+        background: rgba(14, 165, 233, 0.35);
+        animation: ocean-orb-a 22s ease-in-out infinite;
+    }
+
+    .services-ocean-band__glow::after {
+        bottom: -20%;
+        right: 5%;
+        width: min(45vw, 22rem);
+        height: min(45vw, 22rem);
+        background: rgba(59, 130, 246, 0.3);
+        animation: ocean-orb-b 28s ease-in-out infinite;
+    }
+
+    .services-ocean-band__waves {
+        position: absolute;
+        inset: 0;
+        opacity: 0.35;
+        background-image:
+            repeating-linear-gradient(
+                180deg,
+                transparent,
+                transparent 48px,
+                rgba(56, 189, 248, 0.06) 48px,
+                rgba(56, 189, 248, 0.06) 49px
+            );
+        mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+        animation: ocean-wave-drift 18s linear infinite;
+        pointer-events: none;
+    }
+
+    .ocean-btn {
+        display: inline-flex;
+        padding: 2px;
+        border-radius: 0.5rem;
+        background: linear-gradient(
+            90deg,
+            #0ea5e9,
+            #3b82f6,
+            #06b6d4,
+            #38bdf8,
+            #0ea5e9
+        );
+        background-size: 300% 100%;
+        animation: ocean-border-shimmer 3s linear infinite;
+        transition: transform 0.2s ease;
+    }
+
+    .ocean-btn:hover {
+        transform: translateY(-1px);
+    }
+
+    .ocean-btn__label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: white;
+        padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+        border-radius: calc(0.5rem - 2px);
+        background: #2563eb;
+        transition: background-color 0.2s ease;
+    }
+
+    .ocean-btn:hover .ocean-btn__label {
+        background: #1d4ed8;
+    }
+
+    @keyframes ocean-border-shimmer {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        100% {
+            background-position: 300% 50%;
+        }
+    }
+
+    @keyframes ocean-orb-a {
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        50% {
+            transform: translate(6%, 8%) scale(1.1);
+        }
+    }
+
+    @keyframes ocean-orb-b {
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        50% {
+            transform: translate(-8%, -6%) scale(1.08);
+        }
+    }
+
+    @keyframes ocean-wave-drift {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(49px);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .services-ocean-band__glow::before,
+        .services-ocean-band__glow::after,
+        .services-ocean-band__waves,
+        .ocean-btn {
+            animation: none;
+        }
     }
 
     .page-hero__backdrop {

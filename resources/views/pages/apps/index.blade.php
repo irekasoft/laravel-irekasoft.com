@@ -15,8 +15,7 @@
       <p>
         Software we build and publish ourselves — small, focused apps for
         <strong class="text-paper">iPhone</strong> and <strong class="text-paper">Mac</strong>.
-        Clocks, reminders, expense tracking, and everyday utilities — each one does one job well,
-        from CalcDrill in 2010 to the tools listed below.
+        Clocks, reminders, expense tracking, and everyday utilities — each one does one job well.
       </p>
       
     </div>
@@ -40,11 +39,11 @@
 
   @foreach ($grouped as $platformKey => $platformApps)
     <section @class([
-        'border-b border-ink/10',
-        'bg-paper' => $loop->even,
+        'apps-platform-section border-b border-ink/10',
+        'apps-platform-section--light bg-paper' => $loop->even,
         'bg-ink-soft text-paper' => $loop->odd,
     ])>
-      <div class="mx-auto max-w-6xl px-6 pt-6 pb-10">
+      <div class="relative z-10 mx-auto max-w-6xl px-6 pt-6 pb-10">
         <h2 @class([
             'font-display font-semibold text-2xl md:text-3xl tracking-tight mb-4',
             'text-ink' => $loop->even,

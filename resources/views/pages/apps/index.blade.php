@@ -12,7 +12,7 @@
     </h1>
 
     <div class="mt-6 max-w-2xl text-paper/70 leading-relaxed space-y-4">
-      <p>
+      <p class="text-balance">
         Software we build and publish ourselves — small, focused apps for
         <strong class="text-paper">iPhone</strong> and <strong class="text-paper">Mac</strong>.
         Clocks, reminders, expense tracking, and everyday utilities — each one does one job well.

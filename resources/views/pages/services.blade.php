@@ -53,11 +53,14 @@
       <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-blue-500">
         Technologies We Used
       </h2>
+      <p class="mt-4 mx-auto max-w-2xl text-center text-sm text-charcoal/60 leading-relaxed">
+        We use the latest modern technologies to build your software.
+      </p>
       <x-service-tech-grid />
     </div>
   </section>
 
-  <section class="services-cta-band text-paper border-t border-paper/10">
+  <section class="services-cta-band services-cta-band--guilloche text-paper border-t border-paper/10">
     <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
       <blockquote class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto">
         &ldquo;Plan &amp; design before jumping into coding to<br class="hidden sm:inline">

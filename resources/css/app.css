@@ -664,6 +664,23 @@
         pointer-events: none;
     }
 
+    .services-cta-band--guilloche::before {
+        display: none;
+    }
+
+    .services-cta-band--guilloche::after {
+        content: '';
+        position: absolute;
+        inset: -35%;
+        opacity: 0.5;
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'100'%20height%3D'48'%20viewBox%3D'0%200%20100%2048'%20fill%3D'none'%3E%3Cg%20stroke%3D'%23ffffff'%20stroke-width%3D'0.45'%20stroke-linecap%3D'round'%3E%3Cpath%20d%3D'M0%204%20Q12.5%202%2025%204%20T50%204%20T75%204%20T100%204'%2F%3E%3Cpath%20d%3D'M0%2016%20Q12.5%2014%2025%2016%20T50%2016%20T75%2016%20T100%2016'%2F%3E%3Cpath%20d%3D'M0%2028%20Q12.5%2026%2025%2028%20T50%2028%20T75%2028%20T100%2028'%2F%3E%3Cpath%20d%3D'M0%2040%20Q12.5%2038%2025%2040%20T50%2040%20T75%2040%20T100%2040'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+        background-size: 100px 52px;
+        background-position: center;
+        pointer-events: none;
+        transform: rotate(-2.5deg);
+        transform-origin: center center;
+    }
+
     .services-ocean-band {
         position: relative;
         isolation: isolate;

@@ -4,6 +4,7 @@ return [
 
     'stack' => [        
         ['name' => 'Laravel', 'icon' => 'laravel.svg'],
+        ['name' => 'Expo', 'icon' => 'expo.svg'],
         ['name' => 'React', 'icon' => 'react.svg'],
         ['name' => 'React Native', 'icon' => 'react.svg'],
         ['name' => 'Tailwind CSS', 'icon' => 'tailwindcss.svg'],

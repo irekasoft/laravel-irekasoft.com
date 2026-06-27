@@ -160,8 +160,7 @@
                     Muhammad Hijazi
                 </h1>
                 <p class="mt-5 max-w-2xl text-paper/70 leading-relaxed">
-                    Founder at iReka Soft Enterprise. Development, design, marketing, and content —
-                    with iOS as the core strength.
+                    Founder at iReka Soft Enterprise. Development, design, marketing, and content.
                 </p>
             </div>
             <img
@@ -184,14 +183,14 @@
                 <p>
                     Hi, my name is Muhammad Hijazi. I am the founder at iReka Soft Enterprise.
                     You may call me Hijazi. I do development, design, marketing, and content
-                    development at my own business. My forte now is iOS development, where I build
-                    apps for iPhone and iPad.
+                    at my own business. These days I spend most of my time on Laravel and React,
+                    and sometimes React Native when a project needs mobile.
                 </p>
                 <p>
-                    I also work with PHP, Ruby on Rails, Java, JavaScript, and C, and I am still
-                    learning Android Studio — hoping to get as comfortable there as I am on iOS.
-                    By being good at what I do, I can earn a living and help other people build
-                    their apps too.
+                    For design I work in Sketch, Figma, and Pencil. On the mobile side I still
+                    tinker with native modules on Expo when something needs to go deeper than
+                    JavaScript alone. By being good at what I do, I can earn a living and help
+                    other people build their apps too.
                 </p>
             </div>
         </div>

@@ -1,11 +1,9 @@
-<svg class="h-full w-full" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-        <linearGradient id="ai-pencil-body" x1="4" y1="2" x2="20" y2="20" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#F7D948"/>
-            <stop offset="1" stop-color="#E5BC2A"/>
-        </linearGradient>
-    </defs>
-    <rect x="2" y="0" width="20" height="20" fill="url(#ai-pencil-body)"/>
-    <path d="M2 20H22L12 30Z" fill="#C8C8C8"/>
-    <path d="M10 30H14L12 36Z" fill="#1A1A1A"/>
-</svg>
+<img
+    src="{{ asset('images/icons/ai-tools/pencil.svg') }}"
+    alt=""
+    class="h-full w-full object-contain"
+    width="20"
+    height="20"
+    loading="lazy"
+    aria-hidden="true"
+>

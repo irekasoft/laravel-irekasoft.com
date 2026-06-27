@@ -2,8 +2,7 @@
   $timeline = [
     [
       'year' => '2009',
-      'items' => [
-        'Attending Tokyo University of Technology',
+      'items' => [        
         'Learn Java',
         'Learn iPhone OS 2.0 and Objective-C',
       ],
@@ -11,8 +10,9 @@
     [
       'year' => '2010',
       'items' => [
-        'Q1 CalcDrill (first app on the App Store)',
-        'Q2 Work at start-up app developer company',
+        'Graduated from Tokyo University of Technology in Computer Science',
+        'Q1 Published CalcDrill (first app on the App Store)',
+        'Q2 Worked at start-up app developer company',
         'Q4 Published FaceClock 1.0 (global hit app)',
       ],
     ],
@@ -70,10 +70,10 @@
       'year' => '2017',
       'items' => [
         'Q1 Learn Ionic',
-        'Started co-working at Magic Cyberjaya',
+        'Based in Magic co-working space in Cyberjaya',
       ],
       'image' => 'magic-cyberjaya.png',
-      'image_alt' => 'iReka Soft co-working space at Magic Cyberjaya',
+      'image_alt' => 'iReka Soft based in Magic co-working space in Cyberjaya',
     ],
     [
       'year' => '2018',
@@ -108,7 +108,7 @@
     [
       'year' => '2023',
       'items' => [
-        'RekaScape, Cyberjaya',
+        'Based in RekaScape, Cyberjaya',
       ],
     ],
     [
@@ -236,7 +236,7 @@
                     HTML pages one by one. Later I used Macromedia Flash and Adobe Dreamweaver.
                 </p>
                 <p>
-                    I studied in Japan at Tokyo University of Technology, choosing Computer Science
+                    I studied in Japan at Tokyo University of Technology (東京工科大学), choosing Computer Science
                     to learn more about ICT. In Japan the industry was advanced — gaming, ecommerce,
                     websites, Flash, and software everywhere. I learned C and Java formally, and PHP,
                     HTML, jQuery, and CSS on my own. In 2009 I started Objective-C for iPhone on an

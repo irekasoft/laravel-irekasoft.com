@@ -867,8 +867,13 @@
         .services-ocean-band__glow::before,
         .services-ocean-band__glow::after,
         .services-ocean-band__waves,
-        .ocean-btn {
+        .ocean-btn,
+        .footer-logo-soft {
             animation: none;
+        }
+
+        .footer-logo-soft {
+            color: #3b82f6;
         }
 
         .services-ocean-band__cursor {
@@ -929,5 +934,28 @@
             linear-gradient(to top, rgba(7, 9, 13, 0.88) 0%, transparent 45%),
             radial-gradient(ellipse 70% 55% at 82% 38%, rgba(56, 189, 248, 0.14), transparent 62%),
             radial-gradient(ellipse 50% 40% at 18% 82%, rgba(124, 58, 237, 0.1), transparent 58%);
+    }
+
+    .footer-logo-soft {
+        animation: footer-logo-soft-color 4s ease-in-out infinite;
+    }
+
+    @keyframes footer-logo-soft-color {
+        0%,
+        100% {
+            color: #3b82f6; /* blue-500 */
+        }
+
+        25% {
+            color: #3b82f6; /* blue-500 */
+        }
+
+        50% {
+            color: #1e3a8a; /* blue-900 */
+        }
+
+        75% {
+            color: #3b82f6; /* blue-500 */
+        }
     }
 }

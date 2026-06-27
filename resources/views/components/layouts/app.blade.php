@@ -53,7 +53,7 @@
             ireka<span 
             @class([
               'text-blue-600' => !$immersive,
-              'text-blue-300' => $immersive,
+              'text-blue-500' => $immersive,
             ])>soft.</span>
           </span>
           
@@ -152,7 +152,7 @@
   <footer class="bg-ink text-paper/80">
     <div class="mx-auto max-w-6xl px-6 py-14 grid gap-10 md:grid-cols-4">
       <div class="md:col-span-2">
-        <p class="font-bold text-xl text-paper">ireka<span class="text-blue-400">soft.</span></p>
+        <p class="font-bold text-xl text-paper">ireka<span class="footer-logo-soft">soft.</span></p>
         <p class="mt-0 text-sm leading-relaxed max-w-sm text-paper/60">
           A software development studio in Cyberjaya, Malaysia.
         </p>

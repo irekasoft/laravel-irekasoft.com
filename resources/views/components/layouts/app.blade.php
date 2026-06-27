@@ -10,7 +10,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ $title ?? 'iReka Soft' }} — iReka Soft</title>
+  <title>{{ $title ?? 'irekasoft.' }} — irekasoft.</title>
   <meta name="description"
     content="{{ $description ?? 'iReka Soft builds the Orderla commerce suite — WhatsApp ordering, storefronts, and F&B point of sale — from Cyberjaya, Malaysia.' }}">
   @vite(['resources/css/app.css', 'resources/js/app.js'])

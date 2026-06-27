@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 class PageController extends Controller {
+
   public function home() {
     return view('pages.home', [
       'markets' => config('orderla.markets'),
@@ -35,4 +36,5 @@ class PageController extends Controller {
   public function contact() {
     return view('pages.contact');
   }
+  
 }

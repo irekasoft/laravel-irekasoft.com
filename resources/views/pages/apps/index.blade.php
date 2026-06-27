@@ -2,7 +2,7 @@
 
   <x-page-hero
     :image="asset('images/heroes/apps.jpg')"
-    
+    :video="asset('videos/heroes/apps.mp4')"
   >
     <p class="font-mono text-[12px] uppercase tracking-[0.2em] text-gold">
       Products
@@ -10,6 +10,16 @@
     <h1 class="mt-3 font-display font-semibold text-4xl md:text-5xl tracking-tight max-w-2xl leading-tight">
       Apps
     </h1>
+
+    <div class="mt-6 max-w-2xl text-paper/70 leading-relaxed space-y-4">
+      <p>
+        Software we build and publish ourselves — small, focused apps for
+        <strong class="text-paper">iPhone</strong> and <strong class="text-paper">Mac</strong>.
+        Clocks, reminders, expense tracking, and everyday utilities — each one does one job well,
+        from CalcDrill in 2010 to the tools listed below.
+      </p>
+      
+    </div>
   </x-page-hero>
 
   {{-- <section class="bg-paper border-b border-ink/10 pt-6">

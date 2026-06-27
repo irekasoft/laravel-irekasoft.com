@@ -13,23 +13,19 @@
       </h1>
       <div class="mt-6 max-w-2xl text-paper/70 leading-relaxed space-y-4">
         <p>
-          We can help you <em>plan</em>, <em>design</em>, <em>develop</em>, and <em>publish</em>
-          mobile apps for <strong class="text-paper">iPhone</strong> and
-          <strong class="text-paper">Android</strong> with
-          <strong class="text-paper">React Native</strong>, and web apps, APIs, and admin panels
-          with <strong class="text-paper">Laravel</strong>.
+          We can help you <em>plan</em>, <em>design</em>, <em>develop</em> and <em>publish</em>
+          <strong class="text-paper">web apps</strong>, <strong class="text-paper">APIs</strong> and <strong class="text-paper">admin panels</strong>
+          with <strong class="text-paper">Laravel + React</strong> and <strong class="text-paper">React Native</strong>.
         </p>
-        <p>
-          <strong class="text-paper">React Native</strong> is a <em>cross-platform</em> stack that
-          helps companies ship native mobile experiences from a single codebase.
-          <strong class="text-paper">Laravel</strong> powers the backends, dashboards, and
-          business logic that mobile and web products rely on.
-        </p>
-        <p>
-          Together, they let <strong class="text-paper">performance</strong> and
-          <strong class="text-paper">maintainability</strong> live in the same project — fast
-          interfaces on the front, solid foundations behind them.
-        </p>
+        <aside class="flex gap-4 rounded-lg border border-paper/15 bg-paper/5 px-5 py-4 backdrop-blur-sm">
+          <i class="bi bi-lightbulb text-xl text-gold shrink-0 mt-0.5" aria-hidden="true"></i>
+          <p class="leading-relaxed">            
+            <strong class="text-paper">Laravel</strong> powers the backends, dashboards, and
+            business logic that mobile and web products rely on.
+            <strong class="text-paper">React Native</strong> is a <em>cross-platform</em> stack that
+            helps companies ship native mobile experiences from a single codebase.
+          </p>
+        </aside>
       </div>
   </x-page-hero>
 

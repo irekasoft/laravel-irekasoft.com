@@ -624,6 +624,30 @@
         transform: scale(1.03);
     }
 
+    .page-hero--has-video .page-hero__image {
+        opacity: 0;
+    }
+
+    .page-hero__video {
+        position: absolute;
+        inset: -4%;
+        width: calc(100% + 8%);
+        height: calc(100% + 8%);
+        object-fit: cover;
+        opacity: 0.32;
+        transform: scale(1.03);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .page-hero__video {
+            display: none;
+        }
+
+        .page-hero--has-video .page-hero__image {
+            opacity: 0.42;
+        }
+    }
+
     .page-hero__shade {
         position: absolute;
         inset: 0;

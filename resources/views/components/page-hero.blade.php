@@ -1,14 +1,31 @@
 @props([
     'image',
+    'video' => null,
     'credit' => null,
     'creditUrl' => null,
 ])
 
 <section
-    {{ $attributes->class(['page-hero relative isolate overflow-hidden bg-ink text-paper']) }}
+    {{ $attributes->class([
+        'page-hero relative isolate overflow-hidden bg-ink text-paper',
+        'page-hero--has-video' => $video,
+    ]) }}
     style="--page-hero-image: url('{{ $image }}')"
 >
     <div class="page-hero__backdrop pointer-events-none" aria-hidden="true">
+        @if ($video)
+            <video
+                class="page-hero__video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="{{ $image }}"
+            >
+                <source src="{{ $video }}" type="video/mp4">
+            </video>
+        @endif
         <div class="page-hero__image"></div>
         <div class="page-hero__shade"></div>
     </div>

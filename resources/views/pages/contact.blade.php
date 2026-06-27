@@ -30,7 +30,7 @@
     <div class="mx-auto max-w-6xl px-6 py-4 md:py-10 grid gap-8 md:grid-cols-3">
       <div>
         <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Direct</p>
-        <ul class="space-y-3 text-lg font-display">
+        <ul class="space-y-3 text-sm font-display">
           <li><a href="mailto:irekasoft@gmail.com"
               class="hover:text-terracotta transition-colors">irekasoft@gmail.com</a></li>
           <li><a href="https://wa.me/601135859242?text=Hello%20from%20irekasoft.com" target="_blank" rel="noopener"
@@ -40,17 +40,42 @@
 
       <div>
         <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">Social</p>
-        <ul class="space-y-3 text-sm">
-          <li><a href="https://facebook.com/irekasoft" target="_blank" rel="noopener"
-              class="hover:text-terracotta transition-colors">Facebook</a></li>
-          <li><a href="https://instagram.com/irekasoft" target="_blank" rel="noopener"
-              class="hover:text-terracotta transition-colors">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ireka-soft" target="_blank" rel="noopener"
-              class="hover:text-terracotta transition-colors">LinkedIn</a></li>
-          <li><a href="https://github.com/irekasoft" target="_blank" rel="noopener"
-              class="hover:text-terracotta transition-colors">GitHub</a></li>
-          <li><a href="https://irekasoft.blogspot.com" target="_blank" rel="noopener"
-              class="hover:text-terracotta transition-colors">Blogspot</a></li>
+        <ul class="space-y-3 text-lg font-display">
+          <li>
+            <a href="https://facebook.com/irekasoft" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 hover:text-terracotta transition-colors">
+              <i class="bi bi-facebook text-base" aria-hidden="true"></i>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/irekasoft" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 hover:text-terracotta transition-colors">
+              <i class="bi bi-instagram text-base" aria-hidden="true"></i>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/ireka-soft" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 hover:text-terracotta transition-colors">
+              <i class="bi bi-linkedin text-base" aria-hidden="true"></i>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/irekasoft" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 hover:text-terracotta transition-colors">
+              <i class="bi bi-github text-base" aria-hidden="true"></i>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://irekasoft.blogspot.com" target="_blank" rel="noopener"
+              class="inline-flex items-center gap-2 hover:text-terracotta transition-colors">
+              <i class="bi bi-journal-text text-base" aria-hidden="true"></i>
+              Blogspot
+            </a>
+          </li>
         </ul>
 
       </div>

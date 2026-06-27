@@ -17,7 +17,7 @@
 </head>
 
 <body @class([
-    'font-sans antialiased',
+    'font-sans antialiased min-h-screen flex flex-col',
     'bg-paper text-charcoal' => !$immersive,
     'bg-black text-white' => $immersive,
 ])>
@@ -31,7 +31,7 @@
         ['route' => 'contact', 'label' => 'Contact'],
         // ['route' => 'products', 'label' => 'Products'],
     ];
-    $ctaHref = $immersive ? ('services') : 'https://irekaweb.com/enquiry';
+    $ctaHref = $immersive ? 'services' : 'https://irekaweb.com/enquiry';
     $ctaLabel = $immersive ? 'Explore iReka Soft' : 'Enquiry Now';
     $ctaExternal = true;
   @endphp
@@ -39,7 +39,7 @@
   <header @class([
       'fixed inset-x-0 top-0 z-50',
       'border-b border-ink/10 bg-paper/90 backdrop-blur-sm' => !$immersive,
-      'border-b border-white/10 bg-black/40 backdrop-blur-sm' => $immersive,
+      'border-b border-white/10 bg-black/80 backdrop-blur-sm' => $immersive,
   ])>
     <div class="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between gap-6">
       <a href="{{ route('home') }}" class="flex items-center gap-3 shrink-0 group">
@@ -50,13 +50,12 @@
               'text-ink' => !$immersive,
               'text-white' => $immersive,
           ])>
-            ireka<span 
-            @class([
-              'text-blue-600' => !$immersive,
-              'text-blue-500' => $immersive,
+            ireka<span @class([
+                'text-blue-600' => !$immersive,
+                'text-blue-500' => $immersive,
             ])>soft.</span>
           </span>
-          
+
         </span>
       </a>
 
@@ -82,12 +81,11 @@
       </nav>
 
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <a href="{{ $ctaHref }}" 
-          @class([
-              'hidden sm:inline-flex shrink-0 font-mono text-[12px] uppercase tracking-[0.12em] px-4 py-2.5 rounded-sm transition-colors',
-              'bg-blue-500 text-white hover:bg-blue-600' => !$immersive,
-              'bg-gold text-black hover:bg-gold/80' => $immersive,
-          ])>
+        <a href="{{ $ctaHref }}" @class([
+            'hidden sm:inline-flex shrink-0 font-mono text-[12px] uppercase tracking-[0.12em] px-4 py-2.5 rounded-sm transition-colors',
+            'bg-blue-500 text-white hover:bg-blue-600' => !$immersive,
+            'bg-gold text-black hover:bg-gold/80' => $immersive,
+        ])>
           @if (!$immersive)
             <i class="bi bi-cursor mr-2"></i>
           @else
@@ -121,7 +119,7 @@
       <div class="flex shrink-0 justify-end">
         <button type="button" id="mobile-menu-close"
           class="cursor-pointer relative z-20 flex items-center gap-2  border-paper/25  px-3 py-2 font-mono text-[16px] uppercase tracking-[0.14em] text-paper transition-colors hover:border-paper/50"
-          aria-label="Close menu">          
+          aria-label="Close menu">
           <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
             aria-hidden="true">
             <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
@@ -133,7 +131,9 @@
         @foreach ($navItems as $item)
           <a href="{{ route($item['route']) }}" @class([
               'transition-colors hover:text-blue-800',
-              request()->routeIs($item['active'] ?? $item['route']) ? 'text-blue-500' : 'text-paper',
+              request()->routeIs($item['active'] ?? $item['route'])
+                  ? 'text-blue-500'
+                  : 'text-paper',
           ])>{{ $item['label'] }}</a>
         @endforeach
       </nav>
@@ -145,7 +145,7 @@
     </div>
   </div>
 
-  <main class="pt-15">
+  <main class="flex flex-1 flex-col pt-15">
     {{ $slot }}
   </main>
 

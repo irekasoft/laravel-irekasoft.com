@@ -3,7 +3,7 @@
 @php
     $sizes = [
         'md' => 'h-16 w-16 rounded-2xl text-sm',
-        'lg' => 'h-24 w-24 rounded-3xl text-2xl',
+        'lg' => 'h-20 w-20 rounded-2xl text-xl',
     ];
     $sizeClass = $sizes[$size] ?? $sizes['md'];
 @endphp

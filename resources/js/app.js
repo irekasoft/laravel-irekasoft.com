@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initSectionDotGrid();
+    initOceanCursor();
 });
 
 function initMobileMenu() {
@@ -155,5 +156,36 @@ function initSectionDotGrid() {
             buildDots();
             resetPulse();
         });
+    });
+}
+
+function initOceanCursor() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    if (prefersReducedMotion || !canHover) {
+        return;
+    }
+
+    document.querySelectorAll('[data-ocean-cursor]').forEach((section) => {
+        const resetCursor = () => {
+            section.classList.remove('is-cursor-active');
+        };
+
+        const updateCursor = (clientX, clientY) => {
+            const rect = section.getBoundingClientRect();
+            const x = clientX - rect.left;
+            const y = clientY - rect.top;
+
+            section.style.setProperty('--cursor-x', `${x}px`);
+            section.style.setProperty('--cursor-y', `${y}px`);
+            section.classList.add('is-cursor-active');
+        };
+
+        section.addEventListener('mousemove', (event) => {
+            updateCursor(event.clientX, event.clientY);
+        });
+
+        section.addEventListener('mouseleave', resetCursor);
     });
 }

@@ -27,18 +27,8 @@
           </p>
         </aside>
       </div>
-  </x-page-hero>
 
-  <x-service-offerings-grid />
-
-  <x-service-flow-timeline />
-
-  <section class="services-cta-band text-paper border-t border-paper/10">
-    <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-24 text-center">
-      <h2 class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto">
-        Hire us to develop your custom mobile apps.
-      </h2>
-      <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-stretch sm:items-center">
+      <div class="mt-8 flex flex-col sm:flex-row flex-wrap gap-4 justify-start items-stretch sm:items-center">
         <a href="{{ route('services.portfolio') }}"
           class="inline-flex items-center justify-center font-mono text-[13px] uppercase tracking-wide bg-gold text-black px-6 py-3 rounded-sm hover:bg-gold/80 transition-colors">
           <i class="bi bi-collection mr-1"></i>
@@ -50,9 +40,13 @@
           Send enquiry
         </a>
       </div>
-    </div>
-  </section>
+  </x-page-hero>
 
+  <x-service-offerings-grid />
+
+  <x-service-flow-timeline />
+
+  
   <section class="section-dot-grid bg-paper relative border-t border-ink/10" data-dot-cursor>
     <div class="section-dot-grid__pulses" aria-hidden="true"></div>
     <div class="relative z-10 mx-auto max-w-6xl px-6 py-16 md:py-20 text-center">
@@ -106,7 +100,13 @@
     <div class="services-ocean-band__glow" aria-hidden="true"></div>
     <div class="services-ocean-band__waves" aria-hidden="true"></div>
     <div class="services-ocean-band__cursor" aria-hidden="true"></div>
-    <div class="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-24 text-center">
+
+    <div class="relative z-10 mx-auto max-w-6xl px-6 pt-14 pb-12 text-center">
+
+      <h2 class="font-serif text-3xl md:text-4xl font-normal tracking-tight leading-snug text-paper/95 max-w-3xl mx-auto mb-4">
+        Hire us to build your custom software — web, mobile, or both.
+      </h2>
+
       <p class="max-w-2xl mx-auto text-paper/70 leading-relaxed">
         We believe that every business should have mobile apps to retain customer and to engage
         users to give more value for their lives.
@@ -123,7 +123,7 @@
           </span>
         </a>
       </div>
-      <p class="mt-8 text-sm text-paper/50">
+      <p class="mt-8 text-sm text-paper/50 font-mono">
         We are based in RekaScape, Cyberjaya — feel free to ask about mobile apps or web development.
       </p>
     </div>

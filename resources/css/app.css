@@ -729,6 +729,41 @@
         pointer-events: none;
     }
 
+    .services-ocean-band__cursor {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+            radial-gradient(
+                circle 280px at var(--cursor-x) var(--cursor-y),
+                rgba(56, 189, 248, 0.22),
+                rgba(14, 165, 233, 0.1) 38%,
+                transparent 68%
+            ),
+            radial-gradient(
+                circle 140px at var(--cursor-x) var(--cursor-y),
+                rgba(255, 255, 255, 0.06),
+                transparent 70%
+            );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .services-ocean-band.is-cursor-active .services-ocean-band__cursor {
+        opacity: 1;
+    }
+
+    .services-ocean-band.is-cursor-active .services-ocean-band__glow::before {
+        animation: none;
+        left: calc(var(--cursor-x) - min(25vw, 13rem));
+        top: calc(var(--cursor-y) - min(25vw, 13rem));
+    }
+
+    .services-ocean-band__glow::before,
+    .services-ocean-band__glow::after {
+        transition: left 0.45s ease, top 0.45s ease;
+    }
+
     .ocean-btn {
         display: inline-flex;
         padding: 2px;
@@ -817,6 +852,15 @@
         .services-ocean-band__waves,
         .ocean-btn {
             animation: none;
+        }
+
+        .services-ocean-band__cursor {
+            display: none;
+        }
+
+        .services-ocean-band.is-cursor-active .services-ocean-band__glow::before {
+            left: 10%;
+            top: -15%;
         }
     }
 

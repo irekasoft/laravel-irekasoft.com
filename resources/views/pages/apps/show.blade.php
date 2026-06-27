@@ -7,7 +7,7 @@
 
 <x-layouts.app :title="$app['name']" :description="$app['tagline']">
 
-  <div class="fixed inset-x-0 top-16 z-40 border-b border-white/10 bg-ink/90 backdrop-blur-sm">
+  <div class="fixed inset-x-0 top-15 z-40 border-b border-white/10 bg-ink/40 backdrop-blur-sm">
     <div class="mx-auto max-w-6xl px-6 py-3">
       <a href="{{ route('apps.index') }}"
         class="font-mono text-[12px] uppercase tracking-[0.14em] text-white hover:text-gold transition-colors">

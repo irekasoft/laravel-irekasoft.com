@@ -116,6 +116,8 @@
       'items' => [
         'Launched Orderla.co',
         'Joined Tech Startup Bootcamp',
+        'Joined Stripe Tour in Singapore',
+        'Joined Stripe Startup Program',
       ],
     ],
     [
@@ -124,8 +126,12 @@
         'Launched Orderla FOS',
         'Joined Laravel Live in Tokyo, Japan',
       ],
+      'image' => 'laravel-live-2026.jpeg',
+      'image_alt' => 'Laravel Live in Tokyo, Japan',
     ],
   ];
+
+  $timeline = array_reverse($timeline);
 
   $timelinePulseSlot = 0.65;
   $timelinePulseCycle = count($timeline) * $timelinePulseSlot;
@@ -298,7 +304,7 @@
                                         src="{{ asset('images/about/' . $entry['image']) }}"
                                         alt="{{ $entry['image_alt'] ?? $entry['year'] }}"
                                         @class([
-                                            'mt-4 w-full rounded-sm border border-paper/10 object-cover',
+                                            'mt-4 w-full rounded-lg border border-paper/10 object-cover',
                                             'md:ml-auto md:max-w-sm' => $isLeft,
                                             'md:max-w-sm' => ! $isLeft,
                                         ])
@@ -313,23 +319,28 @@
         </div>
     </section>
 
-    <section class="bg-paper">
-        <div class="mx-auto max-w-6xl px-6 py-16 md:py-20 grid gap-10 md:grid-cols-2 md:items-center">
-            <div>
-                <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4">
-                    Tools for developing mobile experience
-                </p>
-                <p class="text-charcoal/80 leading-relaxed">
-                    Xcode, Coda, Android Studio, Sketch, and Blender — the everyday stack for
-                    designing, building, and shipping mobile software.
-                </p>
+    <section class="bg-white">
+        <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+            <div class="grid gap-10 md:grid-cols-2 md:items-center">
+                <div>
+                    <p class="font-mono text-[12px] uppercase tracking-wide text-terracotta mb-4 flex items-center gap-2">
+                        <i class="bi bi-phone text-base" aria-hidden="true"></i>
+                        Tools for developing mobile experience
+                    </p>
+                    <p class="text-charcoal/80 leading-relaxed">
+                        Xcode, Coda, Android Studio, Sketch, and Blender — the everyday stack for
+                        designing, building, and shipping mobile software.
+                    </p>
+                </div>
+                <img
+                    src="{{ asset('images/about/tools.png') }}"
+                    alt="Development tools"
+                    class="w-full rounded-lg border border-ink/10 object-cover"
+                    loading="lazy"
+                >
             </div>
-            <img
-                src="{{ asset('images/about/tools.png') }}"
-                alt="Development tools"
-                class="w-full rounded-sm border border-ink/10 object-cover"
-                loading="lazy"
-            >
+
+            <x-ai-tools-grid />
         </div>
     </section>
 

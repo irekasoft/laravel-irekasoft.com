@@ -35,11 +35,12 @@
                 href="{{ route('services') }}"
                 class="mt-8 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-2 py-2 backdrop-blur-sm hover:border-white/30 hover:bg-white/10 transition-colors">
                 <span
-                  class="flex h-8 w-8 items-center justify-center rounded-full bg-gold/20 font-display text-sm font-semibold text-gold">
-                  iR
+                  class="flex items-center justify-center rounded-full bg-gold/20 font-display text-sm font-semibold text-gold"
+                  style="min-width: 24px; min-height: 24px;">
+                  <i class="bi bi-arrow-right"></i>
                 </span>
                 <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-white/75 mr-3">
-                  iReka Soft — Cyberjaya, Malaysia
+                  SEE WHAT WE BUILD
                 </span>
               </a>
 
@@ -68,7 +69,7 @@
     <div class="section-dot-grid__pulses" aria-hidden="true"></div>
     <div class="relative z-10 mx-auto max-w-6xl px-6 py-20 md:py-24">
       <h2 class="font-display text-blue-500 font-semibold text-3xl md:text-4xl tracking-tight max-w-xl">
-        Orderla suite for three markets.
+        Orderla Suite
       </h2>
 
       <div class="mt-12 grid gap-10 md:grid-cols-3">
@@ -103,7 +104,7 @@
           </p>
         </div>
         <div class="border-t border-paper/20 pt-5">
-          <p class="font-mono text-sm text-paper/40 mb-2">Today — Orderla</p>
+          <p class="font-mono text-sm text-paper/40 mb-2">2020 — Orderla</p>
           <p class="text-lg leading-snug">
             All of that became one focus: Orderla, a commerce suite merchants actually run
             their business on, every day.

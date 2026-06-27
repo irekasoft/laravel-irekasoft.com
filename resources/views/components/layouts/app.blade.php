@@ -31,7 +31,7 @@
         ['route' => 'contact', 'label' => 'Contact'],
         // ['route' => 'products', 'label' => 'Products'],
     ];
-    $ctaHref = $immersive ? ('apps') : 'https://irekaweb.com/enquiry';
+    $ctaHref = $immersive ? ('services') : 'https://irekaweb.com/enquiry';
     $ctaLabel = $immersive ? 'Explore iReka Soft' : 'Enquiry Now';
     $ctaExternal = true;
   @endphp
@@ -67,7 +67,7 @@
       ])>
         @foreach ($navItems as $index => $item)
           @if ($immersive && $index > 0)
-            <span class="px-4 text-white" aria-hidden="true">/</span>
+            <span class="px-4 text-white" aria-hidden="true"></span>
           @endif
           <a href="{{ route($item['route']) }}" @class([
               'hover:text-black transition-colors' => !$immersive,
@@ -89,7 +89,9 @@
               'bg-gold text-black hover:bg-gold/80' => $immersive,
           ])>
           @if (!$immersive)
-            <i class="bi bi-envelope mr-2"></i>
+            <i class="bi bi-cursor mr-2"></i>
+          @else
+            <i class="bi bi-cursor mr-2"></i>
           @endif
           {{ $ctaLabel }}
         </a>

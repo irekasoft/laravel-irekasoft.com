@@ -77,7 +77,7 @@ JSX;
     Every component is exported from a single barrel file. Import what you need and drop it in.
   </p>
   <div class="mt-5 space-y-4">
-    <x-ireka-ui.code-block language="bash" :code="$quickInstall" />
+    {{-- <x-ireka-ui.code-block language="bash" :code="$quickInstall" /> --}}
     <x-ireka-ui.code-block :code="$quickUsage" />
   </div>
 

@@ -1,6 +1,6 @@
 ---
 name: FaceClock Pro
-tagline: Turn your iPhone, iPod touch, and iPad into a gorgeous analogue clock stand.
+tagline: Turn your iPhone and iPad into a gorgeous analogue clock stand.
 platforms:
   - ios
 icon: faceclock-pro.png
@@ -17,4 +17,4 @@ features:
 video_url: https://youtu.be/uNX-O047rGM?si=ViL6i0UXgKj8KOGp
 ---
 
-Turn your iPhone, iPod touch, and iPad into a gorgeous analogue clock stand. Pick from more than 20 faces, check the weather, set alarms, hear hourly announcements, add visual effects, and control your music — all from one full-screen clock.
+Turn your iPhone and iPad into a gorgeous analogue clock stand. Pick from more than 20 faces, check the weather, set alarms, hear hourly announcements, add visual effects, and control your music — all from one full-screen clock.

@@ -46,6 +46,19 @@
           Mobile technology keeps maturing, and software that genuinely helps in daily life
           still matters to us. Our motto is <em class="text-charcoal">app for life</em>.
         </p>
+        <p>
+          These days our work centres on Laravel for the web, and React with Expo React Native
+          on mobile — and we're building toward our own design system, so everything we ship
+          feels consistent from the first screen to the last.
+        </p>
+        <p>
+          Lately, AI — and agentic AI in particular — has changed how we write software. With
+          tools like Claude Code, a lot more of the work can be automated: scaffolding, refactors,
+          tests, and the repetitive plumbing that used to slow us down. It lets a small team take
+          on more, and spend its attention where it counts. We're looking forward to seeing how
+          far this takes our development process — raising the ceiling on what we can build, and
+          reaching it more efficiently than before.
+        </p>
 
       </div>
     </div>

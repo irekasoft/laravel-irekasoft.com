@@ -1,7 +1,18 @@
+import Prism from 'prismjs';
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-markup-templating';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-bash';
+
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
+    initDocsSidebar();
+    initDocsScrollSpy();
     initSectionDotGrid();
     initOceanCursor();
+    initCodeBlocks();
 });
 
 function initMobileMenu() {
@@ -54,6 +65,100 @@ function initMobileMenu() {
         if (event.key === 'Escape' && isOpen()) {
             setOpen(false);
         }
+    });
+}
+
+function initDocsSidebar() {
+    const button = document.getElementById('docs-sidebar-button');
+    const closeButton = document.getElementById('docs-sidebar-close');
+    const drawer = document.getElementById('docs-sidebar-drawer');
+    const panel = drawer?.querySelector('[data-docs-sidebar-panel]');
+
+    if (!button || !drawer || !panel) {
+        return;
+    }
+
+    const isOpen = () => drawer.dataset.open === 'true';
+
+    const setOpen = (open) => {
+        button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        button.setAttribute('aria-label', open ? 'Close documentation menu' : 'Open documentation menu');
+        drawer.dataset.open = open ? 'true' : 'false';
+        drawer.classList.toggle('is-open', open);
+        panel.classList.toggle('-translate-x-full', !open);
+        panel.classList.toggle('translate-x-0', open);
+
+        if (open) {
+            drawer.removeAttribute('aria-hidden');
+            document.body.classList.add('overflow-hidden', 'docs-sidebar-open');
+            button.classList.add('is-open');
+        } else {
+            drawer.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('overflow-hidden', 'docs-sidebar-open');
+            button.classList.remove('is-open');
+        }
+    };
+
+    button.addEventListener('click', () => {
+        setOpen(!isOpen());
+    });
+
+    closeButton?.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        setOpen(false);
+    });
+
+    drawer.querySelector('[data-docs-sidebar-backdrop]')?.addEventListener('click', () => {
+        setOpen(false);
+    });
+
+    drawer.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setOpen(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && isOpen()) {
+            setOpen(false);
+        }
+    });
+}
+
+function initDocsScrollSpy() {
+    const links = Array.from(document.querySelectorAll('[data-component-link]'));
+
+    if (links.length === 0) {
+        return;
+    }
+
+    const byId = Object.fromEntries(
+        links.map((link) => [link.getAttribute('data-component-link'), link]),
+    );
+
+    const setActive = (id) => {
+        links.forEach((link) => {
+            link.classList.remove('bg-charcoal/5', 'text-ink', 'font-medium');
+        });
+
+        const activeLink = byId[id];
+
+        if (activeLink) {
+            activeLink.classList.add('bg-charcoal/5', 'text-ink', 'font-medium');
+        }
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        if (visible[0]) {
+            setActive(visible[0].target.id);
+        }
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+    document.querySelectorAll('section[id]').forEach((section) => {
+        observer.observe(section);
     });
 }
 
@@ -187,5 +292,45 @@ function initOceanCursor() {
         });
 
         section.addEventListener('mouseleave', resetCursor);
+    });
+}
+
+function initCodeBlocks() {
+    document.querySelectorAll('[data-code-block] code[class*="language-"]').forEach((el) => {
+        Prism.highlightElement(el);
+    });
+
+    document.querySelectorAll('[data-code-block]').forEach((block) => {
+        const btn = block.querySelector('[data-copy]');
+        const code = block.querySelector('code');
+
+        if (!btn || !code) {
+            return;
+        }
+
+        btn.addEventListener('click', () => {
+            navigator.clipboard.writeText(code.textContent ?? '').then(() => {
+                const label = btn.querySelector('[data-copy-label]');
+                const icon = btn.querySelector('i');
+
+                if (label) {
+                    label.textContent = 'Copied';
+                }
+
+                if (icon) {
+                    icon.className = 'bi bi-check2';
+                }
+
+                setTimeout(() => {
+                    if (label) {
+                        label.textContent = 'Copy';
+                    }
+
+                    if (icon) {
+                        icon.className = 'bi bi-clipboard';
+                    }
+                }, 1500);
+            });
+        });
     });
 }

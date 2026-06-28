@@ -452,42 +452,4 @@ JSX;
     ireka-ui · {{ count($components) }} components · built by iReka Soft
   </div>
 
-  {{-- Copy buttons + sidebar scroll-spy --}}
-  <script>
-    (function () {
-      document.querySelectorAll('[data-code-block]').forEach(function (block) {
-        var btn = block.querySelector('[data-copy]');
-        var code = block.querySelector('code');
-        if (!btn || !code) return;
-        btn.addEventListener('click', function () {
-          navigator.clipboard.writeText(code.innerText).then(function () {
-            var label = btn.querySelector('[data-copy-label]');
-            var icon = btn.querySelector('i');
-            if (label) label.textContent = 'Copied';
-            if (icon) icon.className = 'bi bi-check2';
-            setTimeout(function () {
-              if (label) label.textContent = 'Copy';
-              if (icon) icon.className = 'bi bi-clipboard';
-            }, 1500);
-          });
-        });
-      });
-
-      var links = Array.prototype.slice.call(document.querySelectorAll('[data-component-link]'));
-      var byId = {};
-      links.forEach(function (l) { byId[l.getAttribute('data-component-link')] = l; });
-      var setActive = function (id) {
-        links.forEach(function (l) { l.classList.remove('bg-charcoal/5', 'text-ink', 'font-medium'); });
-        var el = byId[id];
-        if (el) el.classList.add('bg-charcoal/5', 'text-ink', 'font-medium');
-      };
-      var observer = new IntersectionObserver(function (entries) {
-        var visible = entries.filter(function (e) { return e.isIntersecting; })
-          .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
-        if (visible[0]) setActive(visible[0].target.id);
-      }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
-      document.querySelectorAll('section[id]').forEach(function (s) { observer.observe(s); });
-    })();
-  </script>
-
 </x-ireka-ui.shell>

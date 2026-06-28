@@ -56,6 +56,8 @@
                   class="hover:text-white transition-colors">Orderla.co</a>
                 <span aria-hidden="true">/</span>
                 <a href="{{ route('products') }}" class="hover:text-white transition-colors">Orderla FOS</a>
+                <span aria-hidden="true">/</span>
+                <a href="{{ route('ireka-ui.index') }}" class="hover:text-white transition-colors">ireka-ui</a>
               </nav>
           </div>
         </div>

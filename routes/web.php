@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\IrekaUiController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,13 @@ Route::get('/apps', [AppController::class, 'index'])
 
 Route::get('/apps/{slug}', [AppController::class, 'show'])
   ->name('apps.show');
+
+// Ireka UI — component library documentation
+Route::get('/ireka-ui', [IrekaUiController::class, 'index'])
+  ->name('ireka-ui.index');
+
+Route::get('/ireka-ui/docs/components', [IrekaUiController::class, 'components'])
+  ->name('ireka-ui.components');
 
 
 // Legacy URLs → contact

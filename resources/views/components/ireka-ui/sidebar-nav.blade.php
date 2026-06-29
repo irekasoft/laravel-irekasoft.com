@@ -39,7 +39,7 @@
     </a>
   </div>
 
-  @if (count($components) > 0)
+  @if ($active === 'components' && count($components) > 0)
     <div class="space-y-0.5">
       <p class="mb-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Components</p>
       @foreach ($components as $c)

@@ -35,18 +35,16 @@
             ])>{{ $project['title'] }}</h2>
 
             @if (!empty($project['meta']))
-              <dl class="mt-5 space-y-1.5 text-sm">
+              <dl class="mt-5 grid grid-cols-[max-content_1fr] items-baseline gap-x-4 gap-y-1.5 text-sm">
                 @foreach ($project['meta'] as $label => $value)
-                  <div class="flex flex-wrap gap-x-2">
-                    <dt @class([
-                        'font-mono uppercase tracking-wide text-[11px]',
-                        'text-charcoal/50' => $isEven,
-                        'text-paper/50' => !$isEven,
-                    ])>{{ $label }}:</dt>
-                    <dd @class([
-                        $isEven ? 'text-charcoal/80' : 'text-paper/80',
-                    ])>{{ $value }}</dd>
-                  </div>
+                  <dt @class([
+                      'font-mono uppercase tracking-wide text-[11px]',
+                      'text-charcoal/50' => $isEven,
+                      'text-paper/50' => !$isEven,
+                  ])>{{ $label }}:</dt>
+                  <dd @class([
+                      $isEven ? 'text-charcoal/80' : 'text-paper/80',
+                  ])>{{ $value }}</dd>
                 @endforeach
               </dl>
             @endif
@@ -122,5 +120,13 @@
       </div>
     </section>
   @endforeach
+
+  <section class="border-t border-ink/10 bg-white">
+    <div class="mx-auto max-w-6xl px-6 py-20 text-center md:py-24">
+      <p class="font-display text-2xl tracking-tight text-ink md:text-3xl">
+        &ldquo;That&rsquo;s all we have now. Thank you.&rdquo;
+      </p>
+    </div>
+  </section>
 
 </x-layouts.app>

@@ -448,8 +448,4 @@ JSX;
 
   </div>
 
-  <div class="mt-4 border-t border-charcoal/10 pt-6 font-mono text-[11px] uppercase tracking-[0.12em] text-charcoal/40">
-    ireka-ui · {{ count($components) }} components · built by iReka Soft
-  </div>
-
 </x-ireka-ui.shell>

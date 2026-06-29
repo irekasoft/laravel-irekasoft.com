@@ -30,6 +30,13 @@
     ])>
       <i class="bi bi-diagram-3" aria-hidden="true"></i> Structure
     </a>
+    <a href="{{ route('ireka-ui.navigation') }}" @class([
+        'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
+        'bg-ink text-paper font-medium' => $active === 'navigation',
+        'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'navigation',
+    ])>
+      <i class="bi bi-layers" aria-hidden="true"></i> Navigation &amp; Overlays
+    </a>
     <a href="{{ route('ireka-ui.components') }}" @class([
         'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
         'bg-ink text-paper font-medium' => $active === 'components',

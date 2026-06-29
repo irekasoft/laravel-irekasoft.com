@@ -40,6 +40,9 @@ Route::get('/ireka-ui', [IrekaUiController::class, 'index'])
 Route::get('/ireka-ui/docs/structure', [IrekaUiController::class, 'structure'])
   ->name('ireka-ui.structure');
 
+Route::get('/ireka-ui/docs/navigation', [IrekaUiController::class, 'navigation'])
+  ->name('ireka-ui.navigation');
+
 Route::get('/ireka-ui/docs/components', [IrekaUiController::class, 'components'])
   ->name('ireka-ui.components');
 

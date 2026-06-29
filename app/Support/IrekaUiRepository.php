@@ -32,6 +32,19 @@ class IrekaUiRepository
         ];
     }
 
+    public function doc(string $filename): array
+    {
+        $doc = $this->load($filename);
+
+        return [
+            'title' => $doc['meta']['title'] ?? Str::headline(pathinfo($filename, PATHINFO_FILENAME)),
+            'description' => $doc['meta']['description'] ?? '',
+            'eyebrow' => $doc['meta']['eyebrow'] ?? '',
+            'intro_html' => $this->introHtml($doc['body']),
+            'sections' => $this->parseSections($doc['body']),
+        ];
+    }
+
     private function load(string $filename): array
     {
         $path = config('ireka-ui.path', base_path('content/ireka-ui')).'/'.$filename;

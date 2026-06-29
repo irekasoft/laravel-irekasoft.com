@@ -39,6 +39,13 @@ class IrekaUiController extends Controller {
     ]);
   }
 
+  public function navigation(IrekaUiRepository $content) {
+    return view('pages.ireka-ui.navigation', [
+      'page' => $content->doc('navigation.md'),
+      'components' => self::COMPONENTS,
+    ]);
+  }
+
   public function components() {
     return view('pages.ireka-ui.components', [
       'components' => self::COMPONENTS,

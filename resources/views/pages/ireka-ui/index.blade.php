@@ -20,7 +20,7 @@
     <div class="mt-7 flex flex-wrap gap-3">
       <a href="{{ route('ireka-ui.components') }}"
         class="inline-flex items-center gap-2 rounded-xl bg-ink px-4 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ink-soft">
-        Browse components <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        Browse components <i class="bi bi-chevron-right" aria-hidden="true"></i>
       </a>
     </div>
   </div>

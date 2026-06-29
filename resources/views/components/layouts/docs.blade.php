@@ -69,7 +69,7 @@
   </div>
 
   <main class="flex flex-1 flex-col pt-15">
-    <div class="mx-auto flex w-full max-w-7xl flex-1 gap-10 px-4 py-8 sm:px-6 lg:py-10">
+    <div class="mx-auto flex w-full max-w-7xl flex-1 gap-10 px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-10">
       <aside class="hidden w-60 shrink-0 md:block">
         <div class="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
           @isset($sidebar)

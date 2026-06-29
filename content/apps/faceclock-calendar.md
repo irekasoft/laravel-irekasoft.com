@@ -6,7 +6,7 @@ platforms:
 icon: faceclock-calendar.png
 icon_bg: '#2C3E50'
 icon_label: CC
-store_url: http://appstore.com/irekasoft/faceclockwithcalendar
+store_url: https://apps.apple.com/my/app/faceclock-calendar/id444503832
 image_url: fc-calendar.jpg
 features:
   - Digital clock and calendar on a single screen

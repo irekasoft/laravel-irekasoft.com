@@ -43,23 +43,4 @@
     <x-ireka-ui.markdown-section :section="$section" class="mt-14" />
   @endforeach
 
-  {{-- Index --}}
-  <h2 class="mt-14 max-w-3xl font-display text-2xl font-semibold tracking-tight text-ink">What's inside</h2>
-  <p class="mt-3 max-w-3xl leading-relaxed text-charcoal/70">
-    {{ count($components) }} components and counting — here's the full set.
-    <a href="{{ route('ireka-ui.components') }}" class="text-ink underline underline-offset-2">See them in action</a>.
-  </p>
-  <div class="mt-5 grid max-w-3xl gap-2 sm:grid-cols-2">
-    @foreach ($components as $c)
-      <a href="{{ route('ireka-ui.components') }}#{{ $c['id'] }}"
-        class="group flex items-start gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3 transition-colors hover:border-charcoal/30">
-        <div class="min-w-0">
-          <p class="font-mono text-[13px] text-ink">{{ $c['name'] }}</p>
-          <p class="mt-0.5 text-xs text-charcoal/50">{{ $c['summary'] }}</p>
-        </div>
-        <i class="bi bi-arrow-right ml-auto mt-0.5 text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
-      </a>
-    @endforeach
-  </div>
-
 </x-ireka-ui.shell>

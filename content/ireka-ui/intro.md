@@ -20,26 +20,3 @@ features:
 A small, mobile-first React component library.
 Built on Tailwind CSS and designed to feel native inside Capacitor shells, with clean
 defaults and almost no API surface to learn.
-
-## Quick start
-
-Every component is exported from a single barrel file. Import what you need and drop it in.
-
-```jsx
-import { Button, Badge, Card } from './components/ui';
-
-export default function Example() {
-  return (
-    <Card>
-      <Card.Header
-        title="Order #1024"
-        trailing={<Badge label="Paid" variant="green" />}
-      />
-      <Card.Body>Two items · RM 38.00</Card.Body>
-      <Card.Footer>
-        <Button variant="primary">Track order</Button>
-      </Card.Footer>
-    </Card>
-  );
-}
-```

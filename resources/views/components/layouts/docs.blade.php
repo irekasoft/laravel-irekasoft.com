@@ -2,6 +2,7 @@
     'title' => null,
     'description' => null,
     'product' => 'Documentation',
+    'section' => 'intro',
 ])
 
 <!DOCTYPE html>
@@ -22,7 +23,10 @@
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
       <div class="flex min-w-0 items-center gap-3">
         <button type="button" id="docs-sidebar-button"
-          class="docs-sidebar-button cursor-pointer relative z-[120] flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-ink transition-colors hover:bg-charcoal/5 md:hidden"
+          @class([
+              'docs-sidebar-button cursor-pointer relative z-[120] flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-ink transition-colors hover:bg-charcoal/5 md:hidden',
+              'hidden' => $section === 'intro',
+          ])
           aria-expanded="false" aria-controls="docs-sidebar-drawer" aria-label="Open documentation menu">
           <span class="docs-sidebar-bar absolute block h-0.5 w-5 bg-blue-500 transition-all duration-300 -translate-y-1.5"></span>
           <span class="docs-sidebar-bar absolute block h-0.5 w-4 bg-current transition-all duration-300"></span>
@@ -41,6 +45,10 @@
     </div>
   </header>
 
+  <div class="fixed inset-x-0 top-11 z-40">
+    <x-ireka-ui.top-nav :section="$section" />
+  </div>
+
   <div id="docs-sidebar-drawer"
     class="fixed inset-0 z-[100] md:hidden opacity-0 invisible pointer-events-none transition-opacity duration-300 data-[open=true]:opacity-100 data-[open=true]:visible data-[open=true]:pointer-events-auto"
     data-open="false" aria-hidden="true">
@@ -48,7 +56,7 @@
 
     <div data-docs-sidebar-panel
       class="absolute inset-y-0 left-0 flex w-[min(100%,18rem)] flex-col border-r border-charcoal/10 bg-white shadow-xl transition-transform duration-300 -translate-x-full">
-      <div class="flex shrink-0 items-center justify-between border-b border-charcoal/10 px-4 py-3">
+      <div class="flex shrink-0 items-center justify-between border-b border-charcoal/10 px-2 py-3">
         <span class="font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Menu</span>
         <button type="button" id="docs-sidebar-close"
           class="cursor-pointer flex h-9 w-9 items-center justify-center rounded-lg text-charcoal/60 transition-colors hover:bg-charcoal/5 hover:text-ink"
@@ -68,10 +76,13 @@
     </div>
   </div>
 
-  <main class="flex flex-1 flex-col pt-15">
+  <main class="flex flex-1 flex-col pt-28">
     <div class="mx-auto flex w-full max-w-7xl flex-1 gap-10 px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-10">
-      <aside class="hidden w-60 shrink-0 md:block">
-        <div class="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
+      <aside @class([
+          'hidden w-60 shrink-0 md:block',
+          'md:hidden' => $section === 'intro',
+      ])>
+        <div class="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2">
           @isset($sidebar)
             {{ $sidebar }}
           @endisset
@@ -81,6 +92,14 @@
       <div class="min-w-0 flex-1">
         {{ $slot }}
       </div>
+
+      @isset($toc)
+        <aside class="hidden w-44 shrink-0 xl:block">
+          <div class="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pl-2">
+            {{ $toc }}
+          </div>
+        </aside>
+      @endisset
     </div>
   </main>
 

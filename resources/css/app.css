@@ -71,6 +71,16 @@
         z-index: 110;
     }
 
+    .on-page-nav__link.is-active {
+        border-left-color: var(--color-ink);
+        color: var(--color-ink);
+        font-weight: 500;
+    }
+
+    [data-on-page-nav-mobile][data-open='true'] [data-on-page-nav-chevron] {
+        transform: rotate(180deg);
+    }
+
     .app-markdown p + p {
         margin-top: 1rem;
     }

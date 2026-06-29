@@ -9,6 +9,7 @@ import 'prismjs/components/prism-bash';
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initDocsSidebar();
+    initOnPageNavDropdown();
     initDocsScrollSpy();
     initSectionDotGrid();
     initOceanCursor();
@@ -124,6 +125,49 @@ function initDocsSidebar() {
     });
 }
 
+function initOnPageNavDropdown() {
+    const mobileNav = document.querySelector('[data-on-page-nav-mobile]');
+
+    if (!mobileNav) {
+        return;
+    }
+
+    const toggle = mobileNav.querySelector('[data-on-page-nav-toggle]');
+    const menu = mobileNav.querySelector('[data-on-page-nav-menu]');
+
+    if (!toggle || !menu) {
+        return;
+    }
+
+    const isOpen = () => mobileNav.dataset.open === 'true';
+
+    const setOpen = (open) => {
+        mobileNav.dataset.open = open ? 'true' : 'false';
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        menu.classList.toggle('hidden', !open);
+    };
+
+    toggle.addEventListener('click', () => {
+        setOpen(!isOpen());
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setOpen(false));
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!mobileNav.contains(event.target) && isOpen()) {
+            setOpen(false);
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && isOpen()) {
+            setOpen(false);
+        }
+    });
+}
+
 function initDocsScrollSpy() {
     const links = Array.from(document.querySelectorAll('[data-component-link]'));
 
@@ -137,13 +181,26 @@ function initDocsScrollSpy() {
 
     const setActive = (id) => {
         links.forEach((link) => {
-            link.classList.remove('bg-charcoal/5', 'text-ink', 'font-medium');
+            link.classList.remove('is-active', 'bg-charcoal/5', 'text-ink', 'font-medium');
         });
 
-        const activeLink = byId[id];
+        const activeLinks = links.filter((link) => link.getAttribute('data-component-link') === id);
 
-        if (activeLink) {
-            activeLink.classList.add('bg-charcoal/5', 'text-ink', 'font-medium');
+        activeLinks.forEach((link) => {
+            link.classList.add('is-active');
+
+            if (!link.classList.contains('on-page-nav__link')) {
+                link.classList.add('bg-charcoal/5', 'text-ink', 'font-medium');
+            }
+        });
+
+        const currentLabel = document.querySelector('[data-on-page-nav-current]');
+        const activeSection = document.getElementById(id);
+
+        if (currentLabel && activeSection) {
+            const heading = activeSection.querySelector('h2');
+
+            currentLabel.textContent = heading?.textContent?.trim() ?? '';
         }
     };
 
@@ -160,6 +217,13 @@ function initDocsScrollSpy() {
     document.querySelectorAll('section[id]').forEach((section) => {
         observer.observe(section);
     });
+
+    const initialId = window.location.hash.slice(1)
+        || document.querySelector('section[id]')?.id;
+
+    if (initialId && byId[initialId]) {
+        setActive(initialId);
+    }
 }
 
 function initSectionDotGrid() {

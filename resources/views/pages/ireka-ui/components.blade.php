@@ -202,16 +202,6 @@ JSX;
     <code class="rounded bg-charcoal/5 px-1 py-0.5 font-mono text-[13px] text-ink">className</code>.
   </p>
 
-  {{-- Jump chips --}}
-  <div class="mt-6 flex flex-wrap gap-2">
-    @foreach ($components as $c)
-      <a href="#{{ $c['id'] }}"
-        class="rounded-full border border-charcoal/15 px-2.5 py-1 text-xs text-charcoal/70 transition-colors hover:border-charcoal/40 hover:text-ink">
-        {{ $c['name'] }}
-      </a>
-    @endforeach
-  </div>
-
   <div class="mt-12 space-y-2">
 
     {{-- Badge --}}

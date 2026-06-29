@@ -51,6 +51,13 @@
     ])>
       <i class="bi bi-layout-sidebar-inset-reverse" aria-hidden="true"></i> Overlays
     </a>
+    <a href="{{ route('ireka-ui.layout') }}" @class([
+        'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
+        'bg-ink text-paper font-medium' => $active === 'layout',
+        'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'layout',
+    ])>
+      <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> Layout
+    </a>
     <a href="{{ route('ireka-ui.components') }}" @class([
         'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
         'bg-ink text-paper font-medium' => $active === 'components',

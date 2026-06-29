@@ -60,6 +60,13 @@ class IrekaUiController extends Controller {
     ]);
   }
 
+  public function layout(IrekaUiRepository $content) {
+    return view('pages.ireka-ui.layout', [
+      'page' => $content->doc('layout.md'),
+      'components' => self::COMPONENTS,
+    ]);
+  }
+
   public function components() {
     return view('pages.ireka-ui.components', [
       'components' => self::COMPONENTS,

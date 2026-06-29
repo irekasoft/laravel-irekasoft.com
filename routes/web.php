@@ -49,6 +49,9 @@ Route::get('/ireka-ui/docs/modals', [IrekaUiController::class, 'modals'])
 Route::get('/ireka-ui/docs/overlays', [IrekaUiController::class, 'overlays'])
   ->name('ireka-ui.overlays');
 
+Route::get('/ireka-ui/docs/layout', [IrekaUiController::class, 'layout'])
+  ->name('ireka-ui.layout');
+
 Route::get('/ireka-ui/docs/components', [IrekaUiController::class, 'components'])
   ->name('ireka-ui.components');
 

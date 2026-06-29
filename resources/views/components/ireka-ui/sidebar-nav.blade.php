@@ -40,10 +40,19 @@
 @elseif ($section === 'components' && count($components) > 0)
   <nav class="mt-7 space-y-0.5 text-sm">
     <p class="mb-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Components</p>
+    <a href="{{ route('ireka-ui.components') }}" @class([
+        'block rounded-lg px-3 py-1.5 transition-colors',
+        'bg-ink text-paper font-medium' => $active === 'components',
+        'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'components',
+    ])>
+      Overview
+    </a>
     @foreach ($components as $c)
-      <a href="{{ route('ireka-ui.components') }}#{{ $c['id'] }}"
-        data-component-link="{{ $c['id'] }}"
-        class="block rounded-lg px-3 py-1.5 text-charcoal/70 transition-colors hover:bg-charcoal/5">
+      <a href="{{ route('ireka-ui.component', $c['id']) }}" @class([
+          'block rounded-lg px-3 py-1.5 transition-colors',
+          'bg-ink text-paper font-medium' => $active === $c['id'],
+          'text-charcoal/70 hover:bg-charcoal/5' => $active !== $c['id'],
+      ])>
         {{ $c['name'] }}
       </a>
     @endforeach

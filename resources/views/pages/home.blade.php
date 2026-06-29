@@ -91,6 +91,9 @@
 
       <div class="grid gap-8 md:grid-cols-3 font-display">
         <div class="border-t border-paper/20 pt-5">
+          <div class="mb-5">
+            <x-milestone-graphic.tokyo />
+          </div>
           <p class="font-mono text-sm text-paper/40 mb-2">2009 — Tokyo</p>
           <p class="text-lg leading-snug">
             Built CalcDrill, an iPhone maths app, while studying in Japan. It became one of
@@ -99,6 +102,9 @@
           </p>
         </div>
         <div class="border-t border-paper/20 pt-5">
+          <div class="mb-5">
+            <x-milestone-graphic.cyberjaya />
+          </div>
           <p class="font-mono text-sm text-paper/40 mb-2">2015 — Cyberjaya</p>
           <p class="text-lg leading-snug">
             Founded iReka Soft, building iOS, Android, and web apps for clients across
@@ -106,6 +112,9 @@
           </p>
         </div>
         <div class="border-t border-paper/20 pt-5">
+          <div class="mb-5">
+            <x-milestone-graphic.orderla />
+          </div>
           <p class="font-mono text-sm text-paper/40 mb-2">2020 — Orderla</p>
           <p class="text-lg leading-snug">
             All of that became one focus: Orderla, a commerce suite merchants actually run

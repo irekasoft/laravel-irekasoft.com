@@ -55,6 +55,9 @@ Route::get('/ireka-ui/docs/layout', [IrekaUiController::class, 'layout'])
 Route::get('/ireka-ui/docs/components', [IrekaUiController::class, 'components'])
   ->name('ireka-ui.components');
 
+Route::get('/ireka-ui/docs/components/{component}', [IrekaUiController::class, 'component'])
+  ->name('ireka-ui.component');
+
 
 // Legacy URLs → contact
 Route::get('/contact-us', function () {

@@ -6,10 +6,12 @@
 ])
 
 @php
-  $section = match ($active) {
-    'intro' => 'intro',
-    'components' => 'components',
-    default => 'guides',
+  $guideIds = ['structure', 'navigation', 'modals', 'overlays', 'layout'];
+
+  $section = match (true) {
+    $active === 'intro' => 'intro',
+    in_array($active, $guideIds, true) => 'guides',
+    default => 'components',
   };
 @endphp
 

@@ -9,6 +9,11 @@ inside a stack of providers, the **framework/** layer supplies the
 declares the routes and tabs that render page components from
 **pages/**.
 
+The same source is **Capacitor-ready** — it runs in the browser during
+development and ships unchanged inside the Capacitor shell that powers
+the iOS and Android builds, so what you see on the web is what runs on
+device.
+
 ```text
 src/
 ├── main.jsx            # Entry — mounts providers + AppShell

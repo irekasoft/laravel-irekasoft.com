@@ -35,7 +35,21 @@
         'bg-ink text-paper font-medium' => $active === 'navigation',
         'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'navigation',
     ])>
-      <i class="bi bi-layers" aria-hidden="true"></i> Navigation &amp; Overlays
+      <i class="bi bi-layers" aria-hidden="true"></i> Navigation
+    </a>
+    <a href="{{ route('ireka-ui.modals') }}" @class([
+        'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
+        'bg-ink text-paper font-medium' => $active === 'modals',
+        'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'modals',
+    ])>
+      <i class="bi bi-window-stack" aria-hidden="true"></i> Modals
+    </a>
+    <a href="{{ route('ireka-ui.overlays') }}" @class([
+        'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
+        'bg-ink text-paper font-medium' => $active === 'overlays',
+        'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'overlays',
+    ])>
+      <i class="bi bi-layout-sidebar-inset-reverse" aria-hidden="true"></i> Overlays
     </a>
     <a href="{{ route('ireka-ui.components') }}" @class([
         'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',

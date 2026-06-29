@@ -22,13 +22,11 @@ class IrekaUiRepository
 
     public function structure(): array
     {
-        $intro = $this->load('intro.md');
         $doc = $this->load('structure.md');
 
         return [
             'section' => $this->loadSection('structure.md'),
             'description' => $doc['meta']['description'] ?? '',
-            'features' => $intro['meta']['features'] ?? [],
         ];
     }
 

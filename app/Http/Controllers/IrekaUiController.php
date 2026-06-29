@@ -46,6 +46,20 @@ class IrekaUiController extends Controller {
     ]);
   }
 
+  public function modals(IrekaUiRepository $content) {
+    return view('pages.ireka-ui.modals', [
+      'page' => $content->doc('modals.md'),
+      'components' => self::COMPONENTS,
+    ]);
+  }
+
+  public function overlays(IrekaUiRepository $content) {
+    return view('pages.ireka-ui.overlays', [
+      'page' => $content->doc('overlays.md'),
+      'components' => self::COMPONENTS,
+    ]);
+  }
+
   public function components() {
     return view('pages.ireka-ui.components', [
       'components' => self::COMPONENTS,

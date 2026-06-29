@@ -1,14 +1,14 @@
 ---
-title: Navigation & Overlays
-description: Stack navigation, full-screen modals, bottom sheets, and Android back handling in ireka-ui.
+title: Navigation
+description: Stack navigation in ireka-ui — the Page wrapper, useNavigation, and standalone StackNav flows.
 eyebrow: Framework
 ---
 
-Beyond static screens, ireka-ui ships a small navigation layer: tab
-stacks push and pop pages with native-feeling slide transitions, and
-overlays — full-screen modals and bottom sheets — layer on top.
-Everything participates in a shared back-button system so the Android
-hardware back key always does the expected thing.
+ireka-ui ships a small navigation layer. Each tab owns a stack of
+screens that push and pop with native-feeling slide transitions, and a
+`Page` wrapper gives every screen a NavBar, scrolling, and lifecycle
+hooks. For flows outside the tab bar, `StackNav` provides the same stack
+behaviour on its own.
 
 ## Page
 
@@ -89,80 +89,3 @@ function CartPage({ cart }) {
 // Mount the flow:
 <StackNav component={CartPage} props={{ cart }} />
 ```
-
-## ModalPage
-
-`ModalPage` presents a full-screen page above everything else. Control
-it with `open` and `onClose`. `direction="up"` slides it from the bottom
-(a presented modal); `direction="right"` slides it from the edge like a
-pushed page, complete with edge-swipe-back on supported platforms.
-
-```jsx
-import { useState } from 'react';
-import { ModalPage } from '../framework';
-
-function NewOrderButton() {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <button onClick={() => setOpen(true)}>New order</button>
-
-      <ModalPage open={open} onClose={() => setOpen(false)} title="New Order" direction="up">
-        <NewOrderForm onDone={() => setOpen(false)} />
-      </ModalPage>
-    </>
-  );
-}
-```
-
-Set `hideNavBar` to supply your own header, and combine `ModalPage` with
-`StackNav` to run a multi-step flow inside a single modal.
-
-## BottomSheet
-
-`BottomSheet` slides a panel up from the bottom over a dimmed backdrop.
-It's drag-dismissible — flicking it down past the threshold (or tapping
-the backdrop) calls `onClose`. Best for short, contextual actions.
-
-```jsx
-import { useState } from 'react';
-import { BottomSheet } from '../framework';
-import { SheetAction } from '../components/ui';
-
-function ShareButton() {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <button onClick={() => setOpen(true)}>Share</button>
-
-      <BottomSheet open={open} onClose={() => setOpen(false)}>
-        <SheetAction onClick={() => setOpen(false)}>Copy link</SheetAction>
-        <SheetAction onClick={() => setOpen(false)}>Share to…</SheetAction>
-      </BottomSheet>
-    </>
-  );
-}
-```
-
-## Android back handling
-
-Every overlay registers itself with a shared back stack via the
-`useOverlayBack(active, onBack)` hook, so the Android hardware back key
-dismisses the topmost overlay first, then walks back through the page
-stack, and only minimizes the app when nothing is left to close.
-`ModalPage`, `BottomSheet`, and `StackNav` already wire this up — you
-only need the hook when building a custom overlay.
-
-```jsx
-import { useOverlayBack } from '../framework';
-
-function CustomOverlay({ open, onClose, children }) {
-  useOverlayBack(open, onClose);
-  if (!open) return null;
-  return <div className="overlay">{children}</div>;
-}
-```
-
-The handler is installed once at startup via `installAndroidBackHandler()`
-and is a no-op on web and iOS, where the platform's own back gestures
-apply.

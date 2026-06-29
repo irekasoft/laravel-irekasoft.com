@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Support\IrekaUiRepository;
+
 class IrekaUiController extends Controller {
 
   /**
@@ -23,8 +25,16 @@ class IrekaUiController extends Controller {
     ['id' => 'toggle',            'name' => 'Toggle',            'summary' => 'On/off switch, optionally with a label.'],
   ];
 
-  public function index() {
+  public function index(IrekaUiRepository $content) {
     return view('pages.ireka-ui.index', [
+      'page' => $content->intro(),
+      'components' => self::COMPONENTS,
+    ]);
+  }
+
+  public function structure(IrekaUiRepository $content) {
+    return view('pages.ireka-ui.structure', [
+      'page' => $content->structure(),
       'components' => self::COMPONENTS,
     ]);
   }

@@ -18,7 +18,7 @@
         <i class="bi bi-whatsapp mr-1"></i>
         Send a WhatsApp message
       </a>
-      <a href="https://irekaweb.com/enquiry" target="_blank" rel="noopener"
+      <a href="https://irekaweb.com/enquiry?from=irekasoft.com" target="_blank" rel="noopener"
         class="inline-flex items-center justify-center font-mono text-[13px] uppercase tracking-wide bg-blue-500 text-white px-6 py-3 rounded-sm hover:bg-blue-600 transition-colors">
         <i class="bi bi-cursor mr-1"></i>
         Send enquiry 

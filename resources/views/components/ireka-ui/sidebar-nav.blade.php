@@ -23,7 +23,7 @@
     ])>
       <i class="bi bi-house-door" aria-hidden="true"></i> Introduction
     </a>
-    <a href="{{ route('ireka-ui.index') }}#structure" @class([
+    <a href="{{ route('ireka-ui.structure') }}" @class([
         'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
         'bg-ink text-paper font-medium' => $active === 'structure',
         'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'structure',

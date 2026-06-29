@@ -31,7 +31,7 @@
         ['route' => 'contact', 'label' => 'Contact'],
         // ['route' => 'products', 'label' => 'Products'],
     ];
-    $ctaHref = $immersive ? 'services' : 'https://irekaweb.com/enquiry';
+    $ctaHref = $immersive ? 'services' : 'https://irekaweb.com/enquiry?from=irekasoft.com';
     $ctaLabel = $immersive ? 'Explore iReka Soft' : 'Enquiry Now';
     $ctaExternal = true;
   @endphp

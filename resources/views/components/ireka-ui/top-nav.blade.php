@@ -30,7 +30,19 @@
 
 <nav aria-label="Documentation sections"
   class="border-b border-charcoal/10 bg-white/90 backdrop-blur-sm">
-  <div class="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 sm:px-6">
+  <div class="mx-auto flex max-w-7xl items-center px-4 sm:px-6">
+    <button type="button" id="docs-sidebar-button"
+      @class([
+          'docs-sidebar-button cursor-pointer relative z-[120] -ml-2 mr-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-ink transition-colors hover:bg-charcoal/5 md:hidden',
+          'hidden' => $section === 'intro',
+      ])
+      aria-expanded="false" aria-controls="docs-sidebar-drawer" aria-label="Open documentation menu">
+      <span class="docs-sidebar-bar absolute left-2 block h-0.5 w-5 bg-blue-500 transition-all duration-300 -translate-y-1.5"></span>
+      <span class="docs-sidebar-bar absolute left-2 block h-0.5 w-4 bg-current transition-all duration-300"></span>
+      <span class="docs-sidebar-bar absolute left-2 block h-0.5 w-5 bg-current transition-all duration-300 translate-y-1.5"></span>
+    </button>
+
+    <div class="flex flex-1 gap-1 overflow-x-auto">
     @foreach ($items as $item)
       <a href="{{ $item['href'] }}" @class([
           'group relative flex shrink-0 items-center gap-2 px-2.5 py-4 text-sm transition-colors sm:px-3',
@@ -49,5 +61,6 @@
         ]) aria-hidden="true"></span>
       </a>
     @endforeach
+    </div>
   </div>
 </nav>

@@ -67,7 +67,8 @@
         transform: rotate(-45deg);
     }
 
-    body.docs-sidebar-open header {
+    body.docs-sidebar-open header,
+    body.docs-sidebar-open #docs-topnav {
         z-index: 110;
     }
 

@@ -22,17 +22,6 @@
   <header class="fixed inset-x-0 top-0 z-50 border-b border-charcoal/10 bg-white/90 backdrop-blur-sm">
     <div class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
       <div class="flex min-w-0 items-center gap-3">
-        <button type="button" id="docs-sidebar-button"
-          @class([
-              'docs-sidebar-button cursor-pointer relative z-[120] flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-ink transition-colors hover:bg-charcoal/5 md:hidden',
-              'hidden' => $section === 'intro',
-          ])
-          aria-expanded="false" aria-controls="docs-sidebar-drawer" aria-label="Open documentation menu">
-          <span class="docs-sidebar-bar absolute left-2 block h-0.5 w-5 bg-blue-500 transition-all duration-300 -translate-y-1.5"></span>
-          <span class="docs-sidebar-bar absolute left-2 block h-0.5 w-4 bg-current transition-all duration-300"></span>
-          <span class="docs-sidebar-bar absolute left-2 block h-0.5 w-5 bg-current transition-all duration-300 translate-y-1.5"></span>
-        </button>
-
         <a href="{{ route('ireka-ui.index') }}" class="truncate font-mono text-[15px] font-semibold text-ink">
           {{ $product }}
         </a>
@@ -45,7 +34,7 @@
     </div>
   </header>
 
-  <div class="fixed inset-x-0 top-14 z-40">
+  <div id="docs-topnav" class="fixed inset-x-0 top-14 z-40">
     <x-ireka-ui.top-nav :section="$section" />
   </div>
 

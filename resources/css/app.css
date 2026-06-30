@@ -55,18 +55,6 @@
         pointer-events: auto;
     }
 
-    #docs-sidebar-button.is-open .docs-sidebar-bar:nth-child(1) {
-        transform: rotate(45deg);
-    }
-
-    #docs-sidebar-button.is-open .docs-sidebar-bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    #docs-sidebar-button.is-open .docs-sidebar-bar:nth-child(3) {
-        transform: rotate(-45deg);
-    }
-
     body.docs-sidebar-open header,
     body.docs-sidebar-open #docs-topnav {
         z-index: 110;

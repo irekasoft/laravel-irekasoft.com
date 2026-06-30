@@ -45,7 +45,139 @@ class IrekaUiRepository
 
     public function componentOverview(): array
     {
-        return $this->doc('components-overview.md');
+        return $this->doc('components/index.md');
+    }
+
+    /**
+     * Guide categories (Modals, Overlays, Layout) that live in the
+     * components section. Each is a folder of markdown sub-pages.
+     */
+    public function categoryMeta(): array
+    {
+        return [
+            'modals' => ['id' => 'modals', 'name' => 'Modals', 'route' => 'ireka-ui.modals'],
+            'overlays' => ['id' => 'overlays', 'name' => 'Overlays', 'route' => 'ireka-ui.overlays'],
+            'layout' => ['id' => 'layout', 'name' => 'Layout', 'route' => 'ireka-ui.layout'],
+        ];
+    }
+
+    public function guideCategory(string $category): array
+    {
+        $meta = $this->categoryMeta()[$category] ?? null;
+
+        if ($meta === null) {
+            throw new \RuntimeException("Unknown guide category: {$category}");
+        }
+
+        $index = $this->parseFile($this->categoryPath($category).'/index.md');
+
+        return [
+            'id' => $category,
+            'name' => $index['meta']['title'] ?? $meta['name'],
+            'eyebrow' => $index['meta']['eyebrow'] ?? '',
+            'summary' => $index['meta']['summary'] ?? '',
+            'intro_html' => $index['body'] !== '' ? Str::markdown($index['body']) : '',
+            'guides' => $this->guidesIn($category),
+        ];
+    }
+
+    public function guidesIn(string $category): array
+    {
+        return collect(glob($this->categoryPath($category).'/*.md'))
+            ->reject(fn (string $file) => basename($file) === 'index.md')
+            ->map(fn (string $file) => $this->parseGuideMeta($file, $category))
+            ->sortBy('order')
+            ->values()
+            ->all();
+    }
+
+    public function guidesByCategory(): array
+    {
+        return collect($this->categoryMeta())
+            ->map(fn (array $meta, string $key) => $meta + ['guides' => $this->guidesIn($key)])
+            ->values()
+            ->all();
+    }
+
+    public function findGuide(string $category, string $id): ?array
+    {
+        $meta = $this->categoryMeta()[$category] ?? null;
+
+        if ($meta === null) {
+            return null;
+        }
+
+        $path = $this->categoryPath($category)."/{$id}.md";
+
+        if (! is_readable($path)) {
+            return null;
+        }
+
+        $doc = $this->parseFile($path);
+
+        return [
+            'id' => $doc['meta']['id'] ?? $id,
+            'category' => $category,
+            'category_name' => $meta['name'],
+            'category_route' => $meta['route'],
+            'title' => $doc['meta']['title'] ?? Str::headline($id),
+            'summary' => $doc['meta']['summary'] ?? '',
+            'blocks' => $this->parseBlocks($doc['body']),
+        ];
+    }
+
+    private function categoryPath(string $category): string
+    {
+        return config('ireka-ui.path', base_path('content/ireka-ui')).'/'.$category;
+    }
+
+    private function parseGuideMeta(string $path, string $category): array
+    {
+        $meta = $this->parseFile($path)['meta'];
+
+        return [
+            'id' => $meta['id'] ?? pathinfo($path, PATHINFO_FILENAME),
+            'title' => $meta['title'] ?? Str::headline(pathinfo($path, PATHINFO_FILENAME)),
+            'summary' => $meta['summary'] ?? '',
+            'order' => (int) ($meta['order'] ?? 0),
+            'category' => $category,
+        ];
+    }
+
+    /**
+     * Split a markdown body into ordered prose/code blocks so the two
+     * render interleaved in document order.
+     */
+    private function parseBlocks(string $body): array
+    {
+        $blocks = [];
+        $offset = 0;
+
+        if (preg_match_all('/```(\w*)\r?\n(.*?)```/s', $body, $matches, PREG_OFFSET_CAPTURE)) {
+            foreach ($matches[0] as $i => $whole) {
+                $prose = trim(substr($body, $offset, $whole[1] - $offset));
+
+                if ($prose !== '') {
+                    $blocks[] = ['type' => 'prose', 'html' => Str::markdown($prose)];
+                }
+
+                $blocks[] = [
+                    'type' => 'code',
+                    'language' => $matches[1][$i][0] !== '' ? $matches[1][$i][0] : 'jsx',
+                    'code' => rtrim($matches[2][$i][0], "\r\n"),
+                ];
+
+                $offset = $whole[1] + strlen($whole[0]);
+            }
+        }
+
+        $tail = trim(substr($body, $offset));
+
+        if ($tail !== '') {
+            $blocks[] = ['type' => 'prose', 'html' => Str::markdown($tail)];
+        }
+
+        return $blocks;
     }
 
     public function findComponent(string $id): ?array
@@ -69,6 +201,7 @@ class IrekaUiRepository
         $path = config('ireka-ui.components_path', base_path('content/ireka-ui/components'));
 
         return collect(glob($path.'/*.md'))
+            ->reject(fn (string $file) => basename($file) === 'index.md')
             ->map(fn (string $file) => $this->parseComponent($file))
             ->sortBy('order')
             ->values()

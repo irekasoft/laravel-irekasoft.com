@@ -58,6 +58,10 @@ Route::get('/ireka-ui/docs/components', [IrekaUiController::class, 'components']
 Route::get('/ireka-ui/docs/components/{component}', [IrekaUiController::class, 'component'])
   ->name('ireka-ui.component');
 
+Route::get('/ireka-ui/docs/{category}/{guide}', [IrekaUiController::class, 'guide'])
+  ->whereIn('category', ['modals', 'overlays', 'layout'])
+  ->name('ireka-ui.guide');
+
 
 // Legacy URLs → contact
 Route::get('/contact-us', function () {

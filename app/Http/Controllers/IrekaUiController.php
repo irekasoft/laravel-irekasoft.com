@@ -28,23 +28,34 @@ class IrekaUiController extends Controller {
   }
 
   public function modals(IrekaUiRepository $content) {
-    return view('pages.ireka-ui.modals', [
-      'page' => $content->doc('modals.md'),
-      'components' => $content->componentCatalog(),
-    ]);
+    return $this->category($content, 'modals');
   }
 
   public function overlays(IrekaUiRepository $content) {
-    return view('pages.ireka-ui.overlays', [
-      'page' => $content->doc('overlays.md'),
-      'components' => $content->componentCatalog(),
-    ]);
+    return $this->category($content, 'overlays');
   }
 
   public function layout(IrekaUiRepository $content) {
-    return view('pages.ireka-ui.layout', [
-      'page' => $content->doc('layout.md'),
-      'components' => $content->componentCatalog(),
+    return $this->category($content, 'layout');
+  }
+
+  private function category(IrekaUiRepository $content, string $key) {
+    return view('pages.ireka-ui.category', [
+      'category' => $content->guideCategory($key),
+      'catalog' => $content->componentCatalog(),
+    ]);
+  }
+
+  public function guide(IrekaUiRepository $content, string $category, string $guide) {
+    $doc = $content->findGuide($category, $guide);
+
+    if ($doc === null) {
+      abort(404);
+    }
+
+    return view('pages.ireka-ui.guide', [
+      'doc' => $doc,
+      'catalog' => $content->componentCatalog(),
     ]);
   }
 

@@ -1,43 +1,9 @@
 ---
-title: Layout
-description: Arranging content in ireka-ui — the 12-column Grid and iOS-style GroupedList.
-eyebrow: Components
+id: groupedlist
+title: GroupedList
+order: 2
+summary: Inset, rounded lists for settings and detail screens.
 ---
-
-Two primitives cover most screen layouts: `Grid` lays widgets out across
-a 12-column track, and `GroupedList` builds the inset, rounded lists that
-settings and detail screens are made of.
-
-## Grid
-
-`Grid` is a 12-column grid. Wrap children in `Grid.Item` and give each a
-`col` span from 1 to 12; rows wrap automatically once the spans fill up.
-The `gap` prop (default `2`) sets the spacing between cells.
-
-```jsx
-import { Grid } from '../components/ui';
-
-function Stats() {
-  return (
-    <Grid gap={2}>
-      <Grid.Item col={4}>
-        <StatCard label="Orders" value="128" />
-      </Grid.Item>
-      <Grid.Item col={4}>
-        <StatCard label="Points" value="2,340" />
-      </Grid.Item>
-      <Grid.Item col={4}>
-        <StatCard label="Tier" value="Gold" />
-      </Grid.Item>
-    </Grid>
-  );
-}
-```
-
-Mix spans freely — a `col={12}` item fills the row, two `col={6}` items
-split it in half, four `col={3}` items make a quarter-width row.
-
-## GroupedList
 
 `GroupedList` builds inset, rounded lists — the staple of settings and
 profile screens. Compose `GroupedList.Section` (an optional `title` and

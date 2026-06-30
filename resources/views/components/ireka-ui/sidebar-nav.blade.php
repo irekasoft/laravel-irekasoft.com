@@ -10,11 +10,9 @@
     ['id' => 'navigation', 'route' => 'ireka-ui.navigation', 'name' => 'Navigation', 'icon' => 'bi-layers'],
   ];
 
-  $patterns = [
-    ['id' => 'modals', 'route' => 'ireka-ui.modals', 'name' => 'Modals'],
-    ['id' => 'overlays', 'route' => 'ireka-ui.overlays', 'name' => 'Overlays'],
-    ['id' => 'layout', 'route' => 'ireka-ui.layout', 'name' => 'Layout'],
-  ];
+  $patternCategories = $section === 'components'
+    ? app(\App\Support\IrekaUiRepository::class)->guidesByCategory()
+    : [];
 @endphp
 
 <a href="{{ route('ireka-ui.index') }}" class="flex items-center gap-2.5">
@@ -40,33 +38,42 @@
       </a>
     @endforeach
   </nav>
-@elseif ($section === 'components' && count($components) > 0)
-  <nav class="mt-7 space-y-0.5 text-sm">
-    <p class="mb-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Components</p>
-    <a href="{{ route('ireka-ui.components') }}" @class([
-        'block rounded-lg px-3 py-1.5 transition-colors',
-        'bg-ink text-paper font-medium' => $active === 'components',
-        'text-charcoal/70 hover:bg-charcoal/5' => $active !== 'components',
-    ])>
-      Overview
-    </a>
-    @foreach ($patterns as $p)
-      <a href="{{ route($p['route']) }}" @class([
-          'block rounded-lg px-3 py-1.5 transition-colors',
-          'bg-ink text-paper font-medium' => $active === $p['id'],
-          'text-charcoal/70 hover:bg-charcoal/5' => $active !== $p['id'],
-      ])>
-        {{ $p['name'] }}
-      </a>
-    @endforeach
-    @foreach ($components as $c)
-      <a href="{{ route('ireka-ui.component', $c['id']) }}" @class([
-          'block rounded-lg px-3 py-1.5 transition-colors',
-          'bg-ink text-paper font-medium' => $active === $c['id'],
-          'text-charcoal/70 hover:bg-charcoal/5' => $active !== $c['id'],
-      ])>
-        {{ $c['name'] }}
-      </a>
-    @endforeach
-  </nav>
+@elseif ($section === 'components')
+  @foreach ($patternCategories as $cat)
+    <nav class="mt-7 space-y-0.5 text-sm">
+      <a href="{{ route($cat['route']) }}" @class([
+          'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] transition-colors',
+          'text-ink' => $active === $cat['id'],
+          'text-charcoal/40 hover:text-ink' => $active !== $cat['id'],
+      ])>{{ $cat['name'] }}</a>
+      @foreach ($cat['guides'] as $g)
+        <a href="{{ route('ireka-ui.guide', [$cat['id'], $g['id']]) }}" @class([
+            'block rounded-lg px-3 py-1.5 transition-colors',
+            'bg-ink text-paper font-medium' => $active === $g['id'],
+            'text-charcoal/70 hover:bg-charcoal/5' => $active !== $g['id'],
+        ])>
+          {{ $g['title'] }}
+        </a>
+      @endforeach
+    </nav>
+  @endforeach
+
+  @if (count($components) > 0)
+    <nav class="mt-7 space-y-0.5 text-sm">
+      <a href="{{ route('ireka-ui.components') }}" @class([
+          'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] transition-colors',
+          'text-ink' => $active === 'components',
+          'text-charcoal/40 hover:text-ink' => $active !== 'components',
+      ])>Components</a>
+      @foreach ($components as $c)
+        <a href="{{ route('ireka-ui.component', $c['id']) }}" @class([
+            'block rounded-lg px-3 py-1.5 transition-colors',
+            'bg-ink text-paper font-medium' => $active === $c['id'],
+            'text-charcoal/70 hover:bg-charcoal/5' => $active !== $c['id'],
+        ])>
+          {{ $c['name'] }}
+        </a>
+      @endforeach
+    </nav>
+  @endif
 @endif

@@ -6,7 +6,7 @@
 ])
 
 @php
-  $guideIds = ['structure', 'navigation', 'modals', 'overlays', 'layout'];
+  $guideIds = ['structure', 'navigation'];
 
   $section = match (true) {
     $active === 'intro' => 'intro',

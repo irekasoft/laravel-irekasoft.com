@@ -8,9 +8,12 @@
   $guides = [
     ['id' => 'structure', 'route' => 'ireka-ui.structure', 'name' => 'Structure', 'icon' => 'bi-diagram-3'],
     ['id' => 'navigation', 'route' => 'ireka-ui.navigation', 'name' => 'Navigation', 'icon' => 'bi-layers'],
-    ['id' => 'modals', 'route' => 'ireka-ui.modals', 'name' => 'Modals', 'icon' => 'bi-window-stack'],
-    ['id' => 'overlays', 'route' => 'ireka-ui.overlays', 'name' => 'Overlays', 'icon' => 'bi-layout-sidebar-inset-reverse'],
-    ['id' => 'layout', 'route' => 'ireka-ui.layout', 'name' => 'Layout', 'icon' => 'bi-grid-3x3-gap'],
+  ];
+
+  $patterns = [
+    ['id' => 'modals', 'route' => 'ireka-ui.modals', 'name' => 'Modals'],
+    ['id' => 'overlays', 'route' => 'ireka-ui.overlays', 'name' => 'Overlays'],
+    ['id' => 'layout', 'route' => 'ireka-ui.layout', 'name' => 'Layout'],
   ];
 @endphp
 
@@ -47,6 +50,15 @@
     ])>
       Overview
     </a>
+    @foreach ($patterns as $p)
+      <a href="{{ route($p['route']) }}" @class([
+          'block rounded-lg px-3 py-1.5 transition-colors',
+          'bg-ink text-paper font-medium' => $active === $p['id'],
+          'text-charcoal/70 hover:bg-charcoal/5' => $active !== $p['id'],
+      ])>
+        {{ $p['name'] }}
+      </a>
+    @endforeach
     @foreach ($components as $c)
       <a href="{{ route('ireka-ui.component', $c['id']) }}" @class([
           'block rounded-lg px-3 py-1.5 transition-colors',

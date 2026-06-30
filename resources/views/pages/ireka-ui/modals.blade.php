@@ -10,7 +10,7 @@
         <i class="bi bi-window-stack" aria-hidden="true"></i> {{ $page['eyebrow'] }}
       </p>
     @endif
-    <h1 class="mt-3 font-mono text-4xl font-semibold tracking-tight text-ink md:text-5xl">{{ $page['title'] }}</h1>
+    <h1 class="mt-3 font-display text-4xl font-semibold tracking-tight text-ink md:text-5xl">{{ $page['title'] }}</h1>
     @if ($page['intro_html'])
       <div class="ireka-ui-markdown mt-5 text-lg leading-relaxed text-charcoal/70">
         {!! $page['intro_html'] !!}

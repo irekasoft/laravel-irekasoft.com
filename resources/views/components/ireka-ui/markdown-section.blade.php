@@ -3,7 +3,7 @@
     'heading' => 'h2',
 ])
 
-<section id="{{ $section['id'] }}" {{ $attributes->merge(['class' => 'max-w-3xl scroll-mt-24']) }}>
+<section id="{{ $section['id'] }}" {{ $attributes->merge(['class' => 'max-w-3xl scroll-mt-32']) }}>
   @if ($heading === 'h1')
     <h1 class="font-mono text-4xl font-semibold tracking-tight text-ink md:text-5xl">{{ $section['title'] }}</h1>
   @else

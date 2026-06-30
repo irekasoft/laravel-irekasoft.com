@@ -4,7 +4,7 @@
   active="intro"
   :components="$components">
 
-  <div id="introduction" class="max-w-3xl scroll-mt-24">
+  <div id="introduction" class="max-w-3xl scroll-mt-32">
     @if ($page['eyebrow'])
       <p class="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-terracotta">
         <i class="bi bi-stars" aria-hidden="true"></i> {{ $page['eyebrow'] }}

@@ -33,7 +33,7 @@
   <div class="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 sm:px-6">
     @foreach ($items as $item)
       <a href="{{ $item['href'] }}" @class([
-          'group relative flex shrink-0 items-center gap-2 px-2.5 py-3.5 text-sm transition-colors sm:px-3',
+          'group relative flex shrink-0 items-center gap-2 px-2.5 py-4 text-sm transition-colors sm:px-3',
           'text-ink' => $section === $item['section'],
           'text-charcoal/60 hover:text-ink' => $section !== $item['section'],
       ])>

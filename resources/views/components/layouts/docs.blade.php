@@ -20,7 +20,7 @@
 <body class="font-sans antialiased min-h-screen flex flex-col bg-white text-charcoal">
 
   <header class="fixed inset-x-0 top-0 z-50 border-b border-charcoal/10 bg-white/90 backdrop-blur-sm">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+    <div class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
       <div class="flex min-w-0 items-center gap-3">
         <button type="button" id="docs-sidebar-button"
           @class([
@@ -45,7 +45,7 @@
     </div>
   </header>
 
-  <div class="fixed inset-x-0 top-11 z-40">
+  <div class="fixed inset-x-0 top-14 z-40">
     <x-ireka-ui.top-nav :section="$section" />
   </div>
 
@@ -76,13 +76,13 @@
     </div>
   </div>
 
-  <main class="flex flex-1 flex-col pt-28">
+  <main class="flex flex-1 flex-col pt-32">
     <div class="mx-auto flex w-full max-w-7xl flex-1 gap-10 px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-10">
       <aside @class([
           'hidden w-60 shrink-0 md:block',
           'md:hidden' => $section === 'intro',
       ])>
-        <div class="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pr-2">
+        <div class="sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pr-2">
           @isset($sidebar)
             {{ $sidebar }}
           @endisset
@@ -95,7 +95,7 @@
 
       @isset($toc)
         <aside class="hidden w-44 shrink-0 xl:block">
-          <div class="sticky top-28 max-h-[calc(100vh-8rem)] overflow-y-auto pl-2">
+          <div class="sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pl-2">
             {{ $toc }}
           </div>
         </aside>

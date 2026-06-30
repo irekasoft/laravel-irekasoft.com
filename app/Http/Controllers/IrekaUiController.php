@@ -21,10 +21,7 @@ class IrekaUiController extends Controller {
   }
 
   public function navigation(IrekaUiRepository $content) {
-    return view('pages.ireka-ui.navigation', [
-      'page' => $content->doc('navigation.md'),
-      'components' => $content->componentCatalog(),
-    ]);
+    return $this->category($content, 'navigation');
   }
 
   public function modals(IrekaUiRepository $content) {

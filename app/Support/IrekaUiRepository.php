@@ -55,6 +55,7 @@ class IrekaUiRepository
     public function categoryMeta(): array
     {
         return [
+            'navigation' => ['id' => 'navigation', 'name' => 'Navigation', 'route' => 'ireka-ui.navigation'],
             'modals' => ['id' => 'modals', 'name' => 'Modals', 'route' => 'ireka-ui.modals'],
             'overlays' => ['id' => 'overlays', 'name' => 'Overlays', 'route' => 'ireka-ui.overlays'],
             'layout' => ['id' => 'layout', 'name' => 'Layout', 'route' => 'ireka-ui.layout'],

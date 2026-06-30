@@ -20,6 +20,7 @@
 
   @php
     $patterns = [
+      ['id' => 'navigation', 'route' => 'ireka-ui.navigation', 'name' => 'Navigation', 'summary' => 'The Page wrapper, useNavigation, and standalone StackNav flows.'],
       ['id' => 'modals', 'route' => 'ireka-ui.modals', 'name' => 'Modals', 'summary' => 'Full-screen modal pages — presented or pushed, with multi-step flows.'],
       ['id' => 'overlays', 'route' => 'ireka-ui.overlays', 'name' => 'Overlays', 'summary' => 'Bottom sheets, dropdown menus, alerts, popups, HUDs and toasts.'],
       ['id' => 'layout', 'route' => 'ireka-ui.layout', 'name' => 'Layout', 'summary' => 'The 12-column Grid and the iOS-style GroupedList.'],

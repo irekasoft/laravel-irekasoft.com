@@ -7,7 +7,6 @@
 @php
   $guides = [
     ['id' => 'structure', 'route' => 'ireka-ui.structure', 'name' => 'Structure', 'icon' => 'bi-diagram-3'],
-    ['id' => 'navigation', 'route' => 'ireka-ui.navigation', 'name' => 'Navigation', 'icon' => 'bi-layers'],
   ];
 
   $patternCategories = $section === 'components'
@@ -27,7 +26,7 @@
 
 @if ($section === 'guides')
   <nav class="mt-7 space-y-1 text-sm">
-    <p class="mb-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Structure & Navigation</p>
+    <p class="mb-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Getting started</p>
     @foreach ($guides as $guide)
       <a href="{{ route($guide['route']) }}" @class([
           'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',

@@ -13,8 +13,8 @@
     ],
     [
       'section' => 'guides',
-      'label' => 'Structure & Navigation',
-      'short' => 'Guides',
+      'label' => 'Structure',
+      'short' => 'Structure',
       'icon' => 'bi-diagram-3',
       'href' => route('ireka-ui.structure'),
     ],

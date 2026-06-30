@@ -59,7 +59,7 @@ Route::get('/ireka-ui/docs/components/{component}', [IrekaUiController::class, '
   ->name('ireka-ui.component');
 
 Route::get('/ireka-ui/docs/{category}/{guide}', [IrekaUiController::class, 'guide'])
-  ->whereIn('category', ['modals', 'overlays', 'layout'])
+  ->whereIn('category', ['navigation', 'modals', 'overlays', 'layout'])
   ->name('ireka-ui.guide');
 
 

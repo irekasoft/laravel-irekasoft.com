@@ -12,18 +12,26 @@
         Web / Mobile App<br>Development<br>Services
       </h1>
       <div class="mt-6 max-w-2xl text-paper/70 leading-relaxed space-y-4">
-        <p>
-          We can help you <em>plan</em>, <em>design</em>, <em>develop</em> and <em>publish</em>
-          <strong class="text-paper">web apps</strong>, <strong class="text-paper">APIs</strong> and <strong class="text-paper">admin panels</strong>
-          with <strong class="text-paper">Laravel + React</strong> and <strong class="text-paper">React Native</strong>.
+        <p class="leading-relaxed">
+          We’re not just a service provider — we’re builders ourselves. We’ve created and launched our own apps and products, so we know what it takes to turn ideas into reality.
+
+          <br><br>
+
+          We’re excited to bring that same framework — the stack we use on our own products — to yours. Before we commit, we’ll take an honest look at your brief and confirm we’re the right fit to help.
+
+          <br><br>
+
+          When we are, we’ll <em>plan</em>, <em>design</em>, <em>develop</em>, <em>publish</em> and <em>deploy</em>
+          <strong class="text-paper">apps</strong> and <strong class="text-paper">admin dashboard</strong>
+          on <strong class="text-paper">web</strong> and <strong class="text-paper">mobile</strong>.
         </p>
         <aside class="flex gap-4 rounded-lg border border-paper/15 bg-paper/5 px-5 py-4 backdrop-blur-sm">
           <i class="bi bi-lightbulb text-xl text-gold shrink-0 mt-0.5" aria-hidden="true"></i>
-          <p class="leading-relaxed">            
-            <strong class="text-paper">Laravel</strong> powers the backends, dashboards, and
-            business logic that mobile and web products rely on.
-            <strong class="text-paper">React Native</strong> is a <em>cross-platform</em> stack that
-            helps companies ship native mobile experiences from a single codebase.
+          <p class="leading-relaxed">
+            We use the latest modern technologies to build your software. 
+            <strong class="text-paper">React</strong> drives the interfaces users touch every day;
+            <strong class="text-paper">Laravel</strong> runs the APIs, admin panels, and business logic behind them —
+            a full-stack pairing built to ship fast and scale with your product.
           </p>
         </aside>
       </div>
@@ -53,7 +61,7 @@
       <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-blue-500">
         Technologies We Used
       </h2>
-      <p class="mt-4 mx-auto max-w-2xl text-center text-sm text-charcoal/60 leading-relaxed">
+      <p class="mt-2 mx-auto max-w-2xl text-center text-sm text-charcoal/60 leading-relaxed">
         We use the latest modern technologies to build your software.
       </p>
       <x-service-tech-grid />
@@ -74,7 +82,7 @@
       <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight text-blue-500">
         Previous Clients
       </h2>
-      <p class="mt-5 max-w-2xl mx-auto text-charcoal/70 leading-relaxed">
+      <p class="mt-2 max-w-2xl mx-auto text-charcoal/70 leading-relaxed">
         We have experience working with aspiring individuals to high profile companies. We are
         thrilled to serve and to help more people to thrive in this mobilize world of business.
       </p>

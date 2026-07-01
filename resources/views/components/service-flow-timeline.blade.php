@@ -8,7 +8,7 @@
         <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-blue-500 text-center">
             Service Flow
         </h2>
-        <p class="mt-4 mx-auto max-w-2xl text-center text-sm text-charcoal/60 leading-relaxed">
+        <p class="mt-2 mx-auto max-w-2xl text-center text-sm text-charcoal/60 leading-relaxed">
             From first conversation to launch — how we typically work with you.
         </p>
 

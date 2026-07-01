@@ -8,7 +8,7 @@
     <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-blue-500 text-center">
       Services We Provide
     </h2>
-    <p class="text-center text-charcoal/70 leading-relaxed mt-4 text-sm">
+    <p class="text-center text-charcoal/70 leading-relaxed mt-1 text-sm">
       From planning to deployment.
     </p>
     <div class="mt-12 grid gap-12 md:grid-cols-3">

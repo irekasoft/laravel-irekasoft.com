@@ -35,12 +35,15 @@
         <div class="mt-3 grid gap-2 sm:grid-cols-2">
           @foreach ($cat['guides'] as $g)
             <a href="{{ route('ireka-ui.guide', [$cat['id'], $g['id']]) }}"
-              class="group flex items-start gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3 transition-colors hover:border-charcoal/30">
+              class="group flex items-center gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3 transition-colors hover:border-charcoal/30">
+              <span class="flex h-10 w-12 shrink-0 items-center justify-center rounded-lg border border-charcoal/10 bg-charcoal/[0.03] text-charcoal/55 transition-colors group-hover:text-ink">
+                <x-ireka-ui.component-icon :id="$g['id']" />
+              </span>
               <div class="min-w-0">
                 <p class="font-mono text-[13px] text-ink">{{ $g['title'] }}</p>
                 <p class="mt-0.5 text-xs text-charcoal/50">{{ $g['summary'] }}</p>
               </div>
-              <i class="bi bi-arrow-right ml-auto mt-0.5 text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
+              <i class="bi bi-arrow-right ml-auto text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
             </a>
           @endforeach
         </div>

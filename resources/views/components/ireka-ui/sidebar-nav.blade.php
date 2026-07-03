@@ -14,18 +14,8 @@
     : [];
 @endphp
 
-<a href="{{ route('ireka-ui.index') }}" class="flex items-center gap-2.5">
-  <span class="grid h-8 w-8 place-items-center rounded-lg bg-ink text-paper">
-    <i class="bi bi-boxes text-base" aria-hidden="true"></i>
-  </span>
-  <span class="leading-tight">
-    <span class="block font-mono text-[15px] font-semibold text-ink">ireka-ui</span>
-    <span class="block font-mono text-[11px] text-charcoal/40">v0.1.0</span>
-  </span>
-</a>
-
 @if ($section === 'guides')
-  <nav class="mt-7 space-y-1 text-sm">
+  <nav class="mt-7 first:mt-0 space-y-1 text-sm">
     <p class="mb-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Getting started</p>
     @foreach ($guides as $guide)
       <a href="{{ route($guide['route']) }}" @class([
@@ -39,7 +29,7 @@
   </nav>
 @elseif ($section === 'components')
   @foreach ($patternCategories as $cat)
-    <nav class="mt-7 space-y-0.5 text-sm">
+    <nav class="mt-7 first:mt-0 space-y-0.5 text-sm">
       <a href="{{ route($cat['route']) }}" @class([
           'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] transition-colors',
           'text-ink' => $active === $cat['id'],
@@ -58,7 +48,7 @@
   @endforeach
 
   @if (count($components) > 0)
-    <nav class="mt-7 space-y-0.5 text-sm">
+    <nav class="mt-7 first:mt-0 space-y-0.5 text-sm">
       <a href="{{ route('ireka-ui.components') }}" @class([
           'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] transition-colors',
           'text-ink' => $active === 'components',

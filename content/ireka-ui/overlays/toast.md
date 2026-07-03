@@ -1,7 +1,7 @@
 ---
 id: toast
 title: Toast
-order: 6
+order: 7
 summary: Global, stacked notifications fired from anywhere via useToast.
 ---
 

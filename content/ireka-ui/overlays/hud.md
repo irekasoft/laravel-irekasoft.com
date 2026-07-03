@@ -1,7 +1,7 @@
 ---
 id: hud
 title: HUD
-order: 5
+order: 6
 summary: A centered heads-up indicator for loading and status.
 ---
 

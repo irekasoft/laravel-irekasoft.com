@@ -1,7 +1,7 @@
 ---
 id: popup
 title: Popup
-order: 4
+order: 5
 summary: An attention-grabbing promotional modal with image and actions.
 ---
 

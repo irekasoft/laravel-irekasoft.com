@@ -1,7 +1,7 @@
 ---
 id: dropdownmenu
 title: DropdownMenu
-order: 2
+order: 3
 summary: A small menu anchored to the top-right over a light scrim.
 ---
 

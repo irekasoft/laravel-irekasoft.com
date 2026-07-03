@@ -1,7 +1,7 @@
 ---
 id: toastoverlay
 title: ToastOverlay
-order: 7
+order: 8
 summary: A lightweight local pill toast scoped to one screen.
 ---
 

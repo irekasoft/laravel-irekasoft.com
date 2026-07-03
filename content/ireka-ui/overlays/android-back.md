@@ -1,7 +1,7 @@
 ---
 id: android-back
 title: Android back handling
-order: 8
+order: 9
 summary: The shared back stack that ties every overlay together.
 ---
 

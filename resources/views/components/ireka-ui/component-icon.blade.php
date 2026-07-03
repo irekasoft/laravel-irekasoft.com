@@ -82,14 +82,6 @@
     </svg>
     @break
 
-  @case('sheet-action')
-    <svg {!! $svg !!}>
-      <rect x="12" y="9.5" width="24" height="3.4" rx="1.7" fill="currentColor" fill-opacity="0.16" stroke="none"/>
-      <rect x="12" y="14.3" width="24" height="3.4" rx="1.7" fill="currentColor" fill-opacity="0.16" stroke="none"/>
-      <rect x="12" y="19.1" width="15" height="3.4" rx="1.7" fill="currentColor" fill-opacity="0.16" stroke="none"/>
-    </svg>
-    @break
-
   @case('skeleton')
     <svg {!! $svg !!}>
       <circle cx="16" cy="16" r="4.5" fill="currentColor" fill-opacity="0.18" stroke="none"/>

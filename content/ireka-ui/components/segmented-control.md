@@ -1,7 +1,7 @@
 ---
 id: segmented-control
 name: SegmentedControl
-order: 6
+order: 9
 summary: iOS-style single-select switcher.
 lead: iOS-style single-select switch. Options can be plain strings or { label, value } objects.
 ---

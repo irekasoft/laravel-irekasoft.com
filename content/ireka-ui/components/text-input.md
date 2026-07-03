@@ -1,7 +1,7 @@
 ---
 id: text-input
 name: TextInput
-order: 10
+order: 16
 summary: Labeled single-line text field.
 lead: Labeled single-line field. Any extra props (type, placeholder, value…) pass straight through to the input.
 ---

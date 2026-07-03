@@ -29,4 +29,4 @@ function Settings() {
 Each `GroupedList.Item` takes a `label`, an optional leading `icon`, a
 trailing `value`, and an `onPress` (which adds a chevron and tap
 feedback). Set `danger` to tint a destructive row red, or pass a custom
-`trailing` node to replace the chevron — a `Toggle`, a badge, anything.
+`trailing` node to replace the chevron — a `Switch`, a badge, anything.

@@ -1,7 +1,7 @@
 ---
 id: card
 name: Card
-order: 3
+order: 5
 summary: Grouped surface with header, body and footer slots.
 lead: A rounded surface composed from Card.Header, Card.Body and Card.Footer. Pass onClick to make the whole card tappable.
 ---

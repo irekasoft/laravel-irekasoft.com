@@ -1,7 +1,7 @@
 ---
 id: skeleton
 name: Skeleton
-order: 8
+order: 11
 summary: Animated placeholder for loading state.
 lead: Animated placeholder block for loading states. Size it with utility classes.
 ---

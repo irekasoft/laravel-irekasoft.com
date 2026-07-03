@@ -1,7 +1,7 @@
 ---
 id: content-container
 name: ContentContainer
-order: 4
+order: 6
 summary: Scrollable, centered page body.
 lead: Scrollable page body. Fills the remaining height, scrolls vertically, and centers content to a comfortable reading width unless told otherwise.
 ---

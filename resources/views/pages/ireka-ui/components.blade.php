@@ -19,26 +19,32 @@
   </div>
 
   @php
-    $patterns = [
-      ['id' => 'navigation', 'route' => 'ireka-ui.navigation', 'name' => 'Navigation', 'summary' => 'The Page wrapper, useNavigation, and standalone StackNav flows.'],
-      ['id' => 'modals', 'route' => 'ireka-ui.modals', 'name' => 'Modals', 'summary' => 'Full-screen modal pages — presented or pushed, with multi-step flows.'],
-      ['id' => 'overlays', 'route' => 'ireka-ui.overlays', 'name' => 'Overlays', 'summary' => 'Bottom sheets, dropdown menus, alerts, popups, HUDs and toasts.'],
-      ['id' => 'layout', 'route' => 'ireka-ui.layout', 'name' => 'Layout', 'summary' => 'The 12-column Grid and the iOS-style GroupedList.'],
-    ];
+    $patternCategories = app(\App\Support\IrekaUiRepository::class)->guidesByCategory();
   @endphp
 
   <h2 class="mt-12 max-w-3xl font-display text-2xl font-semibold tracking-tight text-ink">Patterns</h2>
   <p class="mt-2 max-w-3xl leading-relaxed text-charcoal/60">Composable building blocks for navigation, overlays and page layout.</p>
-  <div class="mt-5 grid gap-2 sm:grid-cols-2">
-    @foreach ($patterns as $p)
-      <a href="{{ route($p['route']) }}"
-        class="group flex items-start gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3 transition-colors hover:border-charcoal/30">
-        <div class="min-w-0">
-          <p class="font-mono text-[13px] text-ink">{{ $p['name'] }}</p>
-          <p class="mt-0.5 text-xs text-charcoal/50">{{ $p['summary'] }}</p>
+
+  <div class="mt-6 space-y-8">
+    @foreach ($patternCategories as $cat)
+      <div>
+        <a href="{{ route($cat['route']) }}" class="group inline-flex items-center gap-2">
+          <h3 class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">{{ $cat['name'] }}</h3>
+          <i class="bi bi-arrow-right text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
+        </a>
+        <div class="mt-3 grid gap-2 sm:grid-cols-2">
+          @foreach ($cat['guides'] as $g)
+            <a href="{{ route('ireka-ui.guide', [$cat['id'], $g['id']]) }}"
+              class="group flex items-start gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3 transition-colors hover:border-charcoal/30">
+              <div class="min-w-0">
+                <p class="font-mono text-[13px] text-ink">{{ $g['title'] }}</p>
+                <p class="mt-0.5 text-xs text-charcoal/50">{{ $g['summary'] }}</p>
+              </div>
+              <i class="bi bi-arrow-right ml-auto mt-0.5 text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
+            </a>
+          @endforeach
         </div>
-        <i class="bi bi-arrow-right ml-auto mt-0.5 text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
-      </a>
+      </div>
     @endforeach
   </div>
 
@@ -46,12 +52,15 @@
   <div class="mt-5 grid gap-2 sm:grid-cols-2">
     @foreach ($catalog as $c)
       <a href="{{ route('ireka-ui.component', $c['id']) }}"
-        class="group flex items-start gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3 transition-colors hover:border-charcoal/30">
+        class="group flex items-center gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3 transition-colors hover:border-charcoal/30">
+        <span class="flex h-10 w-12 shrink-0 items-center justify-center rounded-lg border border-charcoal/10 bg-charcoal/[0.03] text-charcoal/55 transition-colors group-hover:text-ink">
+          <x-ireka-ui.component-icon :id="$c['id']" />
+        </span>
         <div class="min-w-0">
           <p class="font-mono text-[13px] text-ink">{{ $c['name'] }}</p>
           <p class="mt-0.5 text-xs text-charcoal/50">{{ $c['summary'] }}</p>
         </div>
-        <i class="bi bi-arrow-right ml-auto mt-0.5 text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
+        <i class="bi bi-arrow-right ml-auto text-charcoal/30 transition-colors group-hover:text-ink" aria-hidden="true"></i>
       </a>
     @endforeach
   </div>

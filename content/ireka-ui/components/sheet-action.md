@@ -1,7 +1,7 @@
 ---
 id: sheet-action
 name: SheetAction
-order: 7
+order: 10
 summary: Full-width row action for sheets and menus.
 lead: Full-width tappable row for action sheets and dropdown menus. Set danger for destructive actions.
 ---

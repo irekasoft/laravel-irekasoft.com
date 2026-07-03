@@ -1,7 +1,7 @@
 ---
 id: text-area
 name: TextArea
-order: 11
+order: 15
 summary: Labeled multi-line text field.
 lead: Labeled multi-line field. Same pass-through behaviour as TextInput, plus a rows prop.
 ---

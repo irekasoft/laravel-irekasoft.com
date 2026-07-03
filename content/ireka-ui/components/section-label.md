@@ -1,7 +1,7 @@
 ---
 id: section-label
 name: SectionLabel
-order: 5
+order: 8
 summary: Uppercase heading for a group of controls.
 lead: Uppercase caption used to title a group of controls.
 ---

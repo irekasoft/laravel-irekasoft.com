@@ -8,6 +8,7 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
+            detectTls: 'irekasoft.test',
             fonts: [
                 bunny('Space Grotesk', {
                     weights: [500, 600, 700],

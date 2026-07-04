@@ -17,7 +17,7 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased min-h-screen flex flex-col bg-white text-charcoal">
+<body class="font-sans antialiased flex flex-col bg-white text-charcoal">
 
   <header class="fixed inset-x-0 top-0 z-50 border-b border-charcoal/10 bg-white/90 backdrop-blur-sm">
     <div class="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -65,8 +65,8 @@
     </div>
   </div>
 
-  <main class="flex flex-1 flex-col pt-32">
-    <div class="mx-auto flex w-full max-w-7xl flex-1 gap-10 px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-10">
+  <main class="flex flex-col pt-32">
+    <div class="mx-auto flex w-full max-w-7xl items-start gap-10 px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-10">
       <aside @class([
           'hidden w-60 shrink-0 md:block',
           'md:hidden' => $section === 'intro',

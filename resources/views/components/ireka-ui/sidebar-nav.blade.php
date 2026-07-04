@@ -6,7 +6,19 @@
 
 @php
   $guides = [
-    ['id' => 'structure', 'route' => 'ireka-ui.structure', 'name' => 'Structure', 'icon' => 'bi-diagram-3'],
+    [
+      'id' => 'structure', 
+      'route' => 'ireka-ui.structure', 
+      'name' => 'Structure', 
+      'icon' => 'bi-diagram-3'
+    ],
+    [
+      'id' => 'getting-started', 
+      'route' => 'ireka-ui.getting-started', 
+      'name' => 'Getting Started', 
+      'icon' => 'bi-rocket-takeoff'
+    ],
+    
   ];
 
   $patternCategories = $section === 'components'

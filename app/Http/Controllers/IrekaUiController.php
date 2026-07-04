@@ -13,6 +13,13 @@ class IrekaUiController extends Controller {
     ]);
   }
 
+  public function gettingStarted(IrekaUiRepository $content) {
+    return view('pages.ireka-ui.getting-started', [
+      'page' => $content->doc('structure/getting-started.md'),
+      'components' => $content->componentCatalog(),
+    ]);
+  }
+
   public function structure(IrekaUiRepository $content) {
     return view('pages.ireka-ui.structure', [
       'page' => $content->structure(),

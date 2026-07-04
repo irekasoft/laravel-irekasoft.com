@@ -37,6 +37,9 @@ Route::get('/apps/{slug}', [AppController::class, 'show'])
 Route::get('/ireka-ui', [IrekaUiController::class, 'index'])
   ->name('ireka-ui.index');
 
+Route::get('/ireka-ui/docs/getting-started', [IrekaUiController::class, 'gettingStarted'])
+  ->name('ireka-ui.getting-started');
+
 Route::get('/ireka-ui/docs/structure', [IrekaUiController::class, 'structure'])
   ->name('ireka-ui.structure');
 

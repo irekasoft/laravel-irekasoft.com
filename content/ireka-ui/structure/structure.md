@@ -5,7 +5,8 @@ description: How ireka-ui apps are organised — the main.jsx entry, the framewo
 
 ireka-ui apps follow a layered layout: **main.jsx** mounts the app
 inside a stack of providers, the **framework/** layer supplies the
-`AppShell`, `TabNav`, and navigation primitives, and **App.jsx**
+`AppShell` — which also mounts the global `Alert` and `Snackbar` hosts —
+along with `TabNav` and the navigation primitives, and **App.jsx**
 declares the routes and tabs that render page components from
 **pages/**.
 
@@ -18,8 +19,10 @@ device.
 src/
 ├── main.jsx            # Entry — mounts providers + AppShell
 ├── App.jsx             # Routes, auth guards, TabNav
-├── framework/          # AppShell, TabNav, Tab, navigation, auth
+├── framework/          # AppShell (+ Alert/Snackbar hosts), TabNav, Tab,
+│                       # Page, StackNav, ModalPage, ActionSheet, BottomSheet
 ├── i18n/               # LanguageProvider + useLanguage
+├── hooks/              # shared hooks (keyboard insets, …)
 ├── pages/              # One component per screen
 │   ├── HomePage.jsx
 │   ├── MenuPage.jsx
@@ -27,7 +30,7 @@ src/
 │       ├── LoginPage.jsx
 │       └── RegisterPage.jsx
 └── components/
-    └── ui/             # ireka-ui components
+    └── ui/             # ireka-ui components (Button, Card, Alert, Snackbar…)
 ```
 
 **main.jsx** is the entry point. It mounts the app on `#root` and
@@ -54,6 +57,39 @@ createRoot(document.getElementById('root')).render(
     </LanguageProvider>
   </StrictMode>,
 );
+```
+
+**AppShell** is the shared frame. It sets up the `HashRouter` (so the app
+works inside Capacitor's `file://` context), the `AuthProvider`, and the
+phone-sized container every screen renders into. It also mounts the
+global overlay hosts — `Alert.Host`, `Snackbar.Host`, and
+`AndroidBackHost` — so imperative calls like `Alert.show()` and
+`Snackbar.show()` work anywhere with no extra wiring.
+
+```jsx
+// framework/AppShell.jsx (simplified)
+import { HashRouter } from 'react-router-dom';
+import { AuthProvider } from './AuthContext';
+import AndroidBackHost from './AndroidBackHost';
+import Alert from '../components/ui/Alert';
+import Snackbar from '../components/ui/Snackbar';
+
+export default function AppShell({ children, isMobile }) {
+  return (
+    <HashRouter>
+      <AuthProvider>
+        <Shell isMobile={isMobile}>
+          {children}
+          <AndroidBackHost />
+        </Shell>
+
+        {/* Global overlay hosts — mounted once, callable anywhere */}
+        <Alert.Host />
+        <Snackbar.Host />
+      </AuthProvider>
+    </HashRouter>
+  );
+}
 ```
 
 **App.jsx** holds the route table. Guest-only routes (`/login`,

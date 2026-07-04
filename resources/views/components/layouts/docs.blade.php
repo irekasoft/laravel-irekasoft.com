@@ -65,8 +65,8 @@
     </div>
   </div>
 
-  <main class="flex flex-col pt-32">
-    <div class="mx-auto flex w-full max-w-7xl items-start gap-10 px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-10">
+  <main class="flex flex-col pt-27">
+    <div class="mx-auto flex w-full max-w-7xl items-start gap-10 px-4 pt-0 pb-8 sm:px-6 lg:pb-10">
       <aside @class([
           'hidden w-60 shrink-0 self-start sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pr-2 md:block',
           'md:hidden' => $section === 'intro',
@@ -76,7 +76,7 @@
         @endisset
       </aside>
 
-      <div class="min-w-0 flex-1">
+      <div class="min-w-0 flex-1 pt-3">
         {{ $slot }}
       </div>
 

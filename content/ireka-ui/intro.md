@@ -17,6 +17,4 @@ features:
     body: Ships inside the same shell that powers our iOS and Android builds, so what you see is what runs on device.
 ---
 
-A small, mobile-first React component library.
-Built on Tailwind CSS and designed to feel native inside Capacitor shells, with clean
-defaults and almost no API surface to learn.
+A web based mobile-first React component library, built on Tailwind CSS and designed to feel native inside Capacitor shells.

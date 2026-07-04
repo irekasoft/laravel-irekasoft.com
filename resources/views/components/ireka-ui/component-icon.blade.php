@@ -244,7 +244,7 @@
     </svg>
     @break
 
-  @case('toastoverlay')
+  @case('toastpill')
     <svg {!! $svg !!}>
       <rect x="11" y="12.5" width="26" height="7" rx="3.5"/>
       <circle cx="15.5" cy="16" r="1.6" fill="currentColor" stroke="none"/>

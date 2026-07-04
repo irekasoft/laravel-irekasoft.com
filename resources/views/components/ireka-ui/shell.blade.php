@@ -1,8 +1,8 @@
 @props([
-    'title' => 'ireka-ui',
-    'description' => null,
-    'active' => 'intro',
-    'components' => [],
+  'title' => 'ireka-ui',
+  'description' => null,
+  'active' => 'intro',
+  'components' => [],
 ])
 
 @php
@@ -16,6 +16,7 @@
 @endphp
 
 <x-layouts.docs :title="$title" :description="$description" product="ireka-ui" :section="$section">
+  
   <x-slot:sidebar>
     <x-ireka-ui.sidebar-nav :section="$section" :active="$active" :components="$components" />
   </x-slot:sidebar>

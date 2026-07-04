@@ -1,8 +1,9 @@
 <x-ireka-ui.shell
   title="Components — ireka-ui"
-  :description="$page['description']"
   active="components"
-  :components="$catalog">
+  :description="$page['description']"
+  :components="$catalog"
+>
 
   <div class="max-w-3xl">
     @if ($page['eyebrow'])

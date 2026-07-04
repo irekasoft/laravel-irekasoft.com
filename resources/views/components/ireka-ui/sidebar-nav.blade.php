@@ -40,6 +40,7 @@
     @endforeach
   </nav>
 @elseif ($section === 'components')
+
   @foreach ($patternCategories as $cat)
     <nav class="mt-7 first:mt-0 space-y-0.5 text-sm">
       <a href="{{ route($cat['route']) }}" @class([

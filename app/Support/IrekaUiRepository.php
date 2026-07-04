@@ -29,6 +29,7 @@ class IrekaUiRepository {
   }
 
   public function doc(string $filename): array {
+    
     $doc = $this->load($filename);
 
     return [
@@ -38,6 +39,7 @@ class IrekaUiRepository {
       'intro_html' => $this->introHtml($doc['body']),
       'sections' => $this->parseSections($doc['body']),
     ];
+
   }
 
   public function componentOverview(): array {

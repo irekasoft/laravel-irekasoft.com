@@ -68,14 +68,12 @@
   <main class="flex flex-col pt-32">
     <div class="mx-auto flex w-full max-w-7xl items-start gap-10 px-4 pt-3 pb-8 sm:px-6 lg:pt-4 lg:pb-10">
       <aside @class([
-          'hidden w-60 shrink-0 md:block',
+          'hidden w-60 shrink-0 self-start sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pr-2 md:block',
           'md:hidden' => $section === 'intro',
       ])>
-        <div class="sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pr-2">
-          @isset($sidebar)
-            {{ $sidebar }}
-          @endisset
-        </div>
+        @isset($sidebar)
+          {{ $sidebar }}
+        @endisset
       </aside>
 
       <div class="min-w-0 flex-1">
@@ -83,21 +81,19 @@
       </div>
 
       @isset($toc)
-        <aside class="hidden w-44 shrink-0 xl:block">
-          <div class="sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pl-2">
-            {{ $toc }}
-          </div>
+        <aside class="hidden w-44 shrink-0 self-start sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pl-2 xl:block">
+          {{ $toc }}
         </aside>
       @endisset
     </div>
   </main>
 
-  <footer class="border-t border-charcoal/10 bg-white">
+  {{-- <footer class="border-t border-charcoal/10 bg-white">
     <div
       class="mx-auto max-w-7xl px-4 py-5 font-mono text-[11px] uppercase tracking-[0.12em] text-charcoal/40 sm:px-6">
       {{ $product }} · built by <a href="{{ route('home') }}" class="text-charcoal/60 hover:text-ink">irekasoft</a>
     </div>
-  </footer>
+  </footer> --}}
 
 </body>
 

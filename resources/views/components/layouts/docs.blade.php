@@ -76,7 +76,7 @@
         @endisset
       </aside>
 
-      <div class="min-w-0 flex-1 pt-3">
+      <div class="min-w-0 flex-1 pt-3 pb-4">
         {{ $slot }}
       </div>
 

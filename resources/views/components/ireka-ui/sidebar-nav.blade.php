@@ -30,7 +30,9 @@
   <nav class="mt-7 first:mt-0 space-y-1 text-sm">
     <p class="mb-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-charcoal/40">Getting started</p>
     @foreach ($guides as $guide)
-      <a href="{{ route($guide['route']) }}" @class([
+      <a href="{{ route($guide['route']) }}"
+        @if ($active === $guide['id']) aria-current="page" @endif
+        @class([
           'flex items-center gap-2.5 rounded-lg px-3 py-1.5 transition-colors',
           'bg-ink text-paper font-medium' => $active === $guide['id'],
           'text-charcoal/70 hover:bg-charcoal/5' => $active !== $guide['id'],
@@ -43,13 +45,17 @@
 
   @foreach ($patternCategories as $cat)
     <nav class="mt-7 first:mt-0 space-y-0.5 text-sm">
-      <a href="{{ route($cat['route']) }}" @class([
+      <a href="{{ route($cat['route']) }}"
+        @if ($active === $cat['id']) aria-current="page" @endif
+        @class([
           'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] transition-colors',
           'text-ink' => $active === $cat['id'],
           'text-charcoal/40 hover:text-ink' => $active !== $cat['id'],
       ])>{{ $cat['name'] }}</a>
       @foreach ($cat['guides'] as $g)
-        <a href="{{ route('ireka-ui.guide', [$cat['id'], $g['id']]) }}" @class([
+        <a href="{{ route('ireka-ui.guide', [$cat['id'], $g['id']]) }}"
+          @if ($active === $g['id']) aria-current="page" @endif
+          @class([
             'block rounded-lg px-3 py-1.5 transition-colors',
             'bg-ink text-paper font-medium' => $active === $g['id'],
             'text-charcoal/70 hover:bg-charcoal/5' => $active !== $g['id'],
@@ -62,13 +68,17 @@
 
   @if (count($components) > 0)
     <nav class="mt-7 first:mt-0 space-y-0.5 text-sm">
-      <a href="{{ route('ireka-ui.components') }}" @class([
+      <a href="{{ route('ireka-ui.components') }}"
+        @if ($active === 'components') aria-current="page" @endif
+        @class([
           'mb-1 block font-mono text-[11px] uppercase tracking-[0.14em] transition-colors',
           'text-ink' => $active === 'components',
           'text-charcoal/40 hover:text-ink' => $active !== 'components',
       ])>Components</a>
       @foreach ($components as $c)
-        <a href="{{ route('ireka-ui.component', $c['id']) }}" @class([
+        <a href="{{ route('ireka-ui.component', $c['id']) }}"
+          @if ($active === $c['id']) aria-current="page" @endif
+          @class([
             'block rounded-lg px-3 py-1.5 transition-colors',
             'bg-ink text-paper font-medium' => $active === $c['id'],
             'text-charcoal/70 hover:bg-charcoal/5' => $active !== $c['id'],

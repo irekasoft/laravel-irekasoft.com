@@ -9,6 +9,7 @@ import 'prismjs/components/prism-bash';
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initDocsSidebar();
+    initSidebarActiveScroll();
     initOnPageNavDropdown();
     initDocsScrollSpy();
     initSectionDotGrid();
@@ -122,6 +123,35 @@ function initDocsSidebar() {
         if (event.key === 'Escape' && isOpen()) {
             setOpen(false);
         }
+    });
+}
+
+function initSidebarActiveScroll() {
+    // Bring the active sidebar item into view so it's visible on load even when
+    // it sits far down a long, scrollable nav.
+    document.querySelectorAll('[data-sidebar-scroll]').forEach((container) => {
+        const active = container.querySelector('[aria-current="page"]');
+
+        if (!active) {
+            return;
+        }
+
+        const containerRect = container.getBoundingClientRect();
+        const activeRect = active.getBoundingClientRect();
+
+        const fullyVisible = activeRect.top >= containerRect.top
+            && activeRect.bottom <= containerRect.bottom;
+
+        if (fullyVisible) {
+            return;
+        }
+
+        // Center the active item within its own scroll container without moving
+        // the page (scrollIntoView would scroll every ancestor).
+        const offset = (activeRect.top - containerRect.top)
+            - (container.clientHeight - activeRect.height) / 2;
+
+        container.scrollTop += offset;
     });
 }
 

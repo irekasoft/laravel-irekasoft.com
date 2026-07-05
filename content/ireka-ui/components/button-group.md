@@ -38,12 +38,3 @@ const [view, setView] = useState('list');
 | onChange | `(value) => void` | | Called with the selected value on tap. |
 | children | ReactNode | | ButtonGroup.Button items. |
 | className | string | `''` | Extra classes. |
-
-## ButtonGroup.Button props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| value | string | | Identifier for this option. |
-| children | ReactNode | | Icon content. |
-| aria-label | string | | Accessible label. |
-| className | string | `''` | Extra classes. |

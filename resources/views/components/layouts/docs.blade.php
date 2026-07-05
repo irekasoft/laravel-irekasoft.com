@@ -57,7 +57,7 @@
         </button>
       </div>
 
-      <div class="flex-1 overflow-y-auto px-4 py-5">
+      <div class="flex-1 overflow-y-auto px-4 py-5" data-sidebar-scroll>
         @isset($sidebar)
           {{ $sidebar }}
         @endisset
@@ -66,9 +66,9 @@
   </div>
 
   <main class="flex flex-col pt-27">
-    <div class="mx-auto flex w-full max-w-7xl items-start gap-10 px-4 pt-0 pb-8 sm:px-6 lg:pb-10">
-      <aside @class([
-          'hidden w-60 shrink-0 self-start sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pr-2 md:block',
+    <div class="mx-auto flex w-full max-w-7xl items-start gap-10 px-4 pt-0 pb-0 sm:px-6">
+      <aside data-sidebar-scroll @class([
+          'hidden w-64 shrink-0 self-stretch sticky pt-2 top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pr-2 md:block',
           'md:hidden' => $section === 'intro',
       ])>
         @isset($sidebar)
@@ -81,7 +81,7 @@
       </div>
 
       @isset($toc)
-        <aside class="hidden w-44 shrink-0 self-start sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pl-2 xl:block">
+        <aside class="hidden w-44 shrink-0 pt-2 self-start sticky top-32 max-h-[calc(100vh-9rem)] overflow-y-auto pl-2 xl:block">
           {{ $toc }}
         </aside>
       @endisset

@@ -1,7 +1,7 @@
 ---
 id: tabnav
 title: TabNav
-order: 2
+order: 1
 summary: The root tab navigator — one Tab per section, each with its own screen stack.
 ---
 

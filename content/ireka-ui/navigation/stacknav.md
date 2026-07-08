@@ -1,7 +1,7 @@
 ---
 id: stacknav
 title: StackNav
-order: 3
+order: 2
 summary: A standalone stack navigator for flows outside the tab bar.
 ---
 

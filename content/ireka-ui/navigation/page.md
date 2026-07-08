@@ -1,7 +1,7 @@
 ---
 id: page
 title: Page
-order: 1
+order: 3
 summary: The standard screen wrapper — NavBar, scrolling, and lifecycle hooks.
 ---
 

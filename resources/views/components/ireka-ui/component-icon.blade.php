@@ -161,6 +161,16 @@
     </svg>
     @break
 
+  @case('tabnav')
+    <svg {!! $svg !!}>
+      <rect x="14" y="5" width="20" height="22" rx="2.5" stroke-opacity="0.4"/>
+      <line x1="14" y1="21" x2="34" y2="21" stroke-opacity="0.5"/>
+      <circle cx="18" cy="24" r="1.3" fill="currentColor" stroke="none"/>
+      <circle cx="24" cy="24" r="1.3" fill="currentColor" fill-opacity="0.4" stroke="none"/>
+      <circle cx="30" cy="24" r="1.3" fill="currentColor" fill-opacity="0.4" stroke="none"/>
+    </svg>
+    @break
+
   {{-- Modals --}}
   @case('modalpage')
     <svg {!! $svg !!}>

@@ -27,6 +27,9 @@ Route::get('/services/portfolio', [PageController::class, 'portfolio'])
 Route::get('/contact', [PageController::class, 'contact'])
   ->name('contact');
 
+Route::get('/learn', [PageController::class, 'learn'])
+  ->name('learn');
+
 Route::get('/apps', [AppController::class, 'index'])
   ->name('apps.index');
 
